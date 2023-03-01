@@ -12,11 +12,16 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: bbb281ee3bf0b054c82ac2347e9e782c, type: 3}
   m_Name: Maze
   m_EditorClassIdentifier: 
-  m_GroupName: Packed Assets
+  m_GroupName: Maze
   m_Data:
     m_SerializedData: []
   m_GUID: 298de1220de637e408afd2586948b2d0
-  m_SerializeEntries: []
+  m_SerializeEntries:
+  - m_GUID: 51cecbfdf6a5b4d4fbd213d2f75a9c66
+    m_Address: Prefabs
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
   m_ReadOnly: 0
   m_Settings: {fileID: 11400000, guid: 4238d1a742f739247940f48a6d434942, type: 2}
   m_SchemaSet:
