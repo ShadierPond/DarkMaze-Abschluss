@@ -3,6 +3,8 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using Random = UnityEngine.Random;
+using UnityEngine.AddressableAssets;
+using UnityEngine.ResourceManagement.AsyncOperations;
 
 namespace Maze
 {
@@ -10,14 +12,16 @@ namespace Maze
     {
         [Header("Wall Settings")]
         [SerializeField] private float wallThickness = 0.1f;
-        [SerializeField] private  Material wallMaterial;
-        [SerializeField] private  Material floorMaterial;
-        [SerializeField] private  Material ceilingMaterial;
+        [SerializeField] private AssetReferenceGameObject wallReference;
+        [SerializeField] private AssetReferenceGameObject floorReference;
+        [SerializeField] private AssetReferenceGameObject ceilingReference;
 
         [Header("Gameplay Settings")]
         [SerializeField] private GameObject playerSpawner;
         [SerializeField] private GameObject finishPoint;
-        [SerializeField] private GameObject ceilingLight;
+        [SerializeField] private GameObject[] spawnableObjects;
+        [SerializeField] private int[] spawnableObjectAmounts;
+        [SerializeField] private float[] spawnableObjectSpawnChance;
 
 
 
@@ -33,11 +37,7 @@ namespace Maze
         private MazeCell _startCell = new(0, 0);
         private MazeCell _endCell = new(0, 0);
         [SerializeField] private bool showCeilings = true;
-        
-        private GameObject _mazeWall;
-        private GameObject _mazeFloor;
-        private GameObject _mazeCeiling;
-        
+
         private MazeCell[,] _mazeCells;
 
         private void OnValidate()
@@ -50,29 +50,17 @@ namespace Maze
             {
                 mazeSize.y = 1;
             }
+            
+            if (spawnableObjects.Length != spawnableObjectAmounts.Length)
+            {
+                Array.Resize(ref spawnableObjectAmounts, spawnableObjects.Length);
+            }
+            if (spawnableObjects.Length != spawnableObjectSpawnChance.Length)
+            {
+                Array.Resize(ref spawnableObjectSpawnChance, spawnableObjects.Length);
+            }
         }
 
-        private void Awake()
-        {
-            _mazeWall = GameObject.CreatePrimitive(PrimitiveType.Cube);
-            _mazeWall.name = "Maze Wall";
-            _mazeWall.GetComponent<MeshRenderer>().material = wallMaterial;
-            _mazeWall.transform.localScale = new Vector3(wallThickness, cellSize.y, cellSize.z);
-            _mazeWall.SetActive(false);
-            
-            _mazeFloor = GameObject.CreatePrimitive(PrimitiveType.Cube);
-            _mazeFloor.name = "Maze Floor";
-            _mazeFloor.GetComponent<MeshRenderer>().material = floorMaterial;
-            _mazeFloor.transform.localScale = new Vector3(cellSize.x, wallThickness, cellSize.z);
-            _mazeFloor.SetActive(false);
-            
-            _mazeCeiling = GameObject.CreatePrimitive(PrimitiveType.Cube);
-            _mazeCeiling.name = "Maze Ceiling";
-            _mazeCeiling.GetComponent<MeshRenderer>().material = ceilingMaterial;
-            _mazeCeiling.transform.localScale = new Vector3(cellSize.x, wallThickness, cellSize.z);
-            _mazeCeiling.SetActive(false);
-        }
-        
         private void Start()
         {
             if (randomSeed)
@@ -81,8 +69,9 @@ namespace Maze
             }
             Random.InitState(seed);
             GenerateMaze();
-            SpawnObjectInCell(playerSpawner, _startCell);
-            SpawnObjectInCell(finishPoint, _endCell);
+            //SpawnObjectInCell(playerSpawner, _startCell);
+            //SpawnObjectInCell(finishPoint, _endCell);
+            //RandomSpreadObjects();
         }
         
         private void GenerateMaze()
@@ -188,6 +177,7 @@ namespace Maze
 
         private void DrawMaze()
         {
+            Debug.Log("Drawing maze");
             for (int x = 0; x < mazeSize.x; x++)
             {
                 for (int y = 0; y < mazeSize.y; y++)
@@ -196,40 +186,58 @@ namespace Maze
                     Vector3 cellPosition = new Vector3(x * cellSize.x, 0, y * cellSize.z);
                     if (cell.WallLeft)
                     {
-                        GameObject wall = Instantiate(_mazeWall, cellPosition, Quaternion.identity, gameObject.transform);
-                        wall.transform.Translate(new Vector3(-cellSize.x / 2, 0, 0));
-                        wall.SetActive(true);
+                        wallReference.InstantiateAsync(cellPosition, Quaternion.identity, gameObject.transform).Completed += wall =>
+                        {
+                            wall.Result.name = "Maze Wall";
+                            wall.Result.transform.localScale = new Vector3(wallThickness, cellSize.y, cellSize.z);
+                            wall.Result.transform.Translate(new Vector3(-cellSize.x / 2, 0, 0));
+                        };
                     }
                     if (cell.WallRight)
                     {
-                        GameObject wall = Instantiate(_mazeWall, cellPosition, Quaternion.identity, gameObject.transform);
-                        wall.transform.Translate(new Vector3(cellSize.x / 2, 0, 0));
-                        wall.SetActive(true);
+                        wallReference.InstantiateAsync(cellPosition, Quaternion.identity, gameObject.transform).Completed += wall =>
+                        {
+                            wall.Result.name = "Maze Wall";
+                            wall.Result.transform.localScale = new Vector3(wallThickness, cellSize.y, cellSize.z);
+                            wall.Result.transform.Translate(new Vector3(cellSize.x / 2, 0, 0));
+                        };
                     }
                     if (cell.WallTop)
                     {
-                        GameObject wall = Instantiate(_mazeWall, cellPosition, Quaternion.identity, gameObject.transform);
-                        wall.transform.Translate(new Vector3(0, 0, cellSize.z / 2));
-                        wall.transform.Rotate(new Vector3(0, 90, 0));
-                        wall.SetActive(true);
+                        wallReference.InstantiateAsync(cellPosition, Quaternion.identity, gameObject.transform).Completed += wall =>
+                        {
+                            wall.Result.name = "Maze Wall";
+                            wall.Result.transform.localScale = new Vector3(wallThickness, cellSize.y, cellSize.x);
+                            wall.Result.transform.Translate(new Vector3(0, 0, cellSize.z / 2));
+                            wall.Result.transform.Rotate(new Vector3(0, 90, 0));
+                        };
                     }
                     if (cell.WallBottom)
                     {
-                        GameObject wall = Instantiate(_mazeWall, cellPosition, Quaternion.identity, gameObject.transform);
-                        wall.transform.Translate(new Vector3(0, 0, -cellSize.z / 2));
-                        wall.transform.Rotate(new Vector3(0, 90, 0));
-                        wall.SetActive(true);
+                        wallReference.InstantiateAsync(cellPosition, Quaternion.identity, gameObject.transform).Completed += wall =>
+                        {
+                            wall.Result.name = "Maze Wall";
+                            wall.Result.transform.localScale = new Vector3(wallThickness, cellSize.y, cellSize.x);
+                            wall.Result.transform.Translate(new Vector3(0, 0, -cellSize.z / 2));
+                            wall.Result.transform.Rotate(new Vector3(0, 90, 0));
+                        };
                     }
                     
-                    GameObject floor = Instantiate(_mazeFloor, cellPosition, Quaternion.identity, gameObject.transform);
-                    floor.transform.Translate(new Vector3(0, -cellSize.y / 2, 0));
-                    floor.SetActive(true);
+                    floorReference.InstantiateAsync(cellPosition, Quaternion.identity, gameObject.transform).Completed += floor =>
+                    {
+                        floor.Result.name = "Maze Floor";
+                        floor.Result.transform.localScale = new Vector3(cellSize.x, wallThickness, cellSize.z);
+                        floor.Result.transform.Translate(new Vector3(0, -cellSize.y / 2, 0));
+                    };
 
                     if (showCeilings)
                     {
-                        GameObject ceiling = Instantiate(_mazeCeiling, cellPosition, Quaternion.identity, gameObject.transform);
-                        ceiling.transform.Translate(new Vector3(0, cellSize.y / 2, 0));
-                        ceiling.SetActive(true);
+                        ceilingReference.InstantiateAsync(cellPosition, Quaternion.identity, gameObject.transform).Completed += ceiling =>
+                        {
+                            ceiling.Result.name = "Maze Ceiling";
+                            ceiling.Result.transform.localScale = new Vector3(cellSize.x, wallThickness, cellSize.z);
+                            ceiling.Result.transform.Translate(new Vector3(0, cellSize.y / 2, 0));
+                        };
                     }
                 }
             }
@@ -248,12 +256,15 @@ namespace Maze
             spawnedObject.SetActive(true);
         }
         
-        private void RandomSpreadObjects(GameObject obj, int count)
+        private void RandomSpreadObjects()
         {
-            for (int i = 0; i < count; i++)
+            for (int i = 0; i < spawnableObjects.Length; i++)
             {
-                MazeCell cell = _mazeCells[Random.Range(0, mazeSize.x), Random.Range(0, mazeSize.y)];
-                SpawnObjectInCell(obj, cell);
+                for (int j = 0; j < spawnableObjectAmounts[i]; j++)
+                {
+                    if(Random.Range(0f, 1f) < spawnableObjectSpawnChance[i])
+                        SpawnObjectInCell(spawnableObjects[i], _mazeCells[Random.Range(0, mazeSize.x), Random.Range(0, mazeSize.y)]);
+                }
             }
         }
 
