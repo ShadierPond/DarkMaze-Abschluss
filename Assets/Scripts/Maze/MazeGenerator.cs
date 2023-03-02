@@ -17,14 +17,15 @@ namespace Maze
         [SerializeField] private AssetReferenceGameObject ceilingReference;
 
         [Header("Gameplay Settings")]
-        [SerializeField] private GameObject playerSpawner;
-        [SerializeField] private GameObject finishPoint;
-        [SerializeField] private GameObject[] spawnableObjects;
-        [SerializeField] private int[] spawnableObjectAmounts;
-        [SerializeField] private float[] spawnableObjectSpawnChance;
+        [SerializeField] private AssetReferenceGameObject playerSpawnerReference;
+        [SerializeField] private AssetReferenceGameObject exitReference;
 
-
-
+        [Header("Decorations Settings")]
+        [SerializeField] private AssetReferenceGameObject[] decorations;
+        [SerializeField] private int[] decorationAmounts;
+        [SerializeField] private float[] decorationSpawnChance;
+        
+        
         [Header("Cell Settings")]
         [SerializeField] private Vector3 cellSize = new(1, 1, 1);
         
@@ -51,13 +52,10 @@ namespace Maze
                 mazeSize.y = 1;
             }
             
-            if (spawnableObjects.Length != spawnableObjectAmounts.Length)
+            if (decorations.Length != decorationAmounts.Length || decorations.Length != decorationSpawnChance.Length)
             {
-                Array.Resize(ref spawnableObjectAmounts, spawnableObjects.Length);
-            }
-            if (spawnableObjects.Length != spawnableObjectSpawnChance.Length)
-            {
-                Array.Resize(ref spawnableObjectSpawnChance, spawnableObjects.Length);
+                decorationAmounts = new int[decorations.Length];
+                decorationSpawnChance = new float[decorations.Length];
             }
         }
 
@@ -69,9 +67,10 @@ namespace Maze
             }
             Random.InitState(seed);
             GenerateMaze();
-            //SpawnObjectInCell(playerSpawner, _startCell);
-            //SpawnObjectInCell(finishPoint, _endCell);
-            //RandomSpreadObjects();
+            RandomReplaceWallInCell(_startCell, playerSpawnerReference);
+            RandomReplaceWallInCell(_endCell, exitReference);
+            DrawMaze();
+            RandomSpreadObjects();
         }
         
         private void GenerateMaze()
@@ -91,8 +90,6 @@ namespace Maze
             MazeCell currentCell = _mazeCells[Random.Range(0, mazeSize.x), Random.Range(0, mazeSize.y)];
             // Mark the cell as visited
             currentCell.Visited = true;
-            // Set the start cell
-            _startCell = currentCell;
             // Add the cell to the stack
             visitedCells.Push(currentCell);
             
@@ -100,7 +97,7 @@ namespace Maze
             while (visitedCells.Count > 0)
             {
                 // Get the unvisited neighbours of the current cell
-                List<MazeCell> unvisitedNeighbours = GetUnvisitedNeighbours(currentCell);
+                List<MazeCell> unvisitedNeighbours = GetNeighbours(currentCell);
                 // If there are unvisited neighbours
                 if (unvisitedNeighbours.Count > 0)
                 {
@@ -147,32 +144,35 @@ namespace Maze
                     }
                 }
             }
-            // Set the end cell
-            _endCell = currentCell;
-            // Create the maze
-            DrawMaze();
+            // Set random Start and End cells
+            _startCell = _mazeCells[Random.Range(0, mazeSize.x), Random.Range(0, mazeSize.y)];
+            _endCell = _mazeCells[Random.Range(0, mazeSize.x), Random.Range(0, mazeSize.y)];
+            while (_endCell == _startCell)
+            {
+                _endCell = _mazeCells[Random.Range(0, mazeSize.x), Random.Range(0, mazeSize.y)];
+            }
         }
         
-        private List<MazeCell> GetUnvisitedNeighbours(MazeCell cell)
+        private List<MazeCell> GetNeighbours(MazeCell cell, bool includeVisited = false)
         {
-            List<MazeCell> unvisitedNeighbours = new List<MazeCell>();
-            if (cell.X > 0 && !_mazeCells[cell.X - 1, cell.Y].Visited)
+            List<MazeCell> neighbours = new List<MazeCell>();
+            if (cell.X > 0 && (includeVisited || !_mazeCells[cell.X - 1, cell.Y].Visited))
             {
-                unvisitedNeighbours.Add(_mazeCells[cell.X - 1, cell.Y]);
+                neighbours.Add(_mazeCells[cell.X - 1, cell.Y]);
             }
-            if (cell.Y > 0 && !_mazeCells[cell.X, cell.Y - 1].Visited)
+            if (cell.Y > 0 && (includeVisited || !_mazeCells[cell.X, cell.Y - 1].Visited))
             {
-                unvisitedNeighbours.Add(_mazeCells[cell.X, cell.Y - 1]);
+                neighbours.Add(_mazeCells[cell.X, cell.Y - 1]);
             }
-            if (cell.X < mazeSize.x - 1 && !_mazeCells[cell.X + 1, cell.Y].Visited)
+            if (cell.X < mazeSize.x - 1 && (includeVisited || !_mazeCells[cell.X + 1, cell.Y].Visited))
             {
-                unvisitedNeighbours.Add(_mazeCells[cell.X + 1, cell.Y]);
+                neighbours.Add(_mazeCells[cell.X + 1, cell.Y]);
             }
-            if (cell.Y < mazeSize.y - 1 && !_mazeCells[cell.X, cell.Y + 1].Visited)
+            if (cell.Y < mazeSize.y - 1 && (includeVisited || !_mazeCells[cell.X, cell.Y + 1].Visited))
             {
-                unvisitedNeighbours.Add(_mazeCells[cell.X, cell.Y + 1]);
+                neighbours.Add(_mazeCells[cell.X, cell.Y + 1]);
             }
-            return unvisitedNeighbours;
+            return neighbours;
         }
 
         private void DrawMaze()
@@ -243,29 +243,104 @@ namespace Maze
             }
         }
 
-        private void SpawnObjectInCell(GameObject obj, MazeCell cell)
+        private void SpawnObjectInCell(AssetReferenceGameObject obj, MazeCell cell)
         {
-            if (cell.ContainsObject)
-            {
-                Debug.LogError("Cell already contains an object");
-                return;
-            }
+            
             cell.ContainsObject = true;
             Vector3 cellPosition = new Vector3(cell.X * cellSize.x, 0, cell.Y * cellSize.z);
-            GameObject spawnedObject = Instantiate(obj, cellPosition, Quaternion.identity, gameObject.transform);
-            spawnedObject.SetActive(true);
+            obj.InstantiateAsync(cellPosition, Quaternion.identity, gameObject.transform).Completed += objInstance =>
+            {
+                objInstance.Result.name = "Maze Object";
+            };
         }
         
         private void RandomSpreadObjects()
         {
-            for (int i = 0; i < spawnableObjects.Length; i++)
+            for (int i = 0; i < decorations.Length; i++)
             {
-                for (int j = 0; j < spawnableObjectAmounts[i]; j++)
+                for (int j = 0; j < decorationAmounts[i]; j++)
                 {
-                    if(Random.Range(0f, 1f) < spawnableObjectSpawnChance[i])
-                        SpawnObjectInCell(spawnableObjects[i], _mazeCells[Random.Range(0, mazeSize.x), Random.Range(0, mazeSize.y)]);
+                    MazeCell spawnCell = _mazeCells[Random.Range(0, (int)mazeSize.x), Random.Range(0, (int)mazeSize.y)];
+                    while (spawnCell.ContainsObject)
+                    {
+                        spawnCell = _mazeCells[Random.Range(0, (int)mazeSize.x), Random.Range(0, (int)mazeSize.y)];
+                    }
+                    SpawnObjectInCell(decorations[i], spawnCell);
                 }
             }
+        }
+
+        private void RandomReplaceWallInCell(MazeCell spawnCell, AssetReference wall)
+        {
+            var cell = _mazeCells[spawnCell.X, spawnCell.Y];
+            var cellPosition = new Vector3(cell.X * cellSize.x, 0, cell.Y * cellSize.z);
+            var neighbours = GetNeighbours(cell, true);
+            Debug.Log("Neighbours: " + neighbours.Count);
+            var availableWalls = new List<string>();
+            
+            if (cell.WallLeft && neighbours[0] != null)
+                availableWalls.Add("Left");
+            if (cell.WallRight && neighbours[1] != null)
+                availableWalls.Add("Right");
+            if (cell.WallTop && neighbours[2] != null)
+                availableWalls.Add("Top");
+            if (cell.WallBottom && neighbours[3] != null)
+                availableWalls.Add("Bottom");
+            var wallToReplace = availableWalls[Random.Range(0, availableWalls.Count)];
+            Debug.Log(availableWalls.Count);
+
+            switch (wallToReplace)
+            {
+                case "Left":
+                    cell.WallLeft = false;
+                    neighbours[0].WallRight = false;
+                    _mazeCells[neighbours[0].X, neighbours[0].Y] = neighbours[0];
+                    Debug.Log("Replaced Left");
+                    wall.InstantiateAsync(cellPosition, Quaternion.identity, gameObject.transform).Completed += spawner =>
+                    {
+                        spawner.Result.name = "Player Spawner";
+                        spawner.Result.transform.Translate(new Vector3(-cellSize.x / 2, 0, 0));
+                        spawner.Result.transform.Rotate(new Vector3(0, -90, 0));
+                    };
+                    break;
+                case "Right":
+                    cell.WallRight = false;
+                    neighbours[1].WallLeft = false;
+                    _mazeCells[neighbours[1].X, neighbours[1].Y] = neighbours[1];
+                    Debug.Log("Replaced Right");
+                    wall.InstantiateAsync(cellPosition, Quaternion.identity, gameObject.transform).Completed += spawner =>
+                    {
+                        spawner.Result.name = "Player Spawner";
+                        spawner.Result.transform.Translate(new Vector3(cellSize.x / 2, 0, 0));
+                        spawner.Result.transform.Rotate(new Vector3(0, 90, 0));
+                    };
+                    break;
+                case "Top":
+                    cell.WallTop = false;
+                    neighbours[2].WallBottom = false;
+                    _mazeCells[neighbours[2].X, neighbours[2].Y] = neighbours[2];
+                    Debug.Log("Replaced Top");
+                    wall.InstantiateAsync(cellPosition, Quaternion.identity, gameObject.transform).Completed += spawner =>
+                    {
+                        spawner.Result.name = "Player Spawner";
+                        spawner.Result.transform.Translate(new Vector3(0, 0, cellSize.z / 2));
+                    };
+                    break;
+                case "Bottom":
+                    cell.WallBottom = false;
+                    neighbours[3].WallTop = false;
+                    _mazeCells[neighbours[3].X, neighbours[3].Y] = neighbours[3];
+                    Debug.Log("Replaced Bottom");
+                    wall.InstantiateAsync(cellPosition, Quaternion.identity, gameObject.transform).Completed += spawner =>
+                    {
+                        spawner.Result.name = "Player Spawner";
+                        spawner.Result.transform.Translate(new Vector3(0, 0, -cellSize.z / 2));
+                        spawner.Result.transform.Rotate(new Vector3(0, 180, 0));
+                    };
+                    break;
+            }
+            _mazeCells[cell.X, cell.Y] = cell;
+            Debug.Log($"Spawned Wall at {cell.X}, {cell.Y} Replace {wallToReplace}");
         }
 
         private void OnDrawGizmos()
