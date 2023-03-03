@@ -232,7 +232,7 @@ namespace Tools.BetterMapBuilder.Editor
         
         private void SaveMap(BetterMapBuilder mapBuilder)
         {
-            var path = EditorUtility.SaveFilePanel(mapBuilder.mapName, Application.dataPath + "/Tools/BetterMapBuilder/Saves", mapBuilder.mapName, "map");
+            var path = Application.dataPath + "/Maps/" + mapBuilder.mapName + ".map";
             if (string.IsNullOrEmpty(path))
                 return;
             var data = new MapData(mapBuilder.Map, mapBuilder.mapSize, mapBuilder.tileSize);

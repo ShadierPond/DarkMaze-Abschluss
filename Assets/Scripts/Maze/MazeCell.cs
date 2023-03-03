@@ -1,6 +1,4 @@
-﻿using UnityEngine;
-
-namespace Maze
+﻿namespace MazeSystem
 {
     public class MazeCell
     {
@@ -16,7 +14,8 @@ namespace Maze
         public bool WallBottom { get; set; } = true;
         public bool WallLeft { get; set; } = true;
         
-        public bool ContainsObject { get; set; } = false;
+        // Cell contains an object ? (decoration)
+        public bool ContainsObject { get; set; }
 
         // Constructor. Sets the cell's position in the maze
         public MazeCell(int x, int y)
