@@ -1,5 +1,4 @@
 using System;
-using System.Collections.Generic;
 using System.IO;
 using Newtonsoft.Json;
 using Newtonsoft.Json.Linq;
@@ -15,7 +14,7 @@ namespace GlobalSaveLoad
     /// <para>It Saves Custom Class too, just set it up in the Manager. It uses Custom Converters for Unity´s Variables, so it should save and load anything</para>
     /// </summary>
     [Serializable]
-    public class JsonSave:SaveTypeClass
+    public class JsonSave
     {
         // The JSON Settings used to serialize and deserialize the data
         private JsonSerializerSettings _settings = new()
@@ -36,7 +35,7 @@ namespace GlobalSaveLoad
 
         
         // Flush the Save Data
-        public override void ClearData()
+        public void ClearData()
         {
             SaveManager.Instance.dataClass = new Data();
         }
@@ -44,7 +43,7 @@ namespace GlobalSaveLoad
         // Save the Data to a file with the specified path.
         // The name of the file is will be specified in the path string.
         // Choose in the Parameters if you want to pretty print the JSON file.
-        public override void Save(string path)
+        public void Save(string path)
         {
             // Create a new StreamWriter with the specified path
             using StreamWriter writer = new(path);
@@ -57,7 +56,7 @@ namespace GlobalSaveLoad
 
         // Load the Data from a file with the specified path.
         // The name of the file is will be specified in the path string.
-        public override void Load(string path)
+        public void Load(string path)
         {
             // Create a new StreamReader with the specified path
             using StreamReader reader = new(path);
