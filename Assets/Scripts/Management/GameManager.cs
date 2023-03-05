@@ -2,15 +2,17 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.Playables;
 using UnityEngine.SceneManagement;
+using UnityEngine.Serialization;
+using UnityEngine.UI;
 
 public class GameManager : MonoBehaviour
 {
     public static GameManager Instance { get; private set; }
     
     // Loading Screen
-    public bool IsGameLoading { get; private set; }
+    public bool IsGameLoading { get; set; }
     public List<AsyncOperation> LoadingOperations { get; private set; }
-
+    
     // Current Scene
     public enum CurrentScene
     {
@@ -18,11 +20,19 @@ public class GameManager : MonoBehaviour
         Game,
         LoadingScreen
     }
+    [Header("Loading Screen")]
     public CurrentScene currentScene;
-    
+
     // Timeline
-    private PlayableDirector _director;
-    [SerializeField] private List<PlayableAsset> playableAssets;
+    public PlayableDirector director;
+    public List<PlayableAsset> playableAssets;
+
+    [Header("Maze Settings")]
+    [SerializeField] private int seed;
+    public int Seed { get => seed; set => seed = value;}
+    [SerializeField] private bool randomSeed;
+    public bool RandomSeed { get => randomSeed; set => randomSeed = value;}
+
 
     /// <summary>
     /// If there is no instance of GameManager, set this instance to be the instance.<br/>
@@ -39,7 +49,7 @@ public class GameManager : MonoBehaviour
             Instance = this;
             DontDestroyOnLoad(gameObject);
         }
-        _director = GetComponent<PlayableDirector>();
+        director = GetComponent<PlayableDirector>();
         
         LoadingOperations = new List<AsyncOperation>();
         IsGameLoading = false;
@@ -79,7 +89,7 @@ public class GameManager : MonoBehaviour
         if (IsGameLoading)
         {
             currentScene = CurrentScene.LoadingScreen;
-            _director.Play(playableAssets.Find(x => x.name == "Start Loading"));
+            director.Play(playableAssets.Find(x => x.name == "Start Loading"));
             var isDone = true;
             foreach (var operation in LoadingOperations)
             {
@@ -93,7 +103,7 @@ public class GameManager : MonoBehaviour
             {
                 IsGameLoading = false;
                 LoadingOperations.Clear();
-                _director.Play(playableAssets.Find(x => x.name == "End Loading"));
+                director.Play(playableAssets.Find(x => x.name == "End Loading"));
                 currentScene = GetCurrentSceneName() == "Game" ? CurrentScene.Game : CurrentScene.MainMenu;
             }
         }

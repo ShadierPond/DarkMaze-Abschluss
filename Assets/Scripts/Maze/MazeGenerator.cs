@@ -55,10 +55,7 @@ namespace MazeSystem
 
         private void Start()
         {
-            if (randomSeed)
-            {
-                seed = Random.Range(0, int.MaxValue);
-            }
+            seed = GameManager.Instance.RandomSeed ? Random.Range(0, int.MaxValue) : GameManager.Instance.Seed;
             Random.InitState(seed);
             GenerateMaze();
             RandomReplaceWallInCell(_startCell, playerSpawnerReference);

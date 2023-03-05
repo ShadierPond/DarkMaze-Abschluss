@@ -3,14 +3,11 @@
   <component name="ChangeListManager">
     <list default="true" id="f7ab1e7f-ca5b-4a20-acbd-a44a16c6bef8" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/.idea.Abschlusspruefung/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.Abschlusspruefung/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Icons/Loading/Loading Icon.anim" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Icons/Loading/Loading Icon.anim" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Icons/Loading/Loading Icon_0.controller" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Icons/Loading/Loading Icon_0.controller" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scenes/Intro.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/Intro.unity" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/GameManager.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/GameManager.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/SaveSystem/Scripts/SaveManager.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/SaveSystem/Scripts/SaveManager.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Packages/manifest.json" beforeDir="false" afterPath="$PROJECT_DIR$/Packages/manifest.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Packages/packages-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/Packages/packages-lock.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ProjectSettings/EditorSettings.asset" beforeDir="false" afterPath="$PROJECT_DIR$/ProjectSettings/EditorSettings.asset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/GameManager.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/GameManager.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Maze/MazeGenerator.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Maze/MazeGenerator.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Maze/MazeSystem.asmdef" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Maze/MazeSystem.asmdef" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -18,10 +15,10 @@
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
   <component name="HighlightingSettingsPerFile">
+    <setting file="file://$PROJECT_DIR$/Assets/Scripts/Management/MenuManager.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/SaveSystem/Scripts/Data.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/SaveSystem/Scripts/SaveManager.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/SaveSystem/Scripts/SaveTypes/JsonSave.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Assets/Scripts/SaveSystem/Scripts/SaveTypes/SaveType.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Library/PackageCache/com.unity.addressables@1.20.5/Runtime/AddressablesImpl.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Library/PackageCache/com.unity.probuilder@5.0.4/Editor/EditorCore/ProBuilderShapeEditor.cs" root0="SKIP_HIGHLIGHTING" />
   </component>
@@ -111,7 +108,8 @@
       <workItem from="1677784990369" duration="230000" />
       <workItem from="1677785235314" duration="10252000" />
       <workItem from="1677856684670" duration="10852000" />
-      <workItem from="1677929660908" duration="2311000" />
+      <workItem from="1677929660908" duration="3187000" />
+      <workItem from="1677976533723" duration="1857000" />
     </task>
     <servers />
   </component>
