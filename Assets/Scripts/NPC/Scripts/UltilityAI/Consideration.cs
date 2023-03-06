@@ -4,6 +4,7 @@ using UnityEngine;
 
 namespace NPC.UtilityAI
 {
+    [System.Serializable]
     public abstract class Consideration : ScriptableObject
     {
         public string  considerationName;

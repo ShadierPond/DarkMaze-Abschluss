@@ -3,6 +3,7 @@ using UnityEngine;
 
 namespace NPC.UtilityAI
 {
+    [System.Serializable]
     public abstract class Action : ScriptableObject
     {
         public string actionName;

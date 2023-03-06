@@ -319,6 +319,17 @@ namespace MazeSystem
             }
             _mazeCells[cell.X, cell.Y] = cell;
         }
+        
+        public Vector3 GetMazePosition(Vector3 position)
+        {
+            return new Vector3(Mathf.Round(position.x / cellSize.x) * cellSize.x, 0, Mathf.Round(position.z / cellSize.z) * cellSize.z);
+        }
+        
+        public Vector3 GetRandomPositionInMaze()
+        {
+            var cell = _mazeCells[Random.Range(0, mazeSize.x), Random.Range(0, mazeSize.y)];
+            return new Vector3(cell.X * cellSize.x, 0, cell.Y * cellSize.z);
+        }
 
         private void OnDrawGizmos()
         {

@@ -103,7 +103,7 @@ public class GameManager : MonoBehaviour
             {
                 IsGameLoading = false;
                 LoadingOperations.Clear();
-                director.Play(playableAssets.Find(x => x.name == "End Loading"));
+                director.Play(playableAssets.Find(x => x.name == "Stop Loading"));
                 currentScene = GetCurrentSceneName() == "Game" ? CurrentScene.Game : CurrentScene.MainMenu;
             }
         }

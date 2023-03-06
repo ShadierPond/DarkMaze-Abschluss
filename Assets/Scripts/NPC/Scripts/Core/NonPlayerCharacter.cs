@@ -6,6 +6,7 @@ using Action = NPC.UtilityAI.Action;
 
 namespace NPC.Core
 {
+    [RequireComponent(typeof(MoveController)), RequireComponent(typeof(AIBrain)), RequireComponent(typeof(Stats))]
     public class NonPlayerCharacter : MonoBehaviour
     {
         public MoveController mover;
@@ -35,71 +36,28 @@ namespace NPC.Core
         }
 
         #region Coroutines
+        
+        public void FollowPlayer()
+        {
+            StartCoroutine(FollowPlayerCoroutine());
+        }
 
-        public void DoWork(int time)
+        private IEnumerator FollowPlayerCoroutine()
         {
-            StartCoroutine(WorkCoroutine(time));
+            mover.MoveTo(stats.player.transform.position);
+            yield return new WaitForSeconds(0.5f);
         }
         
-        public void DoSleep(int time)
+        public void Wander()
         {
-            StartCoroutine(SleepCoroutine(time));
+            StartCoroutine(WanderCoroutine());
         }
         
-        public void DoEat(int time)
+        private IEnumerator WanderCoroutine()
         {
-            StartCoroutine(EatCoroutine(time));
+            mover.MoveTo(stats.mazeGenerator.GetRandomPositionInMaze());
+            yield return new WaitForSeconds(0.5f);
         }
-        
-         private IEnumerator WorkCoroutine(int time)
-        {
-            int counter = time;
-            while (counter > 0)
-            {
-                yield return new WaitForSeconds(1);
-                counter--;
-            }
-            Debug.Log("Work done");
-            
-            //TODO: Add some logic
-            
-            // Decide what to do next
-            OnFinishedAction();
-        }
-        
-        private IEnumerator SleepCoroutine(int time)
-        {
-            int counter = time;
-            while (counter > 0)
-            {
-                yield return new WaitForSeconds(1);
-                counter--;
-            }
-            Debug.Log("Sleep done");
-            
-            //TODO: Add some logic
-            
-            // Decide what to do next
-            OnFinishedAction();
-        }
-        
-        private IEnumerator EatCoroutine(int time)
-        {
-            int counter = time;
-            while (counter > 0)
-            {
-                yield return new WaitForSeconds(1);
-                counter--;
-            }
-            Debug.Log("Eat done");
-            
-            //TODO: Add some logic
-            
-            // Decide what to do next
-            OnFinishedAction();
-        }
-        
-
         #endregion
     }
 }
