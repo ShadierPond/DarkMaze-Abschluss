@@ -24,6 +24,7 @@ namespace GlobalSaveLoad
         [SerializeField] private string customPath;
         private string _savePath;
         [SerializeField] private string folderName;
+        public string FolderName { get => folderName; set => folderName = value; }
         [SerializeField] private string fileExtension;
 
         [Header("Data")]
