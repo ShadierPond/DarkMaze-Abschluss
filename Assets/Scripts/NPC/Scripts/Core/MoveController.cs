@@ -1,5 +1,4 @@
-﻿using MazeSystem;
-using UnityEngine;
+﻿using UnityEngine;
 using UnityEngine.AI;
 
 namespace NPC.Core
@@ -7,13 +6,11 @@ namespace NPC.Core
     [RequireComponent(typeof(NavMeshAgent))]
     public class MoveController : MonoBehaviour
     {
-        private NavMeshAgent _agent;
+        public NavMeshAgent agent;
         
         private void Start()
-        {
-            _agent = GetComponent<NavMeshAgent>();
-        }
-        
+            => agent = GetComponent<NavMeshAgent>();
+
         public void MoveTo(Vector3 position)
         {
             //_agent.SetDestination(position);

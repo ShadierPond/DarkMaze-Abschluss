@@ -1,5 +1,4 @@
-﻿using System;
-using NPC.Core;
+﻿using NPC.Core;
 using UnityEngine;
 
 namespace NPC.UtilityAI
@@ -10,18 +9,13 @@ namespace NPC.UtilityAI
         public Action bestAction;
         public NonPlayerCharacter npc;
         
-        
-        public void Start()
-        {
-            npc = GetComponent<NonPlayerCharacter>();
-        }
+        public void Start() 
+            => npc = GetComponent<NonPlayerCharacter>();
 
         private void Update()
         {
             if (bestAction is null)
-            {
                 DecideBestAction(npc.actionsAvailable);
-            }
         }
 
         /// <summary>
@@ -38,7 +32,7 @@ namespace NPC.UtilityAI
                 if (!(ScoreAction(actionsAvailable[i]) > score)) 
                     continue;
                 nextBestActionIndex = i;
-                score = actionsAvailable[i].score;
+                score = actionsAvailable[i].Score;
             }
             bestAction = actionsAvailable[nextBestActionIndex];
             finishedDeciding = true;
@@ -58,18 +52,17 @@ namespace NPC.UtilityAI
             {
                 var considerationScore = consideration.ScoreConsideration(npc);
                 score *= considerationScore;
-
                 if (score != 0) 
                     continue;
-                action.score = 0;
-                return action.score; // No point in continuing if the score is 0
+                action.Score = 0;
+                return action.Score; // No point in continuing if the score is 0
             }
             // Average the score - Rescaling Scheme (using Behaviral Mathematiic for Game AI Scheme)
             var originalScore = score;
             var modFactor = 1 - (1/ action.considerations.Length);
             var makeupValue = (1 - originalScore) * modFactor;
-            action.score = originalScore + (makeupValue * originalScore);
-            return action.score;
+            action.Score = originalScore + (makeupValue * originalScore);
+            return action.Score;
         }
     }
 }

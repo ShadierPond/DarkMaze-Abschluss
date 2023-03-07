@@ -7,7 +7,6 @@ namespace NPC.UtilityAI
     [System.Serializable]
     public abstract class Consideration : ScriptableObject
     {
-        public string  considerationName;
         private float _score;
         public float score
         {

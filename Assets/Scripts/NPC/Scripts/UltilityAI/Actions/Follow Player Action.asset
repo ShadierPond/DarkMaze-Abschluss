@@ -12,7 +12,5 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2757fdcc11994b16bb7a7a8cd53866d6, type: 3}
   m_Name: Follow Player Action
   m_EditorClassIdentifier: 
-  actionName: Follow Player
   considerations:
   - {fileID: 11400000, guid: 5f446a6c7b6d6984d81eddd95508b9f9, type: 2}
-  - {fileID: 11400000, guid: 5f273dc0f2a7f0d488da69b598c08aad, type: 2}

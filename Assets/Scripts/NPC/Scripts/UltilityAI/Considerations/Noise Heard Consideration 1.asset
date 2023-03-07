@@ -9,8 +9,6 @@ MonoBehaviour:
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: d1a2cf1d6311407884641d8063c3463d, type: 3}
-  m_Name: Wander Action
+  m_Script: {fileID: 11500000, guid: 3393d67738014835b9b167b712843849, type: 3}
+  m_Name: Noise Heard Consideration 1
   m_EditorClassIdentifier: 
-  considerations:
-  - {fileID: 11400000, guid: 5cabd041867e83e4393637de6c9ea30e, type: 2}

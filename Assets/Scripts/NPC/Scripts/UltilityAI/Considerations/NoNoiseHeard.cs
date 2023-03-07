@@ -8,7 +8,7 @@ namespace NPC.UtilityAI.Considerations
     {
         public override float ScoreConsideration(NonPlayerCharacter npc)
         {
-            return 0;
+            return npc.soundReciever.intensity <= 0.1 ? 1 : 0;
         }
     }
 }
