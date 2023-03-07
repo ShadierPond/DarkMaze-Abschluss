@@ -1,5 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
+﻿using System.Collections.Generic;
 using Sound.Detection;
 using UnityEngine;
 
@@ -8,17 +7,23 @@ namespace Sound
     public class SoundManager : MonoBehaviour
     {
         public static SoundManager Instance { get; private set; }
-        public List<SoundEmitter> soundEmitters = new();
+        public List<SoundReceiver> soundReceivers = new();
+        public void RegisterSoundReceiver(SoundReceiver soundReceiver)
+            => soundReceivers.Add(soundReceiver);
 
-        public void RegisterSoundEmitter(SoundEmitter soundEmitter)
-        {
-            soundEmitters.Add(soundEmitter);
-        }
+        public void UnregisterSoundReceiver(SoundReceiver soundReceiver)
+            => soundReceivers.Remove(soundReceiver);
 
-        public void UnregisterSoundEmitter(SoundEmitter soundEmitter)
+        public void EmitSound(SoundEmitter soundEmitter)
         {
-            soundEmitters.Remove(soundEmitter);
+            foreach (var receiver in soundReceivers)
+            {
+                receiver.lastSoundPosition = soundEmitter.GetPosition();
+                receiver.ReceiveSound(soundEmitter);
+            }
         }
+        
+        
 
         private void Awake()
         {

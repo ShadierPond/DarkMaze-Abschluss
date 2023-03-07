@@ -16,6 +16,9 @@
         
         // Cell contains an object ? (decoration)
         public bool ContainsObject { get; set; }
+        
+        // Cell contains an Enemy Spawn Point
+        public bool ContainsEnemySpawnPoint { get; set; }
 
         // Constructor. Sets the cell's position in the maze
         public MazeCell(int x, int y)

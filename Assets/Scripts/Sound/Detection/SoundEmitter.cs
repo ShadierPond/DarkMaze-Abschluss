@@ -1,8 +1,8 @@
-﻿using System;
-using UnityEngine;
+﻿using UnityEngine;
 
 namespace Sound.Detection
 {
+    [RequireComponent(typeof(AudioSource))]
     public class SoundEmitter : MonoBehaviour
     {
         public float soundRadius = 10f;
@@ -10,28 +10,19 @@ namespace Sound.Detection
         public float soundDecay = 1f;
         public float soundDecayDelay = 1f;
         public AudioSource audioSource;
-        
-        public int maxObjectsToEmitSoundTo = 10;
+        //public int maxObjectsToEmitSoundTo = 10;
 
         private void Awake()
-        {
-            audioSource = GetComponent<AudioSource>();
-        }
+            => audioSource = GetComponent<AudioSource>();
 
-        private void Update()
+        private void Update() 
+            => EmitSound();
+
+        private void EmitSound()
         {
             if(audioSource.isPlaying)
-                EmitSound();
-        }
-
-
-        private void Start()
-        {
-            //SoundManager.Instance.RegisterSoundEmitter(this);
-        }
-        
-        public void EmitSound()
-        {
+                SoundManager.Instance.EmitSound(this);
+            /*
             var results = new Collider[maxObjectsToEmitSoundTo];
             Physics.OverlapSphereNonAlloc(transform.position, soundRadius, results);
             foreach (var result in results)
@@ -45,19 +36,11 @@ namespace Sound.Detection
                     soundReciever.lastSoundPosition = GetRandomPointInRadius();
                 }
             }
+            */
         }
         
-        private Vector3 GetRandomPointInRadius()
-        {
-            var randomPoint = UnityEngine.Random.insideUnitSphere * soundRadius;
-            randomPoint += transform.position;
-            return randomPoint;
-        }
-
-
-
-
-
+        public Vector3 GetPosition()
+            => transform.position;
         private  void OnDrawGizmos()
         {
             Gizmos.color = Color.blue;

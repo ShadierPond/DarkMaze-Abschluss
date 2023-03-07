@@ -15168,6 +15168,7 @@ GameObject:
   - component: {fileID: 1121487337}
   - component: {fileID: 1121487339}
   - component: {fileID: 1121487340}
+  - component: {fileID: 1121487341}
   m_Layer: 0
   m_Name: Management
   m_TagString: Untagged
@@ -15184,7 +15185,7 @@ PlayableDirector:
   m_GameObject: {fileID: 1121487336}
   m_Enabled: 1
   serializedVersion: 3
-  m_PlayableAsset: {fileID: 11400000, guid: 5f667041fcdbb34469ff8647a96c54cc, type: 2}
+  m_PlayableAsset: {fileID: 11400000, guid: 57f2a1afd420f8e42a6dc85ed5a00a54, type: 2}
   m_InitialState: 1
   m_WrapMode: 2
   m_DirectorUpdateMode: 1
@@ -15330,6 +15331,19 @@ MonoBehaviour:
     enemyPositions: []
     enemyRotations: []
     enemyHealth: 
+--- !u!114 &1121487341
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1121487336}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 26fa12d019ff4977a02e596a4c48bb34, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  soundReceivers: []
 --- !u!1 &1121943360
 GameObject:
   m_ObjectHideFlags: 0
