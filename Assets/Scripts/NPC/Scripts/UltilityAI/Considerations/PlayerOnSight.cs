@@ -21,6 +21,8 @@ namespace NPC.UtilityAI.Considerations
 
             Physics.Raycast(npcPosition, playerPosition - npcPosition, out var hit, npc.stats.sightRange);
             var angle = Vector3.Angle(npc.transform.forward, playerPosition - npcPosition);
+            if(hit.collider == null)
+                return 0;
             if (hit.collider.gameObject == player && angle < npc.stats.sightAngle)
                 return 1;
             return 0;

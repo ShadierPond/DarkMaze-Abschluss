@@ -1,4 +1,5 @@
-﻿using MazeSystem;
+﻿using System;
+using MazeSystem;
 using NPC.UI;
 using UnityEngine;
 
@@ -48,6 +49,22 @@ namespace NPC.Core
         public void UpdateEnergy(int value)
         {
             energy += value;
+        }
+
+        private void OnDrawGizmos()
+        {
+
+            // Draw Sight
+            Gizmos.color = Color.green;
+            Gizmos.DrawWireSphere(transform.position, sightRange);
+            Gizmos.DrawLine(transform.position, transform.position + Quaternion.Euler(0, sightAngle / 2, 0) * transform.forward * sightRange);
+            Gizmos.DrawLine(transform.position, transform.position + Quaternion.Euler(0, -sightAngle / 2, 0) * transform.forward * sightRange);
+            
+            // Draw Hearing
+            Gizmos.color = Color.red;
+            Gizmos.DrawWireSphere(transform.position, hearingRange);
+            Gizmos.DrawLine(transform.position, transform.position + Quaternion.Euler(0, noiseAngle / 2, 0) * transform.forward * noiseRange);
+            Gizmos.DrawLine(transform.position, transform.position + Quaternion.Euler(0, -noiseAngle / 2, 0) * transform.forward * noiseRange);
         }
     }
 }
