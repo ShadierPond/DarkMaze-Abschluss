@@ -3,68 +3,10 @@
   <component name="ChangeListManager">
     <list default="true" id="f7ab1e7f-ca5b-4a20-acbd-a44a16c6bef8" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/.idea.Abschlusspruefung/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.Abschlusspruefung/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/AddressableAssetsData/AddressableAssetSettings.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/AddressableAssetsData/AddressableAssetSettings.asset" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/Player.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/Player.prefab" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scenes/Game.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/Game.unity" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scenes/Intro.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/Intro.unity" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scenes/New Scene.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/New Scene.unity" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Maze/MazeCell.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Maze/MazeCell.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Maze/MazeGenerator.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Maze/MazeGenerator.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Maze/MazeSystem.asmdef" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Maze/MazeSystem.asmdef" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/NPC/Scripts.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/NPC/Scripts/Core.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/NPC/Core.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/NPC/Scripts/Core/MoveController.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/NPC/Core/MoveController.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/NPC/Scripts/Core/MoveController.cs.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/NPC/Core/MoveController.cs.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/NPC/Scripts/Core/NonPlayerCharacter.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/NPC/Core/NonPlayerCharacter.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/NPC/Scripts/Core/NonPlayerCharacter.cs.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/NPC/Core/NonPlayerCharacter.cs.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/NPC/Scripts/Core/Stats.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/NPC/Core/Stats.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/NPC/Scripts/Core/Stats.cs.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/NPC/Core/Stats.cs.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/NPC/Scripts/UltilityAI.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/NPC/UltilityAI.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/NPC/Scripts/UltilityAI/AIBrain.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/NPC/UltilityAI/AIBrain.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/NPC/Scripts/UltilityAI/AIBrain.cs.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/NPC/UltilityAI/AIBrain.cs.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/NPC/Scripts/UltilityAI/Action.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/NPC/UltilityAI/Action.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/NPC/Scripts/UltilityAI/Action.cs.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/NPC/UltilityAI/Action.cs.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/NPC/Scripts/UltilityAI/Actions.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/NPC/UltilityAI/Actions.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/NPC/Scripts/UltilityAI/Actions/Follow Player Action.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/NPC/UltilityAI/Actions/Follow Player Action.asset" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/NPC/Scripts/UltilityAI/Actions/Follow Player Action.asset.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/NPC/UltilityAI/Actions/Follow Player Action.asset.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/NPC/Scripts/UltilityAI/Actions/FollowPlayer.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/NPC/UltilityAI/Actions/FollowPlayer.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/NPC/Scripts/UltilityAI/Actions/FollowPlayer.cs.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/NPC/UltilityAI/Actions/FollowPlayer.cs.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/NPC/Scripts/UltilityAI/Actions/GoToSoundPosition.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/NPC/UltilityAI/Actions/GoToSoundPosition.asset" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/NPC/Scripts/UltilityAI/Actions/GoToSoundPosition.asset.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/NPC/UltilityAI/Actions/GoToSoundPosition.asset.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/NPC/Scripts/UltilityAI/Actions/GoToSoundPosition.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/NPC/UltilityAI/Actions/GoToSoundPosition.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/NPC/Scripts/UltilityAI/Actions/GoToSoundPosition.cs.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/NPC/UltilityAI/Actions/GoToSoundPosition.cs.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/NPC/Scripts/UltilityAI/Actions/Wander Action.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/NPC/UltilityAI/Actions/Wander Action.asset" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/NPC/Scripts/UltilityAI/Actions/Wander Action.asset.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/NPC/UltilityAI/Actions/Wander Action.asset.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/NPC/Scripts/UltilityAI/Actions/Wander.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/NPC/UltilityAI/Actions/Wander.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/NPC/Scripts/UltilityAI/Actions/Wander.cs.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/NPC/UltilityAI/Actions/Wander.cs.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/NPC/Scripts/UltilityAI/Consideration.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/NPC/UltilityAI/Consideration.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/NPC/Scripts/UltilityAI/Consideration.cs.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/NPC/UltilityAI/Consideration.cs.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/NPC/Scripts/UltilityAI/Considerations.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/NPC/UltilityAI/Considerations.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/NPC/Scripts/UltilityAI/Considerations/No Noise Heard Consideration.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/NPC/UltilityAI/Considerations/No Noise Heard Consideration.asset" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/NPC/Scripts/UltilityAI/Considerations/No Noise Heard Consideration.asset.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/NPC/UltilityAI/Considerations/No Noise Heard Consideration.asset.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/NPC/Scripts/UltilityAI/Considerations/No Player On Sight Consideration.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/NPC/UltilityAI/Considerations/No Player On Sight Consideration.asset" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/NPC/Scripts/UltilityAI/Considerations/No Player On Sight Consideration.asset.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/NPC/UltilityAI/Considerations/No Player On Sight Consideration.asset.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/NPC/Scripts/UltilityAI/Considerations/NoNoiseHeard.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/NPC/UltilityAI/Considerations/NoNoiseHeard.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/NPC/Scripts/UltilityAI/Considerations/NoNoiseHeard.cs.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/NPC/UltilityAI/Considerations/NoNoiseHeard.cs.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/NPC/Scripts/UltilityAI/Considerations/Noise Heard Consideration 1.asset" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/NPC/Scripts/UltilityAI/Considerations/Noise Heard Consideration 1.asset.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/NPC/Scripts/UltilityAI/Considerations/Noise Heard Consideration.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/NPC/UltilityAI/Considerations/Noise Heard Consideration.asset" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/NPC/Scripts/UltilityAI/Considerations/Noise Heard Consideration.asset.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/NPC/UltilityAI/Considerations/Noise Heard Consideration.asset.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/NPC/Scripts/UltilityAI/Considerations/NoiseHeard.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/NPC/UltilityAI/Considerations/NoiseHeard.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/NPC/Scripts/UltilityAI/Considerations/NoiseHeard.cs.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/NPC/UltilityAI/Considerations/NoiseHeard.cs.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/NPC/Scripts/UltilityAI/Considerations/Player On Sight Consideration.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/NPC/UltilityAI/Considerations/Player On Sight Consideration.asset" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/NPC/Scripts/UltilityAI/Considerations/Player On Sight Consideration.asset.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/NPC/UltilityAI/Considerations/Player On Sight Consideration.asset.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/NPC/Scripts/UltilityAI/Considerations/PlayerNotOnSight.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/NPC/UltilityAI/Considerations/PlayerNotOnSight.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/NPC/Scripts/UltilityAI/Considerations/PlayerNotOnSight.cs.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/NPC/UltilityAI/Considerations/PlayerNotOnSight.cs.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/NPC/Scripts/UltilityAI/Considerations/PlayerOnSight.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/NPC/UltilityAI/Considerations/PlayerOnSight.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/NPC/Scripts/UltilityAI/Considerations/PlayerOnSight.cs.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/NPC/UltilityAI/Considerations/PlayerOnSight.cs.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Sound/Detection/SoundEmitter.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Sound/Detection/SoundEmitter.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Sound/Detection/SoundReciever.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Sound/Detection/SoundReceiver.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Sound/Detection/SoundReciever.cs.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Sound/Detection/SoundReceiver.cs.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Sound/SoundManager.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Sound/SoundManager.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Packages/manifest.json" beforeDir="false" afterPath="$PROJECT_DIR$/Packages/manifest.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Packages/packages-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/Packages/packages-lock.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ProjectSettings/PackageManagerSettings.asset" beforeDir="false" afterPath="$PROJECT_DIR$/ProjectSettings/PackageManagerSettings.asset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/ConsolePro/Remote/LiteNetLib/LiteNetLib.csproj.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Plugins/Borodar/RainbowFolders/Editor/Source/RainbowFolders.src.unitypackage.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Management/Management.asmdef" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Management/Management.asmdef" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ProjectSettings/TimelineSettings.asset" beforeDir="false" afterPath="$PROJECT_DIR$/ProjectSettings/TimelineSettings.asset" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -72,10 +14,11 @@
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
   <component name="HighlightingSettingsPerFile">
-    <setting file="file://$PROJECT_DIR$/Assets/Scripts/Maze/Navigation/NavigationBaker.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="mock://F:/Projects/AbschlussPruefung/Assets/Scripts/NPC/Scripts/UltilityAI/AIBrain.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Library/PackageCache/com.unity.addressables@1.20.5/Runtime/AddressablesImpl.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Library/PackageCache/com.unity.probuilder@5.0.4/Editor/EditorCore/ProBuilderShapeEditor.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/../../MainGame/Assets/Packages/GunSystem/Scripts/Gun.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/../../MainGame/Assets/Packages/GunSystem/Scripts/GunType.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/../../MainGame/Assets/Packages/GunSystem/Scripts/ShootConfiguration.cs" root0="SKIP_HIGHLIGHTING" />
   </component>
   <component name="MarkdownSettingsMigration">
     <option name="stateVersion" value="1" />
@@ -100,15 +43,15 @@
   },
   "keyToStringList": {
     "rider.external.source.directories": [
-      "C:\\Users\\basmj\\AppData\\Roaming\\JetBrains\\Rider2022.3\\resharper-host\\DecompilerCache",
-      "C:\\Users\\basmj\\AppData\\Roaming\\JetBrains\\Rider2022.3\\resharper-host\\SourcesCache",
-      "C:\\Users\\basmj\\AppData\\Local\\Symbols\\src"
+      "C:\\Users\\Teilnehmer2021\\AppData\\Roaming\\JetBrains\\Rider2022.3\\resharper-host\\DecompilerCache",
+      "C:\\Users\\Teilnehmer2021\\AppData\\Roaming\\JetBrains\\Rider2022.3\\resharper-host\\SourcesCache",
+      "C:\\Users\\Teilnehmer2021\\AppData\\Local\\Symbols\\src"
     ]
   }
 }]]></component>
   <component name="RunManager" selected="Attach to Unity Editor.Attach to Unity Editor">
     <configuration name="Start Unity" type="RunUnityExe" factoryName="Unity Executable">
-      <option name="EXE_PATH" value="F:\Editor\2022.1.16f1\Editor\Unity.exe" />
+      <option name="EXE_PATH" value="C:\Program Files\Unity\Hub\Editor\2022.1.16f1\Editor\Unity.exe" />
       <option name="PROGRAM_PARAMETERS" value="-projectPath F:\Projects\AbschlussPruefung -debugCodeOptimization" />
       <option name="WORKING_DIRECTORY" value="F:\Projects\AbschlussPruefung" />
       <option name="PASS_PARENT_ENVS" value="1" />
@@ -116,7 +59,7 @@
       <method v="2" />
     </configuration>
     <configuration name="UnitTests (batch mode)" type="RunUnityExe" factoryName="Unity Executable">
-      <option name="EXE_PATH" value="F:\Editor\2022.1.16f1\Editor\Unity.exe" />
+      <option name="EXE_PATH" value="C:\Program Files\Unity\Hub\Editor\2022.1.16f1\Editor\Unity.exe" />
       <option name="PROGRAM_PARAMETERS" value="-runTests -batchmode -projectPath F:\Projects\AbschlussPruefung -testResults Logs/results.xml -testPlatform EditMode -debugCodeOptimization" />
       <option name="WORKING_DIRECTORY" value="F:\Projects\AbschlussPruefung" />
       <option name="PASS_PARENT_ENVS" value="1" />
@@ -172,6 +115,7 @@
       <workItem from="1678138893266" duration="2160000" />
       <workItem from="1678175497489" duration="11802000" />
       <workItem from="1678213786544" duration="16641000" />
+      <workItem from="1678349112697" duration="6788000" />
     </task>
     <servers />
   </component>
