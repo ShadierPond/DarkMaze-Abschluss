@@ -54,7 +54,6 @@ namespace NPC.UtilityAI
             {
                 var considerationScore = consideration.ScoreConsideration(npc);
                 score *= considerationScore;
-                Debug.Log($"Consideration: {consideration.name} - Score: {considerationScore}");
                 if (score != 0) 
                     continue;
                 action.Score = 0;
