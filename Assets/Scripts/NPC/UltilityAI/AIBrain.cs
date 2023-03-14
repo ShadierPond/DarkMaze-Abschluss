@@ -8,7 +8,7 @@ namespace NPC.UtilityAI
         public bool finishedDeciding;
         public Action bestAction;
         [SerializeField] private float bestActionScore;
-        public NonPlayerCharacter npc;
+        [HideInInspector] public NonPlayerCharacter npc;
         
         public void Start() 
             => npc = GetComponent<NonPlayerCharacter>();

@@ -10,11 +10,11 @@ namespace NPC.Core
     [RequireComponent(typeof(MoveController)), RequireComponent(typeof(AIBrain)), RequireComponent(typeof(Stats)), RequireComponent(typeof(SoundReceiver))]
     public class NonPlayerCharacter : MonoBehaviour
     {
-        public MoveController mover;
-        public AIBrain AIBrain;
+        [HideInInspector] public MoveController mover;
+        [HideInInspector] public AIBrain AIBrain;
         public Action[] actionsAvailable;
-        public Stats stats;
-        public SoundReceiver soundReceiver;
+        [HideInInspector] public Stats stats;
+        [HideInInspector] public SoundReceiver soundReceiver;
     
         public void Start()
         {

@@ -47,8 +47,8 @@ namespace Player
 
         [Header("Animation Settings")]
         [SerializeField] private Animator animator;
-        private static readonly int MoveX = Animator.StringToHash("moveX");
-        private static readonly int MoveY = Animator.StringToHash("moveY");
+        private static readonly int MoveX = Animator.StringToHash("MoveX");
+        private static readonly int MoveY = Animator.StringToHash("MoveY");
         private static readonly int IsCrouching = Animator.StringToHash("isCrouching");
 
         /// <summary>
@@ -137,8 +137,8 @@ namespace Player
         /// </summary>
         private void UpdateAnimation()
         {
-            //animator.SetFloat(MoveX, Mathf.Lerp(animator.GetFloat(MoveX), _input.x, Time.deltaTime * 10));
-            //animator.SetFloat(MoveY, Mathf.Lerp(animator.GetFloat(MoveY), _input.y, Time.deltaTime * 10));
+            animator.SetFloat(MoveX, Mathf.Lerp(animator.GetFloat(MoveX), _input.x, Time.deltaTime * 10));
+            animator.SetFloat(MoveY, Mathf.Lerp(animator.GetFloat(MoveY), _input.y, Time.deltaTime * 10));
         }
         
         /// <summary>

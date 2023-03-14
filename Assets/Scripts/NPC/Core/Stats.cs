@@ -1,4 +1,5 @@
-﻿using MazeSystem;
+﻿using System;
+using MazeSystem;
 using UnityEngine;
 
 namespace NPC.Core
@@ -15,7 +16,7 @@ namespace NPC.Core
         public int maxEnergy = 100;
         public int health = 100;
         
-        public MazeGenerator mazeGenerator;
+        [HideInInspector] public MazeGenerator mazeGenerator;
         
         private void OnEnable()
         {
@@ -27,6 +28,13 @@ namespace NPC.Core
         {
             mazeGenerator = null;
             player = null;
+        }
+
+        private void Update()
+        {
+            if(player != null)
+                return;
+            player = GameObject.FindGameObjectWithTag("Player");
         }
 
         public void UpdateEnergy(int value)

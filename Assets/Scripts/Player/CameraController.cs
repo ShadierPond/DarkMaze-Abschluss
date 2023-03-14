@@ -47,6 +47,7 @@ namespace Player
         private void Awake()
         {
             OnValidate();
+            CursorLock(true);
         }
         
         /// <summary>
@@ -56,7 +57,6 @@ namespace Player
         {
             //mainCamera.cullingMask &= ~(1 << LayerMask.NameToLayer("Player"));
             firstPersonCamera.m_Lens.FieldOfView = firstPersonFOV;
-            CursorLock(true);
         }
 
         /// <summary>

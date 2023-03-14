@@ -16,6 +16,8 @@ namespace NPC.UtilityAI.Considerations
         public override float ScoreConsideration(NonPlayerCharacter npc)
         {
             var player = npc.stats.player;
+            if(player == null)
+                return 0f;
             var playerPosition = player.transform.position;
             var npcPosition = npc.transform.position;
 

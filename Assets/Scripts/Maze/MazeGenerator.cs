@@ -25,6 +25,7 @@ namespace MazeSystem
 
         [Header("Decorations Settings")]
         [SerializeField] private AssetReferenceGameObject[] decorations;
+        [SerializeField] private Vector3[] decorationOffsets;
         [SerializeField] private int[] decorationAmounts;
         [SerializeField] private float[] decorationSpawnChance;
         
@@ -47,7 +48,7 @@ namespace MazeSystem
         [SerializeField] private NavMeshSurface navMeshSurface;
         
         [Header("Debug")]
-        private List<AsyncOperationHandle<GameObject>> objectsSpawning = new();
+        private List<AsyncOperationHandle<GameObject>> _objectsSpawning = new();
         private MazeCell _startCell = new(0, 0);
         private MazeCell _endCell = new(0, 0);
         [SerializeField] private bool showCeilings = true;
@@ -65,6 +66,7 @@ namespace MazeSystem
             {
                 decorationAmounts = new int[decorations.Length];
                 decorationSpawnChance = new float[decorations.Length];
+                decorationOffsets = new Vector3[decorations.Length];
             }
             
             if (enemies.Length != enemyAmounts.Length || enemies.Length != enemySpawnChance.Length)
@@ -86,7 +88,7 @@ namespace MazeSystem
             Random.InitState(seed);
             GenerateMaze();
             RandomReplaceWallInCell(_startCell, playerSpawnerReference);
-            RandomReplaceWallInCell(_endCell, exitReference);
+            //RandomReplaceWallInCell(_endCell, exitReference);
             DrawMaze();
             RandomSpreadObjects();
         }
@@ -229,19 +231,20 @@ namespace MazeSystem
             handle.Completed += obj =>
             {
                 obj.Result.name = position + "_Maze Object";
-                if(scale != Vector3.one)
-                    obj.Result.transform.localScale = scale;
+                obj.Result.transform.localScale = scale != Vector3.zero ? scale : Vector3.one;
                 if(eulerRotation != Vector3.zero)
                     obj.Result.transform.Rotate(eulerRotation);
-                objectsSpawning.Remove(handle);
+                else
+                    obj.Result.transform.rotation = Quaternion.identity;
+                _objectsSpawning.Remove(handle);
                 OnObjectsSpawningCompleted();
             };
-            objectsSpawning.Add(handle);
+            _objectsSpawning.Add(handle);
         }
         
         private void OnObjectsSpawningCompleted()
         {
-            if (objectsSpawning.Count != 0)
+            if (_objectsSpawning.Count != 0)
                 return;
             navMeshSurface.BuildNavMesh();
         }
@@ -258,7 +261,7 @@ namespace MazeSystem
                     while (spawnCell.ContainsObject)
                         spawnCell = _mazeCells[Random.Range(0, mazeSize.x), Random.Range(0, mazeSize.y)];
                     spawnCell.ContainsObject = true;
-                    InstantiateAsync(decorations[i], new Vector3(spawnCell.X * cellSize.x, 0, spawnCell.Y * cellSize.z), Vector3.zero, Vector3.zero);
+                    InstantiateAsync(decorations[i], new Vector3(spawnCell.X * cellSize.x + decorationOffsets[i].x, decorationOffsets[i].y, spawnCell.Y * cellSize.z + decorationOffsets[i].z), Vector3.zero, Vector3.zero);
                 }
             
             for (var i = 0; i < enemies.Length; i++)
@@ -303,7 +306,7 @@ namespace MazeSystem
                             neighbour.Cell.WallRight = false;
                         _mazeCells[neighbour.Cell.X, neighbour.Cell.Y] = neighbour.Cell;
                     }
-                    InstantiateAsync(wall, cellPosition + new Vector3(-cellSize.x / 2, 0, 0), Vector3.zero, new Vector3(0, 90, 0));
+                    InstantiateAsync(wall, cellPosition + new Vector3(-cellSize.x / 2, 0, 0), new Vector3(cellSize.x, cellSize.y, wallThickness), new Vector3(0, 90, 0));
                     break;
                 case "Right":
                     cell.WallRight = false;
@@ -313,7 +316,7 @@ namespace MazeSystem
                             neighbour.Cell.WallLeft = false;
                         _mazeCells[neighbour.Cell.X, neighbour.Cell.Y] = neighbour.Cell;
                     }
-                    InstantiateAsync(wall, cellPosition + new Vector3(cellSize.x / 2, 0, 0), Vector3.zero, new Vector3(0, -90, 0));
+                    InstantiateAsync(wall, cellPosition + new Vector3(cellSize.x / 2, 0, 0), new Vector3(cellSize.x, cellSize.y, wallThickness), new Vector3(0, -90, 0));
                     break;
                 case "Top":
                     cell.WallTop = false;
@@ -323,7 +326,7 @@ namespace MazeSystem
                             neighbour.Cell.WallBottom = false;
                         _mazeCells[neighbour.Cell.X, neighbour.Cell.Y] = neighbour.Cell;
                     }
-                    InstantiateAsync(wall, cellPosition + new Vector3(0, 0, cellSize.z / 2), Vector3.zero, new Vector3(0, 180, 0));
+                    InstantiateAsync(wall, cellPosition + new Vector3(0, 0, cellSize.z / 2),  new Vector3(cellSize.x, cellSize.y, wallThickness), new Vector3(0, 180, 0));
                     break;
                 case "Bottom":
                     cell.WallBottom = false;
@@ -333,7 +336,7 @@ namespace MazeSystem
                             neighbour.Cell.WallTop = false;
                         _mazeCells[neighbour.Cell.X, neighbour.Cell.Y] = neighbour.Cell;
                     }
-                    InstantiateAsync(wall, cellPosition + new Vector3(0, 0, -cellSize.z / 2), Vector3.zero, Vector3.zero);
+                    InstantiateAsync(wall, cellPosition + new Vector3(0, 0, -cellSize.z / 2), new Vector3(cellSize.x, cellSize.y, wallThickness), Vector3.zero);
                     break;
             }
             _mazeCells[cell.X, cell.Y] = cell;

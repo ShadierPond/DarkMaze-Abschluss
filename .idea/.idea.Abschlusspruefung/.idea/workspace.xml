@@ -3,30 +3,31 @@
   <component name="ChangeListManager">
     <list default="true" id="f7ab1e7f-ca5b-4a20-acbd-a44a16c6bef8" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/.idea.Abschlusspruefung/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.Abschlusspruefung/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Animations/Human/Locomotion/Backward_Walk.anim" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Animations/Human/Locomotion/Backward_Walk.anim" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Animations/Human/Locomotion/Backward_Walk.anim.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Animations/Human/Locomotion/Backward_Walk.anim.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Animations/Human/Locomotion/Forward_Run.anim" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Animations/Human/Locomotion/Forward_Run.anim.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Animations/Human/Locomotion/Forward_Walk.anim" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Animations/Human/Locomotion/Forward_Walk.anim" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Animations/Human/Locomotion/Idle.anim" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Animations/Human/Locomotion/Idle.anim.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Animations/Human/Locomotion/Jump.anim" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Animations/Human/Locomotion/Jump.anim.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Animations/Human/Locomotion/New Animation.anim" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Animations/Human/Locomotion/New Animation.anim.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Animations/Human/Locomotion/Strafe_Left_Run.anim" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Animations/Human/Locomotion/Strafe_Left_Run.anim.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Animations/Human/Locomotion/Strafe_Left_Walk.anim" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Animations/Human/Locomotion/Strafe_Left_Walk.anim.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Animations/Human/Locomotion/Strafe_Right_Run.anim" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Animations/Human/Locomotion/Strafe_Right_Run.anim.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Animations/Human/Locomotion/Strafe_Right_Walk.anim" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Animations/Human/Locomotion/Strafe_Right_Walk.anim.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/AddressableAssetsData/AssetGroups/Human.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/AddressableAssetsData/AssetGroups/Human.asset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/AddressableAssetsData/AssetGroups/Maze.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/AddressableAssetsData/AssetGroups/Maze.asset" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Animations/Human/Player.controller" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Animations/Human/Player.controller" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Animations/Human/Player.controller.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Animations/Human/Player.controller.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Models/Human.fbx.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Models/Human.fbx.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/Enemy.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/Enemy.prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/Enemy.prefab.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/Enemy.prefab.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/Maze/Maze Ceiling.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/Maze/Maze Ceiling.prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/Maze/Maze Floor.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/Maze/Maze Floor.prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/Maze/PllayerSpawner.prefab" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/Maze/PllayerSpawner.prefab.meta" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Prefabs/Player.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/Player.prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scenes/Game.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/Game.unity" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scenes/New Scene.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/New Scene.unity" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Management/GameManager.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Management/GameManager.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Maze/MazeGenerator.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Maze/MazeGenerator.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/NPC/Core/MoveController.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/NPC/Core/MoveController.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/NPC/Core/NonPlayerCharacter.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/NPC/Core/NonPlayerCharacter.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/NPC/Core/Stats.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/NPC/Core/Stats.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/NPC/UltilityAI/AIBrain.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/NPC/UltilityAI/AIBrain.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/NPC/UltilityAI/Considerations/PlayerNotOnSight.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/NPC/UltilityAI/Considerations/PlayerNotOnSight.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/NPC/UltilityAI/Considerations/PlayerOnSight.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/NPC/UltilityAI/Considerations/PlayerOnSight.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scripts/Player/CameraController.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Player/CameraController.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Player/Movement.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Player/Movement.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Player/Player.asmdef" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Player/Player.asmdef" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ProjectSettings/Packages/com.unity.probuilder/Settings.json" beforeDir="false" afterPath="$PROJECT_DIR$/ProjectSettings/Packages/com.unity.probuilder/Settings.json" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -34,6 +35,7 @@
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
   <component name="HighlightingSettingsPerFile">
+    <setting file="file://$PROJECT_DIR$/Assets/Scripts/Player/Spawner.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Library/PackageCache/com.unity.addressables@1.20.5/Runtime/AddressablesImpl.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Library/PackageCache/com.unity.probuilder@5.0.4/Editor/EditorCore/ProBuilderShapeEditor.cs" root0="SKIP_HIGHLIGHTING" />
   </component>
@@ -135,7 +137,8 @@
       <workItem from="1678349112697" duration="6788000" />
       <workItem from="1678659861167" duration="981000" />
       <workItem from="1678713693590" duration="607000" />
-      <workItem from="1678800558013" duration="1783000" />
+      <workItem from="1678800558013" duration="2665000" />
+      <workItem from="1678813229543" duration="10739000" />
     </task>
     <servers />
   </component>

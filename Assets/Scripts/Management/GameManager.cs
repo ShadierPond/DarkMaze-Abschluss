@@ -1,3 +1,4 @@
+using System;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.Playables;
@@ -113,9 +114,20 @@ public class GameManager : MonoBehaviour
     {
         return SceneManager.GetActiveScene().name;
     }
+    
+    /// <summary>
+    /// Locks and hides the cursor if the parameter is true.
+    /// Unlocks and shows the cursor if the parameter is false.
+    /// </summary>
+    /// <param name="lockCursor">bool - state of the cursor</param>
+    private static void CursorLock(bool lockCursor)
+    {
+        Cursor.lockState = lockCursor ? CursorLockMode.Locked : CursorLockMode.None;
+        Cursor.visible = !lockCursor;
+    }
 
-
-
-
-
+    private void OnApplicationQuit()
+    {
+        CursorLock(false);
+    }
 }

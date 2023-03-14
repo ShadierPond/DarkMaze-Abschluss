@@ -17,13 +17,13 @@ MonoBehaviour:
     m_SerializedData: []
   m_GUID: 5ea89c7d5c3182f4cb995366a0228f3a
   m_SerializeEntries:
-  - m_GUID: 90eb2ce99630b494fa97f275741a38bd
-    m_Address: Assets/Prefabs/Enemy.prefab
+  - m_GUID: af3d9f11837ec9c4391cb9f961eff114
+    m_Address: Assets/Prefabs/PlayerEnv.prefab
     m_ReadOnly: 0
     m_SerializedLabels: []
     FlaggedDuringContentUpdateRestriction: 0
-  - m_GUID: bc25906af5e0f2748a5a526cb90d8725
-    m_Address: Assets/Prefabs/Player.prefab
+  - m_GUID: 1850f76f05f81ae41a0dbfd0736ebd80
+    m_Address: Assets/Prefabs/Enemy.prefab
     m_ReadOnly: 0
     m_SerializedLabels: []
     FlaggedDuringContentUpdateRestriction: 0
