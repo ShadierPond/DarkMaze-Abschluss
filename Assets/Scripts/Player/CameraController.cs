@@ -1,4 +1,3 @@
-using System;
 using UnityEngine;
 using Cinemachine;
 
@@ -20,8 +19,7 @@ namespace Player
         private DefaultControls _controls;
         private Vector2 _axis;
         private Vector2 _rotation;
-        private Transform _followTarget;
-        private Transform _lookTarget;
+        [SerializeField] private Transform followTarget;
 
         /// <summary>
         /// Sets the Input System controls. It also sets the callbacks for the Look and Move actions.
@@ -48,8 +46,6 @@ namespace Player
         /// </summary>
         private void Awake()
         {
-            _followTarget = transform.GetChild(1);
-            //_lookTarget = transform.GetChild(0).GetChild(1);
             OnValidate();
         }
         
@@ -89,7 +85,7 @@ namespace Player
             _rotation.x = Mathf.Clamp(_rotation.x, minLookAngle, maxLookAngle);
             
             transform.rotation = Quaternion.Euler(0, _rotation.y, 0);
-            _followTarget.rotation = Quaternion.Euler(_rotation.x, _followTarget.rotation.eulerAngles.y, 0);
+            followTarget.rotation = Quaternion.Euler(_rotation.x, followTarget.rotation.eulerAngles.y, 0);
         }
 
         /// <summary>
