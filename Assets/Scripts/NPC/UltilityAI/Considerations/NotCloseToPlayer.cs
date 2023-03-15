@@ -12,7 +12,7 @@ namespace NPC.UtilityAI.Considerations
             if (player == null)
                 return 0;
             var distance = Vector3.Distance(npc.transform.position, player.transform.position);
-            return 1 - (1 - (distance / npc.stats.sightRange));
+            return 1 - (1.3f - (distance / npc.stats.sightRange));
         }
     }
 }

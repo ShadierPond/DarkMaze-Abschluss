@@ -127,7 +127,7 @@ namespace Player
         /// </summary>
         private void UpdateMovement()
         {
-            _moveDirection = _orientation.forward * _input.y + _orientation.right * _input.x;
+            _moveDirection = transform.forward * _input.y + transform.right * _input.x;
             _rigidbody.AddForce(!isJumping? _moveDirection * (currentSpeed * speedMultiplier * 2) : isGrounded ? _moveDirection.normalized * (currentSpeed * speedMultiplier) : _moveDirection.normalized * (currentSpeed * speedMultiplier * airSpeedMultiplier), ForceMode.Force);
         }
 

@@ -18,6 +18,9 @@ namespace NPC.Core
         public float[] actionsScores;
         [HideInInspector] public Stats stats;
         [HideInInspector] public SoundReceiver soundReceiver;
+        [HideInInspector] public AudioSource audioSource;
+        private static readonly int IsWalking = Animator.StringToHash("IsWalking");
+        private static readonly int Attack1 = Animator.StringToHash("Attack");
 
         private void OnValidate()
         {
@@ -32,6 +35,7 @@ namespace NPC.Core
             AIBrain = GetComponent<AIBrain>();
             stats = GetComponent<Stats>();
             soundReceiver = GetComponent<SoundReceiver>();
+            audioSource = GetComponent<AudioSource>();
         }
 
         private void Update()
@@ -45,6 +49,12 @@ namespace NPC.Core
         private void OnFinishedAction()
             => AIBrain.DecideBestAction(actionsAvailable);
 
+        public void PlaySound(AudioClip sound)
+        {
+            audioSource.clip = sound;
+            audioSource.Play();
+        }
+
         #region Coroutines
         
         public void FollowPlayer() 
@@ -53,6 +63,7 @@ namespace NPC.Core
         private IEnumerator FollowPlayerCoroutine()
         {
             mover.MoveTo(stats.player.transform.position);
+            mover.animator.SetBool(IsWalking, true);
             yield return new WaitForSeconds(0.5f);
             while(mover.agent.remainingDistance > 0.5f)
             { 
@@ -60,6 +71,7 @@ namespace NPC.Core
                     stats.UpdateEnergy(-5); 
                 yield return new WaitForSeconds(0.5f);
             }
+            mover.animator.SetBool(IsWalking, false);
             OnFinishedAction();
         }
         
@@ -72,6 +84,7 @@ namespace NPC.Core
                 mover.MoveTo(stats.mazeGenerator.GetRandomPositionInMaze());
             else
                 mover.MoveTo(new Vector3(Random.Range(-10, 10), 0, Random.Range(-10, 10)));
+            mover.animator.SetBool(IsWalking, true);
             yield return new WaitForSeconds(0.5f);
             while(mover.agent.remainingDistance > 0.5f)
             {
@@ -79,6 +92,7 @@ namespace NPC.Core
                     stats.UpdateEnergy(10); 
                 yield return new WaitForSeconds(0.5f);
             }
+            mover.animator.SetBool(IsWalking, false);
             OnFinishedAction();
         }
         
@@ -88,11 +102,13 @@ namespace NPC.Core
         private IEnumerator GoToSoundPositionCoroutine()
         {
             mover.MoveTo(soundReceiver.lastSoundPosition);
+            mover.animator.SetBool(IsWalking, true);
             yield return new WaitForSeconds(0.5f);
             while(mover.agent.remainingDistance > 0.5f)
             {
                 yield return new WaitForSeconds(0.5f);
             }
+            mover.animator.SetBool(IsWalking, false);
             OnFinishedAction();
         }
         
@@ -101,11 +117,12 @@ namespace NPC.Core
         
         private IEnumerator AttackPlayerCoroutine()
         {
-            mover.Attack();
+            mover.animator.SetBool(IsWalking, false);
+            mover.animator.SetTrigger(Attack1);
             yield return new WaitForSeconds(1f);
             OnFinishedAction();
         }
-        
+
         #endregion
     }
 }
