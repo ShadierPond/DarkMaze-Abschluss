@@ -3004,7 +3004,7 @@ AnimationClip:
   m_HasMotionFloatCurves: 0
   m_Events:
   - time: 0.33333334
-    functionName: PlaySound
+    functionName: PlayAttackSound
     data: 
     objectReferenceParameter: {fileID: 8300000, guid: c094abdad57bced468fdfbd3c5aca631,
       type: 3}

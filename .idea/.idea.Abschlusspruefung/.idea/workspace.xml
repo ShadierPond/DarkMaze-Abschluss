@@ -3,6 +3,14 @@
   <component name="ChangeListManager">
     <list default="true" id="f7ab1e7f-ca5b-4a20-acbd-a44a16c6bef8" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/.idea.Abschlusspruefung/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.Abschlusspruefung/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/AddressableAssetsData/AddressableAssetSettings.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/AddressableAssetsData/AddressableAssetSettings.asset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Animations/Human/Enemy/HitBat.anim" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Animations/Human/Enemy/HitBat.anim" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Animations/Human/Locomotion/Forward_Walk.anim" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Animations/Human/Locomotion/Forward_Walk.anim" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/Enemy.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/Enemy.prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/Player.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/Player.prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scenes/New Scene.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/New Scene.unity" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/NPC/Core/NonPlayerCharacter.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/NPC/Core/NonPlayerCharacter.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ProjectSettings/Packages/com.unity.probuilder/Settings.json" beforeDir="false" afterPath="$PROJECT_DIR$/ProjectSettings/Packages/com.unity.probuilder/Settings.json" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -114,6 +122,7 @@
       <workItem from="1678713693590" duration="607000" />
       <workItem from="1678800558013" duration="2665000" />
       <workItem from="1678813229543" duration="11335000" />
+      <workItem from="1678902956674" duration="1367000" />
     </task>
     <servers />
   </component>

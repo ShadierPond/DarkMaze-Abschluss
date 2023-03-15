@@ -18,7 +18,6 @@ namespace NPC.Core
         public float[] actionsScores;
         [HideInInspector] public Stats stats;
         [HideInInspector] public SoundReceiver soundReceiver;
-        [HideInInspector] public AudioSource audioSource;
         private static readonly int IsWalking = Animator.StringToHash("IsWalking");
         private static readonly int Attack1 = Animator.StringToHash("Attack");
 
@@ -35,7 +34,6 @@ namespace NPC.Core
             AIBrain = GetComponent<AIBrain>();
             stats = GetComponent<Stats>();
             soundReceiver = GetComponent<SoundReceiver>();
-            audioSource = GetComponent<AudioSource>();
         }
 
         private void Update()
@@ -48,12 +46,6 @@ namespace NPC.Core
 
         private void OnFinishedAction()
             => AIBrain.DecideBestAction(actionsAvailable);
-
-        public void PlaySound(AudioClip sound)
-        {
-            audioSource.clip = sound;
-            audioSource.Play();
-        }
 
         #region Coroutines
         

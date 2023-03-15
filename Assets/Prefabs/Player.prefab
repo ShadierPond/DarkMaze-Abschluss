@@ -486,6 +486,7 @@ GameObject:
   - component: {fileID: 51330104}
   - component: {fileID: 51330112}
   - component: {fileID: 2452974723894764347}
+  - component: {fileID: 2876388022201501825}
   m_Layer: 8
   m_Name: Player
   m_TagString: Player
@@ -614,7 +615,8 @@ AudioSource:
   m_GameObject: {fileID: 5495352322146779297}
   m_Enabled: 1
   serializedVersion: 4
-  OutputAudioMixerGroup: {fileID: 0}
+  OutputAudioMixerGroup: {fileID: 2923407579805055984, guid: 3c5e010da4cf66741a3d70445bf6fbf4,
+    type: 2}
   m_audioClip: {fileID: 8300000, guid: a05309841541812489dc04ec46ecfd28, type: 3}
   m_PlayOnAwake: 1
   m_Volume: 1
@@ -625,8 +627,8 @@ AudioSource:
   SpatializePostEffects: 0
   Priority: 128
   DopplerLevel: 1
-  MinDistance: 1
-  MaxDistance: 500
+  MinDistance: 0
+  MaxDistance: 10
   Pan2D: 0
   rolloffMode: 0
   BypassEffects: 0
@@ -661,7 +663,7 @@ AudioSource:
     m_Curve:
     - serializedVersion: 3
       time: 0
-      value: 0
+      value: 1
       inSlope: 0
       outSlope: 0
       tangentMode: 0
@@ -854,6 +856,64 @@ MonoBehaviour:
   - {fileID: 6791300383513593762}
   - {fileID: 9094746097223268214}
   - {fileID: 4173379770437638100}
+--- !u!114 &2876388022201501825
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5495352322146779297}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7a37bd6ebbee455980d9071a1ba79c6b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _footstepSounds:
+  - m_AssetGUID: 07efa5f962c482342b08e9a58f64852b
+    m_SubObjectName: 
+    m_SubObjectType: 
+    m_EditorAssetChanged: 0
+  - m_AssetGUID: 8ee8966b3522b464a9014cc0b6a06c7f
+    m_SubObjectName: 
+    m_SubObjectType: 
+    m_EditorAssetChanged: 0
+  - m_AssetGUID: efaa5013b84b05349aa7059e059b7bad
+    m_SubObjectName: 
+    m_SubObjectType: 
+    m_EditorAssetChanged: 0
+  - m_AssetGUID: 9be3a8cebd4a76d49a34062b07313f33
+    m_SubObjectName: 
+    m_SubObjectType: 
+    m_EditorAssetChanged: 0
+  - m_AssetGUID: 43802ef532e230f43bc7c340365c698a
+    m_SubObjectName: 
+    m_SubObjectType: 
+    m_EditorAssetChanged: 0
+  - m_AssetGUID: 3e1e1c9127e33aa4da4c53d7a378abbe
+    m_SubObjectName: 
+    m_SubObjectType: 
+    m_EditorAssetChanged: 0
+  - m_AssetGUID: a7993ce94990db54b992fcca8679ecac
+    m_SubObjectName: 
+    m_SubObjectType: 
+    m_EditorAssetChanged: 0
+  - m_AssetGUID: 7924454be172b7b4ba04e3b1f0d957c8
+    m_SubObjectName: 
+    m_SubObjectType: 
+    m_EditorAssetChanged: 0
+  - m_AssetGUID: 3f2e08d509867844b873502538552b63
+    m_SubObjectName: 
+    m_SubObjectType: 
+    m_EditorAssetChanged: 0
+  - m_AssetGUID: ff1a2eb061285604e85dac39d5ff9ca0
+    m_SubObjectName: 
+    m_SubObjectType: 
+    m_EditorAssetChanged: 0
+  - m_AssetGUID: 850427a97af934441a1b824af2d9ba88
+    m_SubObjectName: 
+    m_SubObjectType: 
+    m_EditorAssetChanged: 0
+  _attackSounds: []
 --- !u!1 &6014295341296797440
 GameObject:
   m_ObjectHideFlags: 0
