@@ -18,7 +18,7 @@ namespace Sound.Detection
             if (intensity < 0)
                 intensity = 0;
         }
-        private void Awake()
+        private void Start()
             => SoundManager.Instance.RegisterSoundReceiver(this);
         private void OnDestroy()
             => SoundManager.Instance.UnregisterSoundReceiver(this);

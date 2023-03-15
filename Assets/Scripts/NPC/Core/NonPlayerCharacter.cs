@@ -1,9 +1,11 @@
+using System;
 using System.Collections;
 using NPC.UtilityAI;
 using Sound.Detection;
 using UnityEngine;
 using UnityEngine.Serialization;
 using Action = NPC.UtilityAI.Action;
+using Random = UnityEngine.Random;
 
 namespace NPC.Core
 {
@@ -13,9 +15,17 @@ namespace NPC.Core
         [HideInInspector] public MoveController mover;
         [HideInInspector] public AIBrain AIBrain;
         public Action[] actionsAvailable;
+        public float[] actionsScores;
         [HideInInspector] public Stats stats;
         [HideInInspector] public SoundReceiver soundReceiver;
-    
+
+        private void OnValidate()
+        {
+            if (actionsAvailable == null) 
+                return;
+            actionsScores = new float[actionsAvailable.Length];
+        }
+
         public void Start()
         {
             mover = GetComponent<MoveController>();
@@ -58,7 +68,10 @@ namespace NPC.Core
 
         private IEnumerator WanderCoroutine()
         {
-            mover.MoveTo(stats.mazeGenerator.GetRandomPositionInMaze());
+            if(stats.mazeGenerator)
+                mover.MoveTo(stats.mazeGenerator.GetRandomPositionInMaze());
+            else
+                mover.MoveTo(new Vector3(Random.Range(-10, 10), 0, Random.Range(-10, 10)));
             yield return new WaitForSeconds(0.5f);
             while(mover.agent.remainingDistance > 0.5f)
             {
@@ -88,7 +101,7 @@ namespace NPC.Core
         
         private IEnumerator AttackPlayerCoroutine()
         {
-            Debug.Log("Attacking player");
+            mover.Attack();
             yield return new WaitForSeconds(1f);
             OnFinishedAction();
         }

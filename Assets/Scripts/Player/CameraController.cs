@@ -3,6 +3,7 @@ using Cinemachine;
 
 namespace Player
 {
+    
     public class CameraController : MonoBehaviour
     {
         [Header("General Settings")] 
@@ -56,7 +57,8 @@ namespace Player
         private void OnValidate()
         {
             //mainCamera.cullingMask &= ~(1 << LayerMask.NameToLayer("Player"));
-            firstPersonCamera.m_Lens.FieldOfView = firstPersonFOV;
+            if(firstPersonCamera)
+                firstPersonCamera.m_Lens.FieldOfView = firstPersonFOV;
         }
 
         /// <summary>

@@ -7,7 +7,6 @@ namespace NPC.UtilityAI
     {
         public bool finishedDeciding;
         public Action bestAction;
-        [SerializeField] private float bestActionScore;
         [HideInInspector] public NonPlayerCharacter npc;
         
         public void Start() 
@@ -34,9 +33,9 @@ namespace NPC.UtilityAI
                     continue;
                 nextBestActionIndex = i;
                 score = actionsAvailable[i].Score;
+                npc.actionsScores[i] = score;
             }
             bestAction = actionsAvailable[nextBestActionIndex];
-            bestActionScore = score;
             finishedDeciding = true;
         }
         
