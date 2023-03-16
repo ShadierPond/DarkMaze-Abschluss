@@ -67,7 +67,7 @@ public class GameManager : MonoBehaviour
     public void LoadGame()
     {
         IsGameLoading = true;
-        LoadingOperations.Add(SceneManager.LoadSceneAsync((int)CurrentScene.Game, LoadSceneMode.Additive));
+        LoadingOperations.Add(SceneManager.LoadSceneAsync((int)CurrentScene.Game, LoadSceneMode.Single));
     }
     
     /// <summary>
@@ -76,7 +76,7 @@ public class GameManager : MonoBehaviour
     public void LoadMainMenu()
     {
         IsGameLoading = true;
-        LoadingOperations.Add(SceneManager.LoadSceneAsync((int)CurrentScene.MainMenu, LoadSceneMode.Additive));
+        LoadingOperations.Add(SceneManager.LoadSceneAsync((int)CurrentScene.MainMenu, LoadSceneMode.Single));
     }
     
     /// <summary>

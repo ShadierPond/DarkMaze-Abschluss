@@ -29,7 +29,7 @@ AudioMixerGroupController:
   m_Send: 00000000000000000000000000000000
   m_Effects:
   - {fileID: 3228087319014511590}
-  m_UserColorIndex: 0
+  m_UserColorIndex: 3
   m_Mute: 0
   m_Solo: 0
   m_BypassEffects: 0
@@ -58,11 +58,20 @@ AudioMixerController:
   m_MasterGroup: {fileID: 24300002}
   m_Snapshots:
   - {fileID: 24500006}
+  - {fileID: 3780311814124869761}
   m_StartSnapshot: {fileID: 24500006}
   m_SuspendThreshold: -80
   m_EnableSuspend: 1
   m_UpdateMode: 0
-  m_ExposedParameters: []
+  m_ExposedParameters:
+  - guid: 5470a4a6384d51e4ea6bfb5185e3129e
+    name: AmbienceVolume
+  - guid: 052d016b0e3d28648bf1e736e035b325
+    name: MasterVolume
+  - guid: 5a67bbf80bd606d45b528b6cbfa530fc
+    name: MusicVolume
+  - guid: 039845ed3d7dfce44a8d0823e2fcaede
+    name: SFXVolume
   m_AudioMixerGroupViews:
   - guids:
     - 342505454fc00a040be4231060ca1cd3
@@ -71,7 +80,7 @@ AudioMixerController:
     - adf9918223befd3469d7c20f1312688f
     name: View
   m_CurrentViewIndex: 0
-  m_TargetSnapshot: {fileID: 24500006}
+  m_TargetSnapshot: {fileID: 3780311814124869761}
 --- !u!243 &24300002
 AudioMixerGroupController:
   m_ObjectHideFlags: 0
@@ -90,7 +99,7 @@ AudioMixerGroupController:
   m_Send: 00000000000000000000000000000000
   m_Effects:
   - {fileID: 24400004}
-  m_UserColorIndex: 0
+  m_UserColorIndex: 1
   m_Mute: 0
   m_Solo: 0
   m_BypassEffects: 0
@@ -114,7 +123,7 @@ AudioMixerSnapshotController:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: Snapshot
+  m_Name: Unmuted
   m_AudioMixer: {fileID: 24100000}
   m_SnapshotID: b2bb2083a08bcc14485642e77251c1f3
   m_FloatValues:
@@ -135,7 +144,7 @@ AudioMixerGroupController:
   m_Send: 00000000000000000000000000000000
   m_Effects:
   - {fileID: -891166042292827505}
-  m_UserColorIndex: 0
+  m_UserColorIndex: 4
   m_Mute: 0
   m_Solo: 0
   m_BypassEffects: 0
@@ -168,7 +177,19 @@ AudioMixerGroupController:
   m_Send: 00000000000000000000000000000000
   m_Effects:
   - {fileID: -6593073583229471413}
-  m_UserColorIndex: 0
+  m_UserColorIndex: 6
   m_Mute: 0
   m_Solo: 0
   m_BypassEffects: 0
+--- !u!245 &3780311814124869761
+AudioMixerSnapshotController:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_Name: Muted
+  m_AudioMixer: {fileID: 24100000}
+  m_SnapshotID: 2bcfbb38a212571499885e2b5cc541e7
+  m_FloatValues:
+    039845ed3d7dfce44a8d0823e2fcaede: -9.833286
+  m_TransitionOverrides: {}
