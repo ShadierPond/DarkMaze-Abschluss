@@ -23,7 +23,6 @@ namespace Management.Menu
         
         private void Start()
         {
-            GameManager.Instance.saveManager.LoadSettings();
             var data = SaveManager.Instance.settingsDataClass;
             
             masterSlider.value = data.masterVolume;

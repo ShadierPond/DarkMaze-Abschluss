@@ -478,14 +478,13 @@ GameObject:
   - component: {fileID: 7060799454107869333}
   - component: {fileID: 8679626333328237919}
   - component: {fileID: 7516918039921236903}
+  - component: {fileID: 51330113}
+  - component: {fileID: 2637442878230803062}
+  - component: {fileID: 51330112}
+  - component: {fileID: 2452974723894764347}
   - component: {fileID: 7905542509928746082}
   - component: {fileID: 6190185056322624298}
   - component: {fileID: 739243183618948807}
-  - component: {fileID: 2637442878230803062}
-  - component: {fileID: 51330113}
-  - component: {fileID: 51330104}
-  - component: {fileID: 51330112}
-  - component: {fileID: 2452974723894764347}
   - component: {fileID: 2876388022201501825}
   m_Layer: 8
   m_Name: Player
@@ -542,70 +541,26 @@ CapsuleCollider:
   m_Height: 2.05
   m_Direction: 1
   m_Center: {x: 0, y: 1, z: 0}
---- !u!114 &7905542509928746082
-MonoBehaviour:
+--- !u!95 &51330113
+Animator:
+  serializedVersion: 4
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 5495352322146779297}
   m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 7692d22dc1a3be747bca4916d2117b81, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  mainCamera: {fileID: 0}
-  invertYAxis: 0
-  mouseSensitivity: 5
-  maxLookAngle: 89.99
-  minLookAngle: -89.99
-  firstPersonCamera: {fileID: 0}
-  firstPersonFOV: 90
-  followTarget: {fileID: 5264911149662554842}
---- !u!114 &6190185056322624298
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 5495352322146779297}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 2891f1272e8bdf340be35f578806efd1, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  speedMultiplier: 10
-  currentSpeed: 0
-  drag: 4
-  isGrounded: 0
-  walkingSpeed: 3
-  crouchSpeed: 1.5
-  holdToCrouch: 0
-  crouchHeight: 1.5
-  runningSpeed: 5
-  holdToRun: 1
-  jumpForce: 7
-  airSpeedMultiplier: 0.4
-  holdToJump: 0
-  isJumping: 0
-  animator: {fileID: 51330113}
---- !u!114 &739243183618948807
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 5495352322146779297}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 1159fb63d3eb4a9e873e60b38794d541, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  soundRadius: 10
-  soundIntensity: 1
-  soundDecay: 1
-  soundDecayDelay: 1
-  audioSource: {fileID: 0}
+  m_Avatar: {fileID: 9000000, guid: 6f221cfda23526c4584055976c0f5b01, type: 3}
+  m_Controller: {fileID: 9100000, guid: 4c5c5f1dcfb9018468d0d217f9e142e0, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_StabilizeFeet: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorControllerStateOnDisable: 0
 --- !u!82 &2637442878230803062
 AudioSource:
   m_ObjectHideFlags: 0
@@ -703,43 +658,6 @@ AudioSource:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
---- !u!95 &51330113
-Animator:
-  serializedVersion: 4
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 5495352322146779297}
-  m_Enabled: 1
-  m_Avatar: {fileID: 9000000, guid: 6f221cfda23526c4584055976c0f5b01, type: 3}
-  m_Controller: {fileID: 9100000, guid: 4c5c5f1dcfb9018468d0d217f9e142e0, type: 2}
-  m_CullingMode: 0
-  m_UpdateMode: 0
-  m_ApplyRootMotion: 0
-  m_LinearVelocityBlending: 0
-  m_StabilizeFeet: 0
-  m_WarningMessage: 
-  m_HasTransformHierarchy: 1
-  m_AllowConstantClipSamplingOptimization: 1
-  m_KeepAnimatorControllerStateOnDisable: 0
---- !u!114 &51330104
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 5495352322146779297}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 1159fb63d3eb4a9e873e60b38794d541, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  soundRadius: 10
-  soundIntensity: 1
-  soundDecay: 1
-  soundDecayDelay: 1
-  audioSource: {fileID: 0}
 --- !u!114 &51330112
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -856,6 +774,70 @@ MonoBehaviour:
   - {fileID: 6791300383513593762}
   - {fileID: 9094746097223268214}
   - {fileID: 4173379770437638100}
+--- !u!114 &7905542509928746082
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5495352322146779297}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7692d22dc1a3be747bca4916d2117b81, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  mainCamera: {fileID: 0}
+  invertYAxis: 0
+  mouseSensitivity: 5
+  maxLookAngle: 89.99
+  minLookAngle: -89.99
+  firstPersonCamera: {fileID: 0}
+  firstPersonFOV: 90
+  followTarget: {fileID: 5264911149662554842}
+--- !u!114 &6190185056322624298
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5495352322146779297}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2891f1272e8bdf340be35f578806efd1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  speedMultiplier: 10
+  currentSpeed: 0
+  drag: 4
+  isGrounded: 0
+  walkingSpeed: 3
+  crouchSpeed: 1.5
+  holdToCrouch: 0
+  crouchHeight: 1.5
+  runningSpeed: 5
+  holdToRun: 1
+  jumpForce: 7
+  airSpeedMultiplier: 0.4
+  holdToJump: 0
+  isJumping: 0
+  animator: {fileID: 51330113}
+--- !u!114 &739243183618948807
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5495352322146779297}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1159fb63d3eb4a9e873e60b38794d541, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  soundRadius: 10
+  soundIntensity: 1
+  soundDecay: 1
+  soundDecayDelay: 1
+  audioSource: {fileID: 0}
 --- !u!114 &2876388022201501825
 MonoBehaviour:
   m_ObjectHideFlags: 0

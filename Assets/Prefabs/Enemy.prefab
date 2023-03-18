@@ -1443,13 +1443,13 @@ GameObject:
   - component: {fileID: 51330113}
   - component: {fileID: 51330112}
   - component: {fileID: 2452974723894764347}
+  - component: {fileID: 2045168527}
   - component: {fileID: 4862481603952406436}
   - component: {fileID: 2914599770219830449}
   - component: {fileID: 7280397780801642879}
   - component: {fileID: 7034109322208244607}
   - component: {fileID: 2954537718700641952}
   - component: {fileID: 3369408547229262356}
-  - component: {fileID: 2045168527}
   - component: {fileID: 269936268027979701}
   m_Layer: 8
   m_Name: Enemy
@@ -1474,7 +1474,7 @@ Transform:
   - {fileID: 995398110}
   - {fileID: 543450653297634551}
   m_Father: {fileID: 0}
-  m_RootOrder: 7
+  m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!136 &7516918039921236903
 CapsuleCollider:
@@ -1642,116 +1642,6 @@ MonoBehaviour:
   - {fileID: 6791300383513593762}
   - {fileID: 9094746097223268214}
   - {fileID: 4173379770437638100}
---- !u!195 &4862481603952406436
-NavMeshAgent:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 5495352322146779297}
-  m_Enabled: 1
-  m_AgentTypeID: 0
-  m_Radius: 0.5
-  m_Speed: 3.5
-  m_Acceleration: 8
-  avoidancePriority: 50
-  m_AngularSpeed: 120
-  m_StoppingDistance: 0
-  m_AutoTraverseOffMeshLink: 1
-  m_AutoBraking: 1
-  m_AutoRepath: 1
-  m_Height: 2
-  m_BaseOffset: 0
-  m_WalkableMask: 4294967295
-  m_ObstacleAvoidanceType: 4
---- !u!114 &2914599770219830449
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 5495352322146779297}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 6c87c78587494fd281362922730b0075, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  agent: {fileID: 0}
-  animator: {fileID: 0}
---- !u!114 &7280397780801642879
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 5495352322146779297}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: cee62a2e889547a680f77739375b2185, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  finishedDeciding: 0
-  bestAction: {fileID: 0}
-  npc: {fileID: 0}
---- !u!114 &7034109322208244607
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 5495352322146779297}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 622737b40d2c418eb4d2b77ada95cb6c, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  player: {fileID: 0}
-  sightRange: 10
-  sightAngle: 90
-  energy: 100
-  maxEnergy: 100
-  health: 100
-  mazeGenerator: {fileID: 0}
---- !u!114 &2954537718700641952
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 5495352322146779297}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 25a96fd9fb3a4ed392457d9568273fe7, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  intensity: 0
-  lastSoundPosition: {x: 0, y: 0, z: 0}
---- !u!114 &3369408547229262356
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 5495352322146779297}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 782868926e00e5a429c54854b2024d76, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  mover: {fileID: 0}
-  AIBrain: {fileID: 0}
-  actionsAvailable:
-  - {fileID: 11400000, guid: c5515b6110c144941bf33114482cfa63, type: 2}
-  - {fileID: 11400000, guid: 6544197185f11994e9c5bfd2bf8f7668, type: 2}
-  - {fileID: 11400000, guid: b2ebcf712685d4949ac06a49a2824c7c, type: 2}
-  - {fileID: 11400000, guid: 31258fb65dc36a24aa9b2e983de30fb7, type: 2}
-  actionsScores:
-  - 0
-  - 0
-  - 0
-  - 0
-  stats: {fileID: 0}
-  soundReceiver: {fileID: 0}
 --- !u!82 &2045168527
 AudioSource:
   m_ObjectHideFlags: 0
@@ -1849,6 +1739,115 @@ AudioSource:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
+--- !u!195 &4862481603952406436
+NavMeshAgent:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5495352322146779297}
+  m_Enabled: 1
+  m_AgentTypeID: 0
+  m_Radius: 0.5
+  m_Speed: 3.5
+  m_Acceleration: 8
+  avoidancePriority: 50
+  m_AngularSpeed: 120
+  m_StoppingDistance: 0
+  m_AutoTraverseOffMeshLink: 1
+  m_AutoBraking: 1
+  m_AutoRepath: 1
+  m_Height: 2
+  m_BaseOffset: 0
+  m_WalkableMask: 4294967295
+  m_ObstacleAvoidanceType: 4
+--- !u!114 &2914599770219830449
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5495352322146779297}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6c87c78587494fd281362922730b0075, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  agent: {fileID: 0}
+  animator: {fileID: 0}
+--- !u!114 &7280397780801642879
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5495352322146779297}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: cee62a2e889547a680f77739375b2185, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  finishedDeciding: 0
+  bestAction: {fileID: 0}
+  npc: {fileID: 0}
+--- !u!114 &7034109322208244607
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5495352322146779297}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 622737b40d2c418eb4d2b77ada95cb6c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  player: {fileID: 0}
+  sightRange: 10
+  sightAngle: 90
+  energy: 100
+  maxEnergy: 100
+  health: 100
+--- !u!114 &2954537718700641952
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5495352322146779297}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 25a96fd9fb3a4ed392457d9568273fe7, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  intensity: 0
+  lastSoundPosition: {x: 0, y: 0, z: 0}
+--- !u!114 &3369408547229262356
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5495352322146779297}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 782868926e00e5a429c54854b2024d76, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  mover: {fileID: 0}
+  AIBrain: {fileID: 0}
+  actionsAvailable:
+  - {fileID: 11400000, guid: c5515b6110c144941bf33114482cfa63, type: 2}
+  - {fileID: 11400000, guid: 6544197185f11994e9c5bfd2bf8f7668, type: 2}
+  - {fileID: 11400000, guid: b2ebcf712685d4949ac06a49a2824c7c, type: 2}
+  - {fileID: 11400000, guid: 31258fb65dc36a24aa9b2e983de30fb7, type: 2}
+  actionsScores:
+  - 0
+  - 0
+  - 0
+  - 0
+  stats: {fileID: 0}
+  soundReceiver: {fileID: 0}
 --- !u!114 &269936268027979701
 MonoBehaviour:
   m_ObjectHideFlags: 0

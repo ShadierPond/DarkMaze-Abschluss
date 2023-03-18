@@ -61,6 +61,7 @@ namespace Management.SaveSystem
                 _ => _settingsPath
             };
             _jsonSave = new JsonSave();
+            LoadSettings();
         }
 
         public void Clear()

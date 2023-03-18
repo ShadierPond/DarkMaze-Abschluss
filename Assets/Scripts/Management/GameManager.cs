@@ -5,6 +5,7 @@ using MazeSystem;
 using UnityEngine;
 using UnityEngine.AddressableAssets;
 using UnityEngine.Playables;
+using UnityEngine.Rendering.PostProcessing;
 using UnityEngine.ResourceManagement.AsyncOperations;
 using UnityEngine.SceneManagement;
 
@@ -14,6 +15,7 @@ namespace Management
     {
         public static GameManager Instance { get; private set; }
         public SaveManager saveManager;
+        public PostProcessVolume postProcessVolume;
         [HideInInspector] public MazeGenerator mazeGenerator;
 
         // Loading Screen
@@ -69,6 +71,7 @@ namespace Management
             LoadingOperations = new List<AsyncOperation>();
             IsGameLoading = false;
             saveManager = GetComponent<SaveManager>();
+            postProcessVolume = GetComponent<PostProcessVolume>();
         }
 
         private void Update()
