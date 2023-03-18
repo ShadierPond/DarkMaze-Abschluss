@@ -1,7 +1,6 @@
-﻿using System.Collections.Generic;
-using UnityEngine;
+﻿using UnityEngine;
 
-namespace GlobalSaveLoad
+namespace Management.SaveSystem
 {
     [System.Serializable]
     public class Data
@@ -20,8 +19,12 @@ namespace GlobalSaveLoad
         public int weaponClipAmmo;
         
         // Enemy Data
-        public List<Vector3> enemyPositions;
-        public List<Quaternion> enemyRotations;
-        public List<int> enemyHealth;
+        public Vector3[] enemyPositions;
+        public Quaternion[] enemyRotations;
+        public int[] enemyHealths;
+        
+        // Maze Data
+        public Vector2Int mazeSize;
+        public int mazeSeed;
     }
 }

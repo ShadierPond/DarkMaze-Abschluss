@@ -1,9 +1,8 @@
-﻿using System;
-using UnityEngine;
-using Random = UnityEngine.Random;
+﻿using UnityEngine;
 using UnityEngine.AddressableAssets;
+using Random = UnityEngine.Random;
 
-namespace Sound
+namespace Management.Sound
 {
     [RequireComponent(typeof(AudioSource))]
     public class AudioManager : MonoBehaviour

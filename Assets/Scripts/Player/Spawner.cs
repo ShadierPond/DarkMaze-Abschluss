@@ -1,6 +1,7 @@
 ﻿using System;
 using UnityEngine;
 using UnityEngine.AddressableAssets;
+using UnityEngine.ResourceManagement.AsyncOperations;
 using UnityEngine.Serialization;
 
 namespace Player
@@ -12,7 +13,20 @@ namespace Player
         
         private void Awake()
         {
-            playerPrefab.InstantiateAsync(spawnPoint.position, spawnPoint.rotation);
+            playerPrefab.InstantiateAsync().Completed += OnPlayerSpawned;
+        }
+        
+        private void OnPlayerSpawned(AsyncOperationHandle<GameObject> obj)
+        {
+            obj.Result.transform.position = spawnPoint.position;
+            obj.Result.transform.GetChild(0).position = spawnPoint.position;
+            obj.Result.transform.GetChild(0).rotation = spawnPoint.rotation;
+        }
+        
+        private void OnDrawGizmos()
+        {
+            Gizmos.color = Color.green;
+            Gizmos.DrawWireSphere(spawnPoint.position , 0.05f);
         }
     }
 }

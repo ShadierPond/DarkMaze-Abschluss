@@ -1,6 +1,6 @@
 ﻿using UnityEngine;
 
-namespace Sound.Detection
+namespace Management.Sound.Detection
 {
     [RequireComponent(typeof(AudioSource))]
     public class SoundEmitter : MonoBehaviour
@@ -21,7 +21,7 @@ namespace Sound.Detection
         private void EmitSound()
         {
             if(audioSource.isPlaying)
-                SoundManager.Instance.EmitSound(this);
+                SoundDetectionManager.Instance.EmitSound(this);
             /*
             var results = new Collider[maxObjectsToEmitSoundTo];
             Physics.OverlapSphereNonAlloc(transform.position, soundRadius, results);

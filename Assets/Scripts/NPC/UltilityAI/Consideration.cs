@@ -1,4 +1,4 @@
-﻿using NPC.Core;
+﻿using NPC;
 using UnityEngine;
 
 namespace NPC.UtilityAI

@@ -65,7 +65,7 @@ AudioMixerController:
   m_UpdateMode: 0
   m_ExposedParameters:
   - guid: 5470a4a6384d51e4ea6bfb5185e3129e
-    name: AmbienceVolume
+    name: AmbientVolume
   - guid: 052d016b0e3d28648bf1e736e035b325
     name: MasterVolume
   - guid: 5a67bbf80bd606d45b528b6cbfa530fc
@@ -80,7 +80,7 @@ AudioMixerController:
     - adf9918223befd3469d7c20f1312688f
     name: View
   m_CurrentViewIndex: 0
-  m_TargetSnapshot: {fileID: 3780311814124869761}
+  m_TargetSnapshot: {fileID: 24500006}
 --- !u!243 &24300002
 AudioMixerGroupController:
   m_ObjectHideFlags: 0
@@ -91,9 +91,9 @@ AudioMixerGroupController:
   m_AudioMixer: {fileID: 24100000}
   m_GroupID: 342505454fc00a040be4231060ca1cd3
   m_Children:
-  - {fileID: -4701313072964911694}
-  - {fileID: 2923407579805055984}
   - {fileID: 3442698987701514522}
+  - {fileID: 2923407579805055984}
+  - {fileID: -4701313072964911694}
   m_Volume: 052d016b0e3d28648bf1e736e035b325
   m_Pitch: 4e5ddf9bed0a1d64e9d9deb83cec2f63
   m_Send: 00000000000000000000000000000000
@@ -127,7 +127,7 @@ AudioMixerSnapshotController:
   m_AudioMixer: {fileID: 24100000}
   m_SnapshotID: b2bb2083a08bcc14485642e77251c1f3
   m_FloatValues:
-    039845ed3d7dfce44a8d0823e2fcaede: -9.833286
+    039845ed3d7dfce44a8d0823e2fcaede: 0
   m_TransitionOverrides: {}
 --- !u!243 &2923407579805055984
 AudioMixerGroupController:

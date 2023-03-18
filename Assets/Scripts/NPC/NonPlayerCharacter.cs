@@ -1,13 +1,13 @@
 using System;
 using System.Collections;
 using NPC.UtilityAI;
-using Sound.Detection;
 using UnityEngine;
+using Management.Sound.Detection;
 using UnityEngine.Serialization;
 using Action = NPC.UtilityAI.Action;
 using Random = UnityEngine.Random;
 
-namespace NPC.Core
+namespace NPC
 {
     [RequireComponent(typeof(MoveController)), RequireComponent(typeof(AIBrain)), RequireComponent(typeof(Stats)), RequireComponent(typeof(SoundReceiver))]
     public class NonPlayerCharacter : MonoBehaviour
@@ -72,9 +72,9 @@ namespace NPC.Core
 
         private IEnumerator WanderCoroutine()
         {
-            if(stats.mazeGenerator)
-                mover.MoveTo(stats.mazeGenerator.GetRandomPositionInMaze());
-            else
+            //if(stats.mazeGenerator)
+                //mover.MoveTo(stats.mazeGenerator.GetRandomPositionInMaze());
+            //else
                 mover.MoveTo(new Vector3(Random.Range(-10, 10), 0, Random.Range(-10, 10)));
             mover.animator.SetBool(IsWalking, true);
             yield return new WaitForSeconds(0.5f);

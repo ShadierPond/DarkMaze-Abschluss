@@ -1,8 +1,8 @@
 ﻿using System;
-using MazeSystem;
+using Management;
 using UnityEngine;
 
-namespace NPC.Core
+namespace NPC
 {
     public class Stats : MonoBehaviour
     {
@@ -15,19 +15,17 @@ namespace NPC.Core
         public int energy = 100;
         public int maxEnergy = 100;
         public int health = 100;
-        
-        [HideInInspector] public MazeGenerator mazeGenerator;
-        
+
         private void OnEnable()
         {
-            mazeGenerator = FindObjectOfType<MazeGenerator>();
             player = GameObject.FindGameObjectWithTag("Player");
+            GameManager.Instance.RegisterEnemy(gameObject);
         }
 
         private void OnDisable()
-        {
-            mazeGenerator = null;
+        { 
             player = null;
+            GameManager.Instance.UnregisterEnemy(gameObject);
         }
 
         private void Update()
@@ -39,6 +37,12 @@ namespace NPC.Core
 
         public void UpdateEnergy(int value)
             => energy += value;
+        
+        private void OnDeath()
+        {
+            GameManager.Instance.UnregisterEnemy(gameObject);
+            Destroy(gameObject);
+        }
 
         private void OnDrawGizmos()
         {

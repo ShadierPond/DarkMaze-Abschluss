@@ -1,5 +1,4 @@
-﻿using NPC.Core;
-using UnityEngine;
+﻿using UnityEngine;
 
 namespace NPC.UtilityAI
 {

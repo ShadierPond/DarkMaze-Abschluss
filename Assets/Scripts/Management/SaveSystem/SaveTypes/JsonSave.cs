@@ -4,7 +4,7 @@ using Newtonsoft.Json;
 using Newtonsoft.Json.Linq;
 using UnityEngine;
 
-namespace GlobalSaveLoad
+namespace Management.SaveSystem.SaveTypes
 {
     /// <summary>
     /// <para>This class is used to save and load data from a JSON file.</para>
@@ -66,6 +66,25 @@ namespace GlobalSaveLoad
             SaveManager.Instance.dataClass = JsonConvert.DeserializeObject<Data>(json, _settings);
             // TODO: Remove this
             Debug.Log($"Loaded from {path}");
+        }
+
+        public void SaveSettings(string path)
+        {
+            // Create a new StreamWriter with the specified path
+            using StreamWriter writer = new(path);
+            var json = JsonConvert.SerializeObject(SaveManager.Instance.settingsDataClass, _settings);
+            // Write the JSON string to the file
+            writer.Write(json);
+        }
+        
+        public void LoadSettings(string path)
+        {
+            // Create a new StreamReader with the specified path
+            using StreamReader reader = new(path);
+            // Read the JSON string from the file
+            var json = reader.ReadToEnd();
+            // Deserialize the JSON string to a Data class.
+            SaveManager.Instance.settingsDataClass = JsonConvert.DeserializeObject<SettingsData>(json, _settings);
         }
     }
     

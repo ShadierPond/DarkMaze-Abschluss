@@ -1,7 +1,6 @@
-using System;
 using System.Collections.Generic;
 using System.Linq;
-using Maze.Navigation;
+using Management;
 using Unity.AI.Navigation;
 using UnityEngine;
 using Random = UnityEngine.Random;
@@ -10,9 +9,11 @@ using UnityEngine.ResourceManagement.AsyncOperations;
 
 namespace MazeSystem
 {
-    [RequireComponent(typeof(NavigationBaker)), RequireComponent(typeof(NavMeshSurface))]
+    [RequireComponent(typeof(NavMeshSurface))]
     public class MazeGenerator : MonoBehaviour
     {
+        private GameManager _gameManager;
+        
         [Header("Wall Settings")]
         [SerializeField] private float wallThickness = 0.1f;
         [SerializeField] private AssetReferenceGameObject wallReference;
@@ -30,25 +31,21 @@ namespace MazeSystem
         [SerializeField] private float[] decorationSpawnChance;
         
         [Header("Enemy Settings")]
-        [SerializeField] private AssetReferenceGameObject[] enemies;
-        [SerializeField] private int[] enemyAmounts;
-        [SerializeField] private float[] enemySpawnChance;
-
-
+        [SerializeField] private AssetReferenceGameObject enemy;
+        [SerializeField] private int enemyAmount;
+        
         [Header("Cell Settings")]
         [SerializeField] private Vector3 cellSize = new(1, 1, 1);
         
         [Header("Maze Settings")]
         [SerializeField] private Vector2Int mazeSize = new(10, 10);
-        [SerializeField] private int seed = 0;
-        [SerializeField] private bool randomSeed = true;
+        [SerializeField] private int seed;
         
         [Header("AI Navigation Settings")]
-        [SerializeField] private NavigationBaker navigationBaker;
-        [SerializeField] private NavMeshSurface navMeshSurface;
+        public NavMeshSurface navMeshSurface;
         
         [Header("Debug")]
-        private List<AsyncOperationHandle<GameObject>> _objectsSpawning = new();
+        private readonly List<AsyncOperationHandle<GameObject>> _objectsSpawning = new();
         private MazeCell _startCell = new(0, 0);
         private MazeCell _endCell = new(0, 0);
         [SerializeField] private bool showCeilings = true;
@@ -68,23 +65,24 @@ namespace MazeSystem
                 decorationSpawnChance = new float[decorations.Length];
                 decorationOffsets = new Vector3[decorations.Length];
             }
-            
-            if (enemies.Length != enemyAmounts.Length || enemies.Length != enemySpawnChance.Length)
-            {
-                enemyAmounts = new int[enemies.Length];
-                enemySpawnChance = new float[enemies.Length];
-            }
         }
 
         private void Awake()
         {
-            navigationBaker = GetComponent<NavigationBaker>();
+            _gameManager = GameManager.Instance;
+            _gameManager.mazeGenerator = this;
             navMeshSurface = GetComponent<NavMeshSurface>();
         }
 
         private void Start()
         {
-            seed = GameManager.Instance.RandomSeed ? Random.Range(0, int.MaxValue) : GameManager.Instance.Seed;
+            seed = _gameManager.Seed;
+            mazeSize = _gameManager.MazeSize;
+            if(seed == 0)
+                _gameManager.Seed = seed = Random.Range(0, int.MaxValue);
+            if(mazeSize == Vector2Int.zero)
+                _gameManager.MazeSize = mazeSize = new Vector2Int(Random.Range(5, 20), Random.Range(5, 20));
+
             Random.InitState(seed);
             GenerateMaze();
             RandomReplaceWallInCell(_startCell, playerSpawnerReference);
@@ -92,6 +90,8 @@ namespace MazeSystem
             DrawMaze();
             RandomSpreadObjects();
         }
+
+        
 
         /// <summary>
         ///   Generates a maze using the Recursive backtracking algorithm and stores it in a 2D array of cells<br/>
@@ -225,29 +225,6 @@ namespace MazeSystem
                 }
         }
         
-        private void InstantiateAsync(AssetReference assetReferenceGameObject, Vector3 position, Vector3 scale, Vector3 eulerRotation)
-        {
-            var handle = assetReferenceGameObject.InstantiateAsync(position, Quaternion.identity, gameObject.transform);
-            handle.Completed += obj =>
-            {
-                obj.Result.name = position + "_Maze Object";
-                obj.Result.transform.localScale = scale != Vector3.zero ? scale : Vector3.one;
-                if(eulerRotation != Vector3.zero)
-                    obj.Result.transform.Rotate(eulerRotation);
-                else
-                    obj.Result.transform.rotation = Quaternion.identity;
-                _objectsSpawning.Remove(handle);
-                OnObjectsSpawningCompleted();
-            };
-            _objectsSpawning.Add(handle);
-        }
-        
-        private void OnObjectsSpawningCompleted()
-        {
-            if (_objectsSpawning.Count != 0)
-                return;
-            navMeshSurface.BuildNavMesh();
-        }
         /// <summary>
         /// Randomly spread objects with spawn chance in the Decoration array over the maze with the given amount in the DecorationAmount array
         /// If the Cell is already occupied, it will find a new one without decreasing the amount (while)
@@ -263,16 +240,18 @@ namespace MazeSystem
                     spawnCell.ContainsObject = true;
                     InstantiateAsync(decorations[i], new Vector3(spawnCell.X * cellSize.x + decorationOffsets[i].x, decorationOffsets[i].y, spawnCell.Y * cellSize.z + decorationOffsets[i].z), Vector3.zero, Vector3.zero);
                 }
-            
-            for (var i = 0; i < enemies.Length; i++)
-                for (var j = 0; j < enemyAmounts[i]; j++)
+            if(!GameManager.Instance.IsGameLoaded) 
+                for (var j = 0; j < enemyAmount; j++)
                 {
                     var spawnCell = _mazeCells[Random.Range(0, mazeSize.x), Random.Range(0, mazeSize.y)];
                     while (spawnCell.ContainsEnemySpawnPoint)
                         spawnCell = _mazeCells[Random.Range(0, mazeSize.x), Random.Range(0, mazeSize.y)];
                     spawnCell.ContainsEnemySpawnPoint = true;
-                    InstantiateAsync(enemies[i], new Vector3(spawnCell.X * cellSize.x, 0, spawnCell.Y * cellSize.z), Vector3.one, Vector3.zero);
+                    InstantiateAsync(enemy, new Vector3(spawnCell.X * cellSize.x, 0, spawnCell.Y * cellSize.z), Vector3.one, Vector3.zero);
                 }
+            else
+                for (var i = 0; i < GameManager.Instance.enemyPositions.Length; i++)
+                    InstantiateAsync(enemy, GameManager.Instance.enemyPositions[i], Vector3.one, new Vector3(0, GameManager.Instance.enemyRotations[i].y, 0));
         }
 
         /// <summary>
@@ -280,7 +259,7 @@ namespace MazeSystem
         /// </summary>
         /// <param name="spawnCell">MazeCell- The cell in which the wall should be replaced</param>
         /// <param name="wall">AssetReferenceGameObject - The reference to the wall to replace the old one with</param>
-        private void RandomReplaceWallInCell(MazeCell spawnCell, AssetReferenceGameObject wall)
+        private void RandomReplaceWallInCell(MazeCell spawnCell, AssetReference wall)
         {
             var cell = _mazeCells[spawnCell.X, spawnCell.Y];
             var cellPosition = new Vector3(cell.X * cellSize.x, 0, cell.Y * cellSize.z);
@@ -341,6 +320,37 @@ namespace MazeSystem
             }
             _mazeCells[cell.X, cell.Y] = cell;
         }
+        
+        
+        private void InstantiateAsync(AssetReference assetReferenceGameObject, Vector3 position, Vector3 scale, Vector3 eulerRotation)
+        {
+            var handle = assetReferenceGameObject.InstantiateAsync(position, Quaternion.identity, gameObject.transform);
+            handle.Completed += obj =>
+            {
+                if (obj.Result.name.Contains("(Clone)"))
+                    obj.Result.name = obj.Result.name.Replace("(Clone)", "");
+                obj.Result.name = position + " " + obj.Result.name;
+                obj.Result.transform.localScale = scale != Vector3.zero ? scale : Vector3.one;
+                if(eulerRotation != Vector3.zero)
+                    obj.Result.transform.Rotate(eulerRotation);
+                else
+                    obj.Result.transform.rotation = Quaternion.identity;
+                _objectsSpawning.Remove(handle);
+                OnObjectsSpawningCompleted();
+            };
+            _objectsSpawning.Add(handle);
+        }
+        
+        private void OnObjectsSpawningCompleted()
+        {
+            if (_objectsSpawning.Count != 0)
+                return;
+            if(_gameManager.IsGameLoaded)
+                _gameManager.OnGameLoaded();
+            navMeshSurface.BuildNavMesh();
+        }
+        
+        
         
         public Vector3 GetMazePosition(Vector3 position)
         {

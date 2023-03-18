@@ -2029,7 +2029,7 @@ MonoBehaviour:
   onValueChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_IsOn: 1
+  m_IsOn: 0
 --- !u!1 &282228277
 GameObject:
   m_ObjectHideFlags: 0
@@ -2983,7 +2983,7 @@ MonoBehaviour:
   onValueChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_IsOn: 1
+  m_IsOn: 0
 --- !u!1 &339572139
 GameObject:
   m_ObjectHideFlags: 0
@@ -13650,7 +13650,7 @@ MonoBehaviour:
   onValueChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_IsOn: 1
+  m_IsOn: 0
 --- !u!1 &782353639
 GameObject:
   m_ObjectHideFlags: 0
@@ -14989,7 +14989,7 @@ MonoBehaviour:
   onValueChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_IsOn: 1
+  m_IsOn: 0
 --- !u!1 &875471667
 GameObject:
   m_ObjectHideFlags: 0
@@ -17183,25 +17183,13 @@ MonoBehaviour:
   m_FillRect: {fileID: 605981351}
   m_HandleRect: {fileID: 1057678550}
   m_Direction: 0
-  m_MinValue: 0
+  m_MinValue: 0.0001
   m_MaxValue: 1
   m_WholeNumbers: 0
-  m_Value: 0
+  m_Value: 0.0001
   m_OnValueChanged:
     m_PersistentCalls:
-      m_Calls:
-      - m_Target: {fileID: 1121487341}
-        m_TargetAssemblyTypeName: Sound.SoundManager, Assembly-CSharp
-        m_MethodName: SetMusicVolume
-        m_Mode: 2
-        m_Arguments:
-          m_ObjectArgument: {fileID: 1032043300}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.UI.Slider, UnityEngine.UI
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
+      m_Calls: []
 --- !u!1 &1039159041
 GameObject:
   m_ObjectHideFlags: 0
@@ -18117,25 +18105,13 @@ MonoBehaviour:
   m_FillRect: {fileID: 1524227364}
   m_HandleRect: {fileID: 1863996851}
   m_Direction: 0
-  m_MinValue: 0
+  m_MinValue: 0.0001
   m_MaxValue: 1
   m_WholeNumbers: 0
-  m_Value: 0
+  m_Value: 0.0001
   m_OnValueChanged:
     m_PersistentCalls:
-      m_Calls:
-      - m_Target: {fileID: 1121487341}
-        m_TargetAssemblyTypeName: Sound.SoundManager, Assembly-CSharp
-        m_MethodName: SetSfxVolume
-        m_Mode: 2
-        m_Arguments:
-          m_ObjectArgument: {fileID: 1104467337}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.UI.Slider, UnityEngine.UI
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
+      m_Calls: []
 --- !u!1 &1108053919
 GameObject:
   m_ObjectHideFlags: 0
@@ -18345,25 +18321,13 @@ MonoBehaviour:
   m_FillRect: {fileID: 1878703351}
   m_HandleRect: {fileID: 1092829735}
   m_Direction: 0
-  m_MinValue: 0
+  m_MinValue: 0.0001
   m_MaxValue: 1
   m_WholeNumbers: 0
-  m_Value: 0
+  m_Value: 0.0001
   m_OnValueChanged:
     m_PersistentCalls:
-      m_Calls:
-      - m_Target: {fileID: 1121487341}
-        m_TargetAssemblyTypeName: Sound.SoundManager, Assembly-CSharp
-        m_MethodName: SetMasterVolume
-        m_Mode: 2
-        m_Arguments:
-          m_ObjectArgument: {fileID: 1117090139}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.UI.Slider, UnityEngine.UI
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
+      m_Calls: []
 --- !u!1 &1118239004
 GameObject:
   m_ObjectHideFlags: 0
@@ -18572,6 +18536,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2fc9206f3d5ffa44a8a40db9f58ba2ab, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  saveManager: {fileID: 0}
+  mazeGenerator: {fileID: 0}
   currentScene: 0
   director: {fileID: 0}
   playableAssets:
@@ -18586,8 +18552,12 @@ MonoBehaviour:
   - {fileID: 11400000, guid: 9b8114867ef6bc14c89ab42d9017b31f, type: 2}
   - {fileID: 11400000, guid: 50513d3df1a2bc94b8a84c1613bf6753, type: 2}
   - {fileID: 11400000, guid: d2ef7772d06d6fe458dda91d72f23abe, type: 2}
+  enemiesAlive: []
+  enemyPositions: []
+  enemyRotations: []
+  enemyHealths: 
   seed: 0
-  randomSeed: 0
+  mazeSize: {x: 0, y: 0}
 --- !u!114 &1121487340
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -18614,7 +18584,18 @@ MonoBehaviour:
     weaponClipAmmo: 0
     enemyPositions: []
     enemyRotations: []
-    enemyHealth: 
+    enemyHealths: 
+    mazeSize: {x: 0, y: 0}
+    mazeSeed: 0
+  settingsDataClass:
+    masterVolume: 0
+    isMasterMuted: 0
+    musicVolume: 0
+    isMusicMuted: 0
+    sfxVolume: 0
+    isSfxMuted: 0
+    ambientVolume: 0
+    isAmbientMuted: 0
 --- !u!114 &1121487341
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -18627,7 +18608,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 26fa12d019ff4977a02e596a4c48bb34, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  audioMixer: {fileID: 0}
   soundReceivers: []
 --- !u!1 &1121943360
 GameObject:
@@ -42022,25 +42002,13 @@ MonoBehaviour:
   m_FillRect: {fileID: 804896510}
   m_HandleRect: {fileID: 1482559965}
   m_Direction: 0
-  m_MinValue: 0
+  m_MinValue: 0.0001
   m_MaxValue: 1
   m_WholeNumbers: 0
-  m_Value: 0
+  m_Value: 0.0001
   m_OnValueChanged:
     m_PersistentCalls:
-      m_Calls:
-      - m_Target: {fileID: 1121487341}
-        m_TargetAssemblyTypeName: Sound.SoundManager, Assembly-CSharp
-        m_MethodName: SetAmbientVolume
-        m_Mode: 2
-        m_Arguments:
-          m_ObjectArgument: {fileID: 1737473588}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.UI.Slider, UnityEngine.UI
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
+      m_Calls: []
 --- !u!1 &1739641782
 GameObject:
   m_ObjectHideFlags: 0
@@ -43378,6 +43346,7 @@ GameObject:
   - component: {fileID: 1845104163}
   - component: {fileID: 1845104162}
   - component: {fileID: 1845104161}
+  - component: {fileID: 1845104164}
   m_Layer: 5
   m_Name: AudioSettings
   m_TagString: Untagged
@@ -43476,6 +43445,27 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1845104159}
   m_CullTransparentMesh: 1
+--- !u!114 &1845104164
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1845104159}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 332813de53c54856addc461de3b05ac5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  masterSlider: {fileID: 1117090139}
+  musicSlider: {fileID: 1032043300}
+  sfxSlider: {fileID: 1104467337}
+  ambientSlider: {fileID: 1737473588}
+  masterToggle: {fileID: 781311754}
+  musicToggle: {fileID: 337756250}
+  sfxToggle: {fileID: 278986380}
+  ambientToggle: {fileID: 872405866}
+  audioMixer: {fileID: 24100000, guid: 3c5e010da4cf66741a3d70445bf6fbf4, type: 2}
 --- !u!1 &1863996850
 GameObject:
   m_ObjectHideFlags: 0
@@ -44526,12 +44516,12 @@ RectTransform:
   m_Children:
   - {fileID: 1943302691}
   - {fileID: 584859377}
-  - {fileID: 1981964388}
-  - {fileID: 932736366}
   - {fileID: 103559855}
   - {fileID: 1475171684}
   - {fileID: 1546349214}
   - {fileID: 126979596}
+  - {fileID: 1981964388}
+  - {fileID: 932736366}
   m_Father: {fileID: 2117266945}
   m_RootOrder: -1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}

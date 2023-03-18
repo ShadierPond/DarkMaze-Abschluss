@@ -1,7 +1,7 @@
 ﻿using UnityEngine;
 using UnityEngine.AI;
 
-namespace NPC.Core
+namespace NPC
 {
     [RequireComponent(typeof(NavMeshAgent))]
     public class MoveController : MonoBehaviour

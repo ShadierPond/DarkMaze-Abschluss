@@ -1,6 +1,6 @@
 ﻿using UnityEngine;
 
-namespace Sound.Detection
+namespace Management.Sound.Detection
 {
     public class SoundReceiver : MonoBehaviour
     {
@@ -19,8 +19,8 @@ namespace Sound.Detection
                 intensity = 0;
         }
         private void Start()
-            => SoundManager.Instance.RegisterSoundReceiver(this);
+            => SoundDetectionManager.Instance.RegisterSoundReceiver(this);
         private void OnDestroy()
-            => SoundManager.Instance.UnregisterSoundReceiver(this);
+            => SoundDetectionManager.Instance.UnregisterSoundReceiver(this);
     }
 }

@@ -1,4 +1,5 @@
 using System.Collections;
+using Management;
 using UnityEngine;
 
 namespace Player
@@ -70,6 +71,7 @@ namespace Player
             _controls.Player.Crouch.performed += ctx => _isCrouching = holdToCrouch ? ctx.ReadValueAsButton() : ctx.ReadValueAsButton() ? !_isCrouching : _isCrouching;
             if(holdToCrouch)
                 _controls.Player.Crouch.canceled += ctx => _isCrouching = false;
+            _controls.Player.Interact.performed += ctx => GameManager.Instance.SaveData();
         }
         
         /// <summary>
