@@ -20,7 +20,7 @@ namespace Management.Menu
    
        private void Awake()
        {
-           _director = GameManager.Instance.director;
+           _director = Management.GameManager.Instance.director;
        }
    
        public void LevelsButton()
@@ -29,27 +29,27 @@ namespace Management.Menu
            {
                _levelsActive = true;
                levelsButton.GetComponentInChildren<TextMeshProUGUI>().text = "Back";
-               _director.Play(GameManager.Instance.playableAssets.Find(x => x.name == "OpenLevels"));
+               _director.Play(Management.GameManager.Instance.playableAssets.Find(x => x.name == "OpenLevels"));
            }
            else
            {
                _levelsActive = false;
                levelsButton.GetComponentInChildren<TextMeshProUGUI>().text = "Levels";
-               _director.Play(GameManager.Instance.playableAssets.Find(x => x.name == "CloseLevels"));
+               _director.Play(Management.GameManager.Instance.playableAssets.Find(x => x.name == "CloseLevels"));
            }
        }
        
        public void SetLevel(int level)
        {
-           GameManager.Instance.Seed = level;
-           GameManager.Instance.IsGameLoading = true;
-           GameManager.Instance.LoadingOperations.Add(SceneManager.LoadSceneAsync("Game"));
+           Management.GameManager.Instance.Seed = level;
+           Management.GameManager.Instance.IsGameLoading = true;
+           Management.GameManager.Instance.LoadingOperations.Add(SceneManager.LoadSceneAsync("Game"));
        }
        
        public void EndlessLevel()
        {
-           GameManager.Instance.IsGameLoading = true;
-           GameManager.Instance.LoadingOperations.Add(SceneManager.LoadSceneAsync("Game"));
+           Management.GameManager.Instance.IsGameLoading = true;
+           Management.GameManager.Instance.LoadingOperations.Add(SceneManager.LoadSceneAsync("Game"));
        }
    
        private void Update()

@@ -2,18 +2,29 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="f7ab1e7f-ca5b-4a20-acbd-a44a16c6bef8" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/.idea.Abschlusspruefung/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.Abschlusspruefung/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/Enemy.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/Enemy.prefab" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/Player.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/Player.prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Audio/Human/Footsteps/concrete-footsteps-1-6265-license.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Audio/Human/Footsteps/concrete-footsteps-1-6265-license.txt.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Audio/Human/Footsteps/concrete-footsteps-1-6265.aup3" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Audio/Human/Footsteps/concrete-footsteps-1-6265.aup3.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Audio/Human/Footsteps/concrete-footsteps-1-6265.mp3" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Audio/Human/Footsteps/concrete-footsteps-1-6265.mp3.meta" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scenes/Intro.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/Intro.unity" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Management/GameManager.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Management/GameManager.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Management/Menu/AudioManager.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Management/Menu/AudioManager.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Management/SaveSystem/SaveManager.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Management/SaveSystem/SaveManager.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Management/SaveSystem/SettingsData.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Management/SaveSystem/SettingsData.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Settings/HDRP Performant.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Settings/HDRP Performant.asset" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Settings/HDRPDefaultResources/DefaultLookDevProfile.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Settings/HDRPDefaultResources/DefaultLookDevProfile.asset" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Settings/HDRPDefaultResources/DefaultSettingsVolumeProfile.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Settings/HDRPDefaultResources/DefaultSettingsVolumeProfile.asset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scenes/New Scene.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/New Scene.unity" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Management/Menu/MenuManager.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Management/Menu/MenuManager.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Management/Menu/VideoManager.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Management/Menu/VideoManager.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Build/Abschlus_Data/Managed/Assembly-CSharp.dll" beforeDir="false" afterPath="$PROJECT_DIR$/Build/Abschlus_Data/Managed/Assembly-CSharp.dll" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Build/Abschlus_Data/Managed/Cinemachine.dll" beforeDir="false" afterPath="$PROJECT_DIR$/Build/Abschlus_Data/Managed/Cinemachine.dll" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Build/Abschlus_Data/Managed/Unity.ProBuilder.dll" beforeDir="false" afterPath="$PROJECT_DIR$/Build/Abschlus_Data/Managed/Unity.ProBuilder.dll" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Build/Abschlus_Data/Managed/Unity.RenderPipelines.HighDefinition.Runtime.dll" beforeDir="false" afterPath="$PROJECT_DIR$/Build/Abschlus_Data/Managed/Unity.RenderPipelines.HighDefinition.Runtime.dll" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Build/Abschlus_Data/Plugins/x86_64/lib_burst_generated.dll" beforeDir="false" afterPath="$PROJECT_DIR$/Build/Abschlus_Data/Plugins/x86_64/lib_burst_generated.dll" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Build/Abschlus_Data/globalgamemanagers" beforeDir="false" afterPath="$PROJECT_DIR$/Build/Abschlus_Data/globalgamemanagers" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Build/Abschlus_Data/globalgamemanagers.assets" beforeDir="false" afterPath="$PROJECT_DIR$/Build/Abschlus_Data/globalgamemanagers.assets" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Build/Abschlus_Data/level0" beforeDir="false" afterPath="$PROJECT_DIR$/Build/Abschlus_Data/level0" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Build/Abschlus_Data/level1" beforeDir="false" afterPath="$PROJECT_DIR$/Build/Abschlus_Data/level1" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Build/Abschlus_Data/resources.assets" beforeDir="false" afterPath="$PROJECT_DIR$/Build/Abschlus_Data/resources.assets" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Build/Abschlus_Data/sharedassets0.assets" beforeDir="false" afterPath="$PROJECT_DIR$/Build/Abschlus_Data/sharedassets0.assets" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Build/Abschlus_Data/sharedassets1.assets" beforeDir="false" afterPath="$PROJECT_DIR$/Build/Abschlus_Data/sharedassets1.assets" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/ProjectSettings/ProjectSettings.asset" beforeDir="false" afterPath="$PROJECT_DIR$/ProjectSettings/ProjectSettings.asset" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -61,7 +72,7 @@
 }</component>
   <component name="RunManager" selected="Attach to Unity Editor.Attach to Unity Editor">
     <configuration name="Standalone Player" type="RunUnityExe" factoryName="Unity Executable">
-      <option name="EXE_PATH" value="$PROJECT_DIR$/Built\Abschlus.exe" />
+      <option name="EXE_PATH" value="$PROJECT_DIR$/Build\Abschlus.exe" />
       <option name="PROGRAM_PARAMETERS" value="" />
       <option name="WORKING_DIRECTORY" value="F:\Projects\AbschlussPruefung\Built" />
       <option name="PASS_PARENT_ENVS" value="1" />
@@ -145,6 +156,8 @@
       <workItem from="1679057075859" duration="1332000" />
       <workItem from="1679087381768" duration="11209000" />
       <workItem from="1679167524392" duration="9436000" />
+      <workItem from="1679307049266" duration="779000" />
+      <workItem from="1679307850149" duration="8165000" />
     </task>
     <servers />
   </component>

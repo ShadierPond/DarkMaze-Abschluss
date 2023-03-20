@@ -65,7 +65,7 @@ namespace Management.Menu
 
             // Get the post processing volume and the settings and the Save data
             var data = SaveManager.Instance.settingsDataClass;
-            _postProcessVolume = GameManager.Instance.postProcessVolume;
+            _postProcessVolume = Management.GameManager.Instance.postProcessVolume;
             _postProcessVolume.profile.TryGetSettings(out _ambientOcclusion);
             _postProcessVolume.profile.TryGetSettings(out _bloom);
             _postProcessVolume.profile.TryGetSettings(out _motionBlur);
