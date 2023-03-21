@@ -6,7 +6,7 @@ using UnityEngine.Pool;
 namespace Weapon
 {
     [CreateAssetMenu(fileName = "Weapon", menuName = "Weapons/New Weapon", order = 0)]
-    public class Gun : ScriptableObject
+    public class Weapon : ScriptableObject
     {
         public WeaponType type;
         public new string name;
@@ -34,7 +34,7 @@ namespace Weapon
             _activeMonoBehaviour = activeMonoBehaviour;
             _lastShootTime = 0;
             _trailPool = new ObjectPool<TrailRenderer>(CreateTrail);
-            //_model = Instantiate(modelPrefab);
+            _model = modelPrefab.InstantiateAsync(parent).WaitForCompletion();
             _model.transform.SetParent(parent, false);
             _model.transform.localPosition = spawnPosition;
             _model.transform.localRotation = Quaternion.Euler(spawnRotation);

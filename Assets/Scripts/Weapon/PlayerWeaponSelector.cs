@@ -10,10 +10,10 @@ namespace Weapon
     {
         [SerializeField] private WeaponType weapon;
         [SerializeField] private Transform weaponParent;
-        [SerializeField] private List<Gun> weapons;
+        [SerializeField] private List<Weapon> weapons;
 
         [Space]
-        public Gun activeGun;
+        public Weapon activeGun;
 
         private void Start()
         {

@@ -1,6 +1,7 @@
 using System.Collections;
 using Management;
 using UnityEngine;
+using Weapon;
 
 namespace Player
 {
@@ -51,6 +52,10 @@ namespace Player
         private static readonly int MoveX = Animator.StringToHash("MoveX");
         private static readonly int MoveY = Animator.StringToHash("MoveY");
         private static readonly int IsCrouching = Animator.StringToHash("isCrouching");
+        
+        [Header("Shoot Settings")]
+        [SerializeField] private PlayerWeaponSelector gunSelector;
+
 
         /// <summary>
         /// This is called when the script instance is being loaded.
@@ -72,6 +77,7 @@ namespace Player
             if(holdToCrouch)
                 _controls.Player.Crouch.canceled += ctx => _isCrouching = false;
             _controls.Player.Interact.performed += ctx => GameManager.Instance.SaveData();
+            _controls.Player.Shoot.performed += ctx => gunSelector.activeGun.Shoot();
         }
         
         /// <summary>
@@ -93,6 +99,7 @@ namespace Player
             _rigidbody = GetComponent<Rigidbody>();
             _collider = GetComponent<CapsuleCollider>();
             _currentHeight = _collider.height;
+            gunSelector = GetComponent<PlayerWeaponSelector>();
         }
         
         /// <summary>
