@@ -79,13 +79,13 @@ Material:
     - _DstBlend: 0
     - _EnableBlendModePreserveSpecularLighting: 1
     - _EnableFogOnTransparent: 1
-    - _Noise_Edge: 0.085
+    - _Noise_Edge: 0.046
     - _Noise_Scale: 8.3
     - _OpaqueCullMode: 2
     - _RandomEdgesRadius: 0.1
-    - _Random_Color_Range: 0.688
-    - _Random_Height_Range: 0.118
-    - _Random_Offset_Range: 0.34
+    - _Random_Color_Range: 1
+    - _Random_Height_Range: 0.101
+    - _Random_Offset_Range: 0.225
     - _RayTracing: 0
     - _ReceivesSSR: 1
     - _ReceivesSSRTransparent: 0
@@ -126,8 +126,10 @@ Material:
     - _ZTestTransparent: 4
     - _ZWrite: 1
     m_Colors:
-    - _Color: {r: 0, g: 0, b: 0, a: 1}
+    - _Color: {r: 0.11320752, g: 0.04952829, b: 0, a: 1}
     - _DoubleSidedConstants: {r: 1, g: 1, b: -1, a: 0}
     - _EmissionColor: {r: 1, g: 1, b: 1, a: 1}
     - _Fill_Color: {r: 0.38679248, g: 0.38679248, b: 0.38679248, a: 1}
+    - _Tiling: {r: 5, g: 10, b: 0, a: 0}
+    - _Tiling_1: {r: 5.8, g: 10.4, b: 0, a: 0}
   m_BuildTextureStacks: []

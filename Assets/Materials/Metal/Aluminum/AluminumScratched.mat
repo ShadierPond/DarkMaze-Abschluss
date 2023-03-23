@@ -8,7 +8,7 @@ Material:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_Name: AluminumScratched
-  m_Shader: {fileID: -6465566751694194690, guid: f6e84ea80ee1ffe4cb326c6463fc5719,
+  m_Shader: {fileID: -6465566751694194690, guid: c32246d7188b3ca45a6e778726c019de,
     type: 3}
   m_Parent: {fileID: 0}
   m_ModifiedSerializedProperties: 0
@@ -33,6 +33,10 @@ Material:
     m_TexEnvs:
     - Texture2D_1E4703A:
         m_Texture: {fileID: 2800000, guid: 03a9aabd2d89135469b717b66bcb83c6, type: 3}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - Texture2D_BB99187C:
+        m_Texture: {fileID: 2800000, guid: cfce99a07432ae4479e21e2e0e12a0cb, type: 3}
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     - Texture2D_BF404DD1:
@@ -123,6 +127,10 @@ Material:
         m_Texture: {fileID: 0}
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
+    - _maskMap:
+        m_Texture: {fileID: 2800000, guid: 03a9aabd2d89135469b717b66bcb83c6, type: 3}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
     - unity_Lightmaps:
         m_Texture: {fileID: 0}
         m_Scale: {x: 1, y: 1}
@@ -148,6 +156,7 @@ Material:
     - Vector1_BB4DD4C5: 0.043
     - Vector1_BD53BAF8: 1
     - Vector1_BDDC6585: 1
+    - Vector1_C562606: 1
     - Vector1_E8712278: 0
     - _AORemapMax: 1
     - _AORemapMin: 0
@@ -237,6 +246,8 @@ Material:
     - _RefractionModel: 0
     - _RenderQueueType: 1
     - _RequireSplitLighting: 0
+    - _SAASSV: 0.1
+    - _SAAT: 0.2
     - _SSRefractionProjectionModel: 0
     - _Smoothness: 0.5
     - _SmoothnessRemapMax: 1
@@ -274,11 +285,16 @@ Material:
     - _UVEmissive: 0
     - _UseEmissiveIntensity: 0
     - _UseShadowThreshold: 0
+    - _Use_Normal_Map: 0
     - _ZTestDepthEqualForOpaque: 3
     - _ZTestGBuffer: 4
     - _ZTestModeDistortion: 8
     - _ZTestTransparent: 4
     - _ZWrite: 1
+    - _metallic: 1
+    - _occlusion: 1
+    - _smoothnessRemapMin: 0.351
+    - _smoothnessRemoapMax: 0.975
     m_Colors:
     - Color_AD8F67CE: {r: 0.6313726, g: 0.6313726, b: 0.6313726, a: 0}
     - Vector2_3344450D: {r: 3, g: 3, b: 0, a: 0}
@@ -299,6 +315,9 @@ Material:
     - _UVDetailsMappingMask: {r: 1, g: 0, b: 0, a: 0}
     - _UVMappingMask: {r: 1, g: 0, b: 0, a: 0}
     - _UVMappingMaskEmissive: {r: 1, g: 0, b: 0, a: 0}
+    - _color: {r: 0.6431373, g: 0.6431373, b: 0.6431373, a: 0}
+    - _offset: {r: 0, g: 0, b: 0, a: 0}
+    - _tiling: {r: 3, g: 3, b: 0, a: 0}
   m_BuildTextureStacks: []
 --- !u!114 &171501545646190735
 MonoBehaviour:
