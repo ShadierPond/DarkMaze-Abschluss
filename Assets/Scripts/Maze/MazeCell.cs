@@ -17,6 +17,9 @@
         // Cell contains an object ? (decoration)
         public bool ContainsObject { get; set; }
         
+        // Cell does not have a floor
+        public bool NoFloor { get; set; }
+        
         // Cell contains an Enemy Spawn Point
         public bool ContainsEnemySpawnPoint { get; set; }
 

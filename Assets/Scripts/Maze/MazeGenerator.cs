@@ -20,8 +20,12 @@ namespace MazeSystem
         [SerializeField] private AssetReferenceGameObject floorReference;
         [SerializeField] private AssetReferenceGameObject ceilingReference;
 
-        [Header("Gameplay Settings")]
+        [Header("Player Settings")]
         [SerializeField] private AssetReferenceGameObject playerSpawnerReference;
+        [SerializeField] private AssetReferenceGameObject playerReference;
+        [SerializeField] private Vector3 playerSpawnOffset = new(0, 0, 0);
+        
+        [Header("Exit Settings")]
         [SerializeField] private AssetReferenceGameObject exitReference;
 
         [Header("Decorations Settings")]
@@ -85,8 +89,8 @@ namespace MazeSystem
 
             Random.InitState(seed);
             GenerateMaze();
-            RandomReplaceWallInCell(_startCell, playerSpawnerReference);
-            //RandomReplaceWallInCell(_endCell, exitReference);
+            ReplaceFloorInCell(_startCell, playerSpawnerReference);
+            InstantiateAsync(playerReference, new Vector3(_startCell.X * cellSize.x + playerSpawnOffset.x, playerSpawnOffset.y, _startCell.Y * cellSize.z + playerSpawnOffset.z), Vector3.zero, Vector3.zero);
             DrawMaze();
             RandomSpreadObjects();
         }
@@ -218,7 +222,8 @@ namespace MazeSystem
                     if (cell.WallBottom)
                         InstantiateAsync(wallReference, cellPosition + new Vector3(0, 0, -cellSize.z / 2), new Vector3(wallThickness, cellSize.y, cellSize.x), new Vector3(0, 90, 0));
                     
-                    InstantiateAsync(floorReference, cellPosition + new Vector3(0, -cellSize.y / 2, 0), new Vector3(cellSize.x, wallThickness, cellSize.z), Vector3.zero);
+                    if(!cell.NoFloor)
+                        InstantiateAsync(floorReference, cellPosition + new Vector3(0, -cellSize.y / 2, 0), new Vector3(cellSize.x, wallThickness, cellSize.z), Vector3.zero);
                     
                     if (showCeilings)
                         InstantiateAsync(ceilingReference, cellPosition + new Vector3(0, cellSize.y / 2, 0), new Vector3(cellSize.x, wallThickness, cellSize.z), Vector3.zero);
@@ -253,7 +258,8 @@ namespace MazeSystem
                 for (var i = 0; i < GameManager.Instance.enemyPositions.Length; i++)
                     InstantiateAsync(enemy, GameManager.Instance.enemyPositions[i], Vector3.one, new Vector3(0, GameManager.Instance.enemyRotations[i].y, 0));
         }
-
+        
+        /*
         /// <summary>
         /// Randomly picks a wall in a given cell and replaces it with a given wall like spawner, door, etc (AssetReference)
         /// </summary>
@@ -320,6 +326,15 @@ namespace MazeSystem
             }
             _mazeCells[cell.X, cell.Y] = cell;
         }
+        */
+        
+        private void ReplaceFloorInCell(MazeCell spawnCell, AssetReference floor)
+        {
+            var cell = _mazeCells[spawnCell.X, spawnCell.Y];
+            cell.NoFloor = true;
+            var cellPosition = new Vector3(cell.X * cellSize.x, 0, cell.Y * cellSize.z);
+            InstantiateAsync(floor, cellPosition + new Vector3(0, -cellSize.y / 2, 0), new Vector3(cellSize.x, wallThickness, cellSize.z), Vector3.zero);
+        }
         
         
         private void InstantiateAsync(AssetReference assetReferenceGameObject, Vector3 position, Vector3 scale, Vector3 eulerRotation)
@@ -329,7 +344,7 @@ namespace MazeSystem
             {
                 if (obj.Result.name.Contains("(Clone)"))
                     obj.Result.name = obj.Result.name.Replace("(Clone)", "");
-                obj.Result.name = position + " " + obj.Result.name;
+                obj.Result.name = new Vector3Int((int)position.x, (int)position.y, (int)position.z) + " " + obj.Result.name;
                 obj.Result.transform.localScale = scale != Vector3.zero ? scale : Vector3.one;
                 if(eulerRotation != Vector3.zero)
                     obj.Result.transform.Rotate(eulerRotation);
@@ -348,19 +363,6 @@ namespace MazeSystem
             if(_gameManager.IsGameLoaded)
                 _gameManager.OnGameLoaded();
             navMeshSurface.BuildNavMesh();
-        }
-        
-        
-        
-        public Vector3 GetMazePosition(Vector3 position)
-        {
-            return new Vector3(Mathf.Round(position.x / cellSize.x) * cellSize.x, 0, Mathf.Round(position.z / cellSize.z) * cellSize.z);
-        }
-        
-        public Vector3 GetRandomPositionInMaze()
-        {
-            var cell = _mazeCells[Random.Range(0, mazeSize.x), Random.Range(0, mazeSize.y)];
-            return new Vector3(cell.X * cellSize.x, 0, cell.Y * cellSize.z);
         }
 
         private void OnDrawGizmos()
