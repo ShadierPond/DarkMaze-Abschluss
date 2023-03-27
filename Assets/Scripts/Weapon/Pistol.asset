@@ -9,17 +9,17 @@ MonoBehaviour:
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 0}
+  m_Script: {fileID: 11500000, guid: 72d4c1b30b6a4ec196094ab9f51eeec3, type: 3}
   m_Name: Pistol
   m_EditorClassIdentifier: Assembly-CSharp:Weapon:Gun
   type: 0
-  name: Pistol
+  name: 
   modelPrefab:
-    m_AssetGUID: 
+    m_AssetGUID: 3413c74f98df28347b16d270f730b5e3
     m_SubObjectName: 
     m_SubObjectType: 
-    m_EditorAssetChanged: 0
+    m_EditorAssetChanged: 1
   spawnPosition: {x: 0, y: 0, z: 0}
   spawnRotation: {x: 0, y: 0, z: 0}
-  shootConfiguration: {fileID: 0}
-  trailConfiguration: {fileID: 0}
+  shootConfiguration: {fileID: 11400000, guid: 023755cb7236d4b4c80d3aaac90b9416, type: 2}
+  trailConfiguration: {fileID: 11400000, guid: 2d658613763174a4bb2c2628ddff2bb6, type: 2}

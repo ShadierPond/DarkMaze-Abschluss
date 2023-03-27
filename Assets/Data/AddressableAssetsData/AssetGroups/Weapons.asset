@@ -12,14 +12,29 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: bbb281ee3bf0b054c82ac2347e9e782c, type: 3}
   m_Name: Weapons
   m_EditorClassIdentifier: 
-  m_GroupName: Packed Assets
+  m_GroupName: Weapons
   m_Data:
     m_SerializedData: []
-  m_GUID: 6d842cdd276a7f7429cef62fdc44cc56
-  m_SerializeEntries: []
+  m_GUID: 42c63c63deab7e448b5845686b0338d0
+  m_SerializeEntries:
+  - m_GUID: 3413c74f98df28347b16d270f730b5e3
+    m_Address: Assets/Prefabs/Weapon/Pistol.prefab
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 0175699ee72b89f4d89dafed3763da28
+    m_Address: Assets/Prefabs/Weapon/Rifle.prefab
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 0f4d189387b66bd4d96d9aab6fb606a6
+    m_Address: Assets/Prefabs/Weapon/Shotgun.prefab
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
   m_ReadOnly: 0
   m_Settings: {fileID: 11400000, guid: 4238d1a742f739247940f48a6d434942, type: 2}
   m_SchemaSet:
     m_Schemas:
-    - {fileID: 11400000, guid: 1f3557dfd3df0ca42a3f5966ea573f50, type: 2}
-    - {fileID: 11400000, guid: 5065a40010b642948a3c3755a82d6208, type: 2}
+    - {fileID: 11400000, guid: 4a39e64bdbd6a3c41b91e3f16daf55f0, type: 2}
+    - {fileID: 11400000, guid: ab7ec56950d0b6342a035afc1c7e2b24, type: 2}

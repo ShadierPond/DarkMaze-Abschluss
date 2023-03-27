@@ -2,88 +2,21 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="f7ab1e7f-ca5b-4a20-acbd-a44a16c6bef8" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/.idea.Abschlusspruefung/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.Abschlusspruefung/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Audio/NewAudioMixer.mixer" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Audio/NewAudioMixer.mixer.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Data/ProBuilder Data/Default Material Palette.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Data/ProBuilder Data/Default Material Palette.asset" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Materials/CarPaint.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Materials/CarPaint/Paint.mat" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Materials/CarPaint/Paint.mat.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Materials/CarPaint/Paint.shadergraph" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Materials/CarPaint/Paint.shadergraph.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Materials/Glass/Glass.mat" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Materials/Glass/Glass.mat" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Materials/Metal/Chrome/ChromeSatin.mat" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Materials/Metal/Chrome/ChromeSatin.mat" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Materials/Plastic/PlasticDirt.mat" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Materials/Plastic/PlasticDirt.mat" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Materials/Subgraphs/Flakes.shadersubgraph" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Materials/Subgraphs/Flakes.shadersubgraph.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Materials/Subgraphs/UVMask.shadersubgraph" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Materials/Subgraphs/UVMask.shadersubgraph" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Materials/Subgraphs/UVNormal.shadersubgraph" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Materials/Subgraphs/UVNormal.shadersubgraph" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Materials/Subgraphs/UVRoughness.shadersubgraph" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Materials/Subgraphs/UVRoughness.shadersubgraph" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Materials/Subgraphs/UVTexture.shadersubgraph" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Materials/Subgraphs/UVTexture.shadersubgraph" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Materials/Wall.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Materials/Wall.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Materials/Wall/Bricks075B_4K-PNG.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Materials/Wall/Bricks075B_4K-PNG/Bricks075B_4K-PNG.usda" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Materials/Wall/Bricks075B_4K-PNG/Bricks075B_4K-PNG.usda.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Materials/Wall/Bricks075B_4K-PNG/Bricks075B_4K-PNG.usdc" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Materials/Wall/Bricks075B_4K-PNG/Bricks075B_4K-PNG.usdc.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Materials/Wall/Bricks075B_4K-PNG/Bricks075B_4K_AmbientOcclusion.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Materials/Wall/Bricks075B_4K-PNG/Bricks075B_4K_AmbientOcclusion.png.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Materials/Wall/Bricks075B_4K-PNG/Bricks075B_4K_Color.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Materials/Wall/Bricks075B_4K-PNG/Bricks075B_4K_Color.png.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Materials/Wall/Bricks075B_4K-PNG/Bricks075B_4K_Displacement.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Materials/Wall/Bricks075B_4K-PNG/Bricks075B_4K_Displacement.png.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Materials/Wall/Bricks075B_4K-PNG/Bricks075B_4K_NormalDX.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Materials/Wall/Bricks075B_4K-PNG/Bricks075B_4K_NormalDX.png.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Materials/Wall/Bricks075B_4K-PNG/Bricks075B_4K_NormalGL.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Materials/Wall/Bricks075B_4K-PNG/Bricks075B_4K_NormalGL.png.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Materials/Wall/Bricks075B_4K-PNG/Bricks075B_4K_Roughness.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Materials/Wall/Bricks075B_4K-PNG/Bricks075B_4K_Roughness.png.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Materials/Wall/Bricks075B_4K-PNG/Bricks075B_PREVIEW.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Materials/Wall/Bricks075B_4K-PNG/Bricks075B_PREVIEW.jpg.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Materials/Wall/NewWall.mat" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Materials/Wall/NewWall.mat.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Materials/Wall/NewWall.shadergraph" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Materials/Wall/NewWall.shadergraph.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Materials/Wall/PavingStones068_4K-PNG.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Materials/Wall/PavingStones068_4K-PNG/PavingStones068_4K-PNG.usda" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Materials/Wall/PavingStones068_4K-PNG/PavingStones068_4K-PNG.usda.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Materials/Wall/PavingStones068_4K-PNG/PavingStones068_4K-PNG.usdc" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Materials/Wall/PavingStones068_4K-PNG/PavingStones068_4K-PNG.usdc.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Materials/Wall/PavingStones068_4K-PNG/PavingStones068_4K_AmbientOcclusion.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Materials/Wall/PavingStones068_4K-PNG/PavingStones068_4K_AmbientOcclusion.png.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Materials/Wall/PavingStones068_4K-PNG/PavingStones068_4K_Color.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Materials/Wall/PavingStones068_4K-PNG/PavingStones068_4K_Color.png.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Materials/Wall/PavingStones068_4K-PNG/PavingStones068_4K_Displacement.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Materials/Wall/PavingStones068_4K-PNG/PavingStones068_4K_Displacement.png.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Materials/Wall/PavingStones068_4K-PNG/PavingStones068_4K_NormalDX.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Materials/Wall/PavingStones068_4K-PNG/PavingStones068_4K_NormalDX.png.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Materials/Wall/PavingStones068_4K-PNG/PavingStones068_4K_NormalGL.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Materials/Wall/PavingStones068_4K-PNG/PavingStones068_4K_NormalGL.png.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Materials/Wall/PavingStones068_4K-PNG/PavingStones068_4K_Roughness.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Materials/Wall/PavingStones068_4K-PNG/PavingStones068_4K_Roughness.png.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Materials/Wall/PavingStones068_4K-PNG/PavingStones068_PREVIEW.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Materials/Wall/PavingStones068_4K-PNG/PavingStones068_PREVIEW.jpg.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Materials/Wall/Wall.mat" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Materials/Wall/Wall.mat" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Materials/Wall/Wall.shadergraph" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Materials/Wall/Wall.shadergraph" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/Maze/Decorations/CeilingLight.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/Maze/Decorations/CeilingLight.prefab" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/Maze/Maze Wall.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/Maze/Maze Wall.prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Animations/Human/Player.controller" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Animations/Human/Player.controller" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Data/AddressableAssetsData/AddressableAssetSettings.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Data/AddressableAssetsData/AddressableAssetSettings.asset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Data/AddressableAssetsData/AssetGroups/Schemas/Weapons_BundledAssetGroupSchema.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Data/AddressableAssetsData/AssetGroups/Schemas/Weapons_BundledAssetGroupSchema.asset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Data/AddressableAssetsData/AssetGroups/Schemas/Weapons_BundledAssetGroupSchema.asset.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Data/AddressableAssetsData/AssetGroups/Schemas/Weapons_BundledAssetGroupSchema.asset.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Data/AddressableAssetsData/AssetGroups/Schemas/Weapons_ContentUpdateGroupSchema.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Data/AddressableAssetsData/AssetGroups/Schemas/Weapons_ContentUpdateGroupSchema.asset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Data/AddressableAssetsData/AssetGroups/Schemas/Weapons_ContentUpdateGroupSchema.asset.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Data/AddressableAssetsData/AssetGroups/Schemas/Weapons_ContentUpdateGroupSchema.asset.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Data/AddressableAssetsData/AssetGroups/Weapons.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Data/AddressableAssetsData/AssetGroups/Weapons.asset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Data/AddressableAssetsData/AssetGroups/Weapons.asset.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Data/AddressableAssetsData/AssetGroups/Weapons.asset.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/Player.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/Player.prefab" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Prefabs/PlayerEnv.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/PlayerEnv.prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/Weapon/Pistol.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/Weapon/Pistol.prefab" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Prefabs/Weapon/Rifle.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/Weapon/Rifle.prefab" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scenes/Game.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scenes/Game.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/Game.unity" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scenes/Game/Sky and Fog Settings Profile.asset" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scenes/Game/Sky and Fog Settings Profile.asset.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scenes/Intro.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scenes/Intro.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/Intro.unity" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scenes/Intro/Global Volume Profile.asset" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scenes/Intro/Global Volume Profile.asset.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scenes/Intro/Sky and Fog Settings Profile.asset" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scenes/Intro/Sky and Fog Settings Profile.asset.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/Weapon/Shotgun.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/Weapon/Shotgun.prefab" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scenes/New Scene.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/New Scene.unity" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Maze/MazeCell.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Maze/MazeCell.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Maze/MazeGenerator.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Maze/MazeGenerator.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ProjectSettings/Packages/com.unity.probuilder/Settings.json" beforeDir="false" afterPath="$PROJECT_DIR$/ProjectSettings/Packages/com.unity.probuilder/Settings.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ProjectSettings/TagManager.asset" beforeDir="false" afterPath="$PROJECT_DIR$/ProjectSettings/TagManager.asset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Weapon/Pistol.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Weapon/Pistol.asset" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -223,6 +156,7 @@
       <workItem from="1679543548818" duration="6000" />
       <workItem from="1679690077588" duration="1156000" />
       <workItem from="1679769155506" duration="4176000" />
+      <workItem from="1679943056878" duration="631000" />
     </task>
     <servers />
   </component>
