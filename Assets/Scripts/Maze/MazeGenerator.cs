@@ -342,6 +342,9 @@ namespace MazeSystem
             var handle = assetReferenceGameObject.InstantiateAsync(position, Quaternion.identity, gameObject.transform);
             handle.Completed += obj =>
             {
+                if (obj.Result.name.Contains("PlayerEnv"))
+                    obj.Result.transform.parent = gameObject.transform.parent;
+                
                 if (obj.Result.name.Contains("(Clone)"))
                     obj.Result.name = obj.Result.name.Replace("(Clone)", "");
                 obj.Result.name = new Vector3Int((int)position.x, (int)position.y, (int)position.z) + " " + obj.Result.name;

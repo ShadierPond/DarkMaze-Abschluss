@@ -81,10 +81,12 @@ namespace Weapon
             {
                 // TODO: Handle impact when the bullet hits something
                 Debug.Log("Hit " + hit.collider.name);
+                trail.emitting = false;
+                trail.gameObject.SetActive(false);
+                _trailPool.Release(trail);
+                yield break;
             }
-            else
-                Debug.Log("Miss");
-            
+
             yield return new WaitForSeconds(trailConfiguration.duration);
             yield return null;
             trail.emitting = false;

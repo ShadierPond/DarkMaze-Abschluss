@@ -182,7 +182,7 @@ GameObject:
   - component: {fileID: 995398110}
   - component: {fileID: 995398112}
   m_Layer: 7
-  m_Name: Rig
+  m_Name: Rig_Body
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1483,7 +1483,7 @@ CapsuleCollider:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 5495352322146779297}
-  m_Material: {fileID: 0}
+  m_Material: {fileID: 13400000, guid: 11c39033c30a1ec40bcddaf052a9c01c, type: 2}
   m_IsTrigger: 0
   m_Enabled: 1
   m_Radius: 0.3

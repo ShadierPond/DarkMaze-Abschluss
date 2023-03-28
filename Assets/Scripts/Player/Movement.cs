@@ -1,8 +1,7 @@
 using System.Collections;
-using System.Collections.Generic;
 using Management;
 using UnityEngine;
-using UnityEngine.Serialization;
+using UnityEngine.Animations.Rigging;
 using Weapon;
 
 namespace Player
@@ -19,21 +18,17 @@ namespace Player
         private float _lastDesiredSpeed;
         private Rigidbody _rigidbody;
         private Vector2 _input;
-        private Transform _orientation;
         public bool isGrounded;
 
         [Header("Movement Settings")]
         [SerializeField] private float walkingSpeed;
         private Vector3 _moveDirection;
         
-        [Header("Crouch Settings")]
-        [SerializeField] private float crouchSpeed;
-        [SerializeField] private bool holdToCrouch;
-        [SerializeField] private float crouchHeight;
-        private float _currentHeight;
-        private bool _isCrouching;
-        private CapsuleCollider _collider;
-         
+        [Header("Aim Settings")]
+        [SerializeField] private Rig aimRig;
+        [SerializeField] private float aimSpeed = 1;
+        private Coroutine _aimCoroutine;
+
         [Header("Running Settings")]
         [SerializeField] private float runningSpeed;
         [SerializeField] private bool holdToRun;
@@ -53,13 +48,9 @@ namespace Player
         [SerializeField] private Animator animator;
         private static readonly int MoveX = Animator.StringToHash("MoveX");
         private static readonly int MoveY = Animator.StringToHash("MoveY");
-        private static readonly int IsCrouching = Animator.StringToHash("isCrouching");
         
         [Header("Shoot Settings")]
         [SerializeField] private PlayerWeaponSelector gunSelector;
-
-        private static readonly int Progress = Shader.PropertyToID("Progress");
-
 
         /// <summary>
         /// This is called when the script instance is being loaded.
@@ -71,17 +62,27 @@ namespace Player
             _controls = new DefaultControls();
             _controls.Enable();
             _controls.Player.Move.performed += ctx => _input = ctx.ReadValue<Vector2>();
-            _controls.Player.Move.canceled += ctx => _input = Vector2.zero;
+            _controls.Player.Move.canceled += _ => _input = Vector2.zero;
             _controls.Player.Sprint.performed += ctx => _isRunning = holdToRun ? ctx.ReadValueAsButton() : ctx.ReadValueAsButton() ? !_isRunning : _isRunning;
             if(holdToRun)
-                _controls.Player.Sprint.canceled += ctx => _isRunning = false;
+                _controls.Player.Sprint.canceled += _ => _isRunning = false;
             _controls.Player.Jump.performed += ctx => _jumpInput = ctx.ReadValueAsButton();
-            _controls.Player.Jump.canceled += ctx => _jumpInput = false;
-            _controls.Player.Crouch.performed += ctx => _isCrouching = holdToCrouch ? ctx.ReadValueAsButton() : ctx.ReadValueAsButton() ? !_isCrouching : _isCrouching;
-            if(holdToCrouch)
-                _controls.Player.Crouch.canceled += ctx => _isCrouching = false;
-            _controls.Player.Interact.performed += ctx => GameManager.Instance.SaveData();
-            _controls.Player.Shoot.performed += ctx => gunSelector.activeGun.Shoot();
+            _controls.Player.Jump.canceled += _ => _jumpInput = false;
+            
+            _controls.Player.Interact.performed += _ => GameManager.Instance.SaveData();
+            _controls.Player.Shoot.performed += _ => gunSelector.activeGun.Shoot();
+            _controls.Player.Aim.performed += _ =>
+            {
+                if(_aimCoroutine != null)
+                    StopCoroutine(_aimCoroutine);
+                _aimCoroutine = StartCoroutine(AimWeapon(true));
+            };
+            _controls.Player.Aim.canceled += _ =>
+            {
+                if(_aimCoroutine != null)
+                    StopCoroutine(_aimCoroutine);
+                _aimCoroutine = StartCoroutine(AimWeapon(false));
+            };
         }
         
         /// <summary>
@@ -99,10 +100,7 @@ namespace Player
         /// </summary>
         private void Awake()
         {
-            _orientation = transform.GetChild(0);
             _rigidbody = GetComponent<Rigidbody>();
-            _collider = GetComponent<CapsuleCollider>();
-            _currentHeight = _collider.height;
             gunSelector = GetComponent<PlayerWeaponSelector>();
         }
         
@@ -127,7 +125,6 @@ namespace Player
         {
             UpdateMovement();
             UpdateJump();
-            UpdateCrouch();
         }
         
         /// <summary>
@@ -140,7 +137,9 @@ namespace Player
         /// </summary>
         private void UpdateMovement()
         {
+            Debug.Log(_input);
             _moveDirection = transform.forward * _input.y + transform.right * _input.x;
+            Debug.DrawRay(transform.position, _moveDirection, Color.red);
             _rigidbody.AddForce(!isJumping? _moveDirection * (currentSpeed * speedMultiplier * 2) : isGrounded ? _moveDirection.normalized * (currentSpeed * speedMultiplier) : _moveDirection.normalized * (currentSpeed * speedMultiplier * airSpeedMultiplier), ForceMode.Force);
         }
 
@@ -185,19 +184,6 @@ namespace Player
             else
                 _jumpGroundCheckTimer -= Time.deltaTime;
         }
-        
-        
-        /// <summary>
-        /// This method controls the crouching behavior for a player character in a game.<br/>
-        /// It sets the IsCrouching parameter of the animator to the value of the _isCrouching variable.
-        /// Then it lerps the height of the collider to the crouch height or the current height depending on the value of _isCrouching.
-        /// </summary>
-        private void UpdateCrouch()
-        {
-            //animator.SetBool(IsCrouching, _isCrouching);
-            var tempHeight = _isCrouching ? crouchHeight : _currentHeight;
-            _collider.height = Mathf.Lerp(_collider.height, tempHeight, Time.deltaTime * 50);
-        }
 
         /// <summary>
         /// The "SpeedControl" method is used to control the speed of the Player with a <c>"Rigidbody"</c> component.<br/>
@@ -222,7 +208,7 @@ namespace Player
         
         /// <summary>
         /// This Method checks if the Player is touching the ground by using a raycast.<br/>
-        /// The raycast is shot downwards from the center of the Player and the length of the raycast is set to a quarter of the Players's height.<br/>
+        /// The raycast is shot downwards from the center of the Player and the length of the raycast is set to a quarter of the Player's height.<br/>
         /// If the raycast hits the ground, the Method sets the Player's drag value to a specified number.<br/>
         /// If the raycast does not hit the ground, the drag value is set to 0.
         /// </summary>
@@ -230,6 +216,7 @@ namespace Player
         {
             var transform1 = transform;
             isGrounded = Physics.Raycast(transform1.position, Vector3.down, transform1.localScale.y / 4);
+            Debug.DrawRay(transform1.position, Vector3.down * transform1.localScale.y / 4, Color.green);
             _rigidbody.drag = isGrounded ? drag : 0;
         }
 
@@ -241,11 +228,8 @@ namespace Player
         /// </summary>
         private void StateHandler()
         {
-            // Crouching
-            if (_isCrouching)
-                _desiredSpeed = crouchSpeed;
             // Sprinting
-            else if(isGrounded && _isRunning)
+            if(isGrounded && _isRunning)
                 _desiredSpeed = runningSpeed;
             // Walking
             else if (isGrounded)
@@ -284,6 +268,19 @@ namespace Player
                 yield return null;
             }
             currentSpeed = _desiredSpeed;
+        }
+
+        private IEnumerator AimWeapon(bool state)
+        {
+            var time = 0f;
+            var endValue = state ? 1 : 0.5f;
+            while (time < 1)
+            {
+                time += Time.deltaTime * aimSpeed;
+                aimRig.weight = Mathf.Lerp(aimRig.weight, endValue, time);
+                yield return null;
+            }
+            aimRig.weight = endValue;
         }
     }
 }
