@@ -1,6 +1,8 @@
 using System.Collections;
+using System.Collections.Generic;
 using Management;
 using UnityEngine;
+using UnityEngine.Serialization;
 using Weapon;
 
 namespace Player
@@ -19,7 +21,7 @@ namespace Player
         private Vector2 _input;
         private Transform _orientation;
         public bool isGrounded;
-        
+
         [Header("Movement Settings")]
         [SerializeField] private float walkingSpeed;
         private Vector3 _moveDirection;
@@ -55,6 +57,8 @@ namespace Player
         
         [Header("Shoot Settings")]
         [SerializeField] private PlayerWeaponSelector gunSelector;
+
+        private static readonly int Progress = Shader.PropertyToID("Progress");
 
 
         /// <summary>

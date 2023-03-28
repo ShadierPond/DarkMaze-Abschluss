@@ -1,27 +1,18 @@
 ﻿using System.Collections;
 using UnityEngine;
-using UnityEngine.AddressableAssets;
 using UnityEngine.Pool;
 
 namespace Weapon
 {
-    [CreateAssetMenu(fileName = "Weapon", menuName = "Weapons/New Weapon", order = 0)]
-    public class Weapon : ScriptableObject
+    public class Weapon : MonoBehaviour
     {
         public WeaponType type;
-        public new string name;
-        public AssetReferenceGameObject modelPrefab;
-        public Vector3 spawnPosition;
-        public Vector3 spawnRotation;
-        
         public ShootConfiguration shootConfiguration;
         public TrailConfiguration trailConfiguration;
-        
-        private MonoBehaviour _activeMonoBehaviour;
-        private GameObject _model;
+        [SerializeField] private ParticleSystem shootSystem;
         private float _lastShootTime;
-        private ParticleSystem _shootSystem;
         private ObjectPool<TrailRenderer> _trailPool;
+        [SerializeField] private Transform trailPoolParent;
 
         /// <summary>
         /// Spawns the gun model and initializes the shoot system
@@ -29,17 +20,10 @@ namespace Weapon
         /// </summary>
         /// <param name="parent">Transform - The parent of the gun model </param>
         /// <param name="activeMonoBehaviour">MonoBehaviour - The active MonoBehaviour </param>
-        public void Spawn(Transform parent, MonoBehaviour activeMonoBehaviour)
+        public void Start()
         {
-            _activeMonoBehaviour = activeMonoBehaviour;
             _lastShootTime = 0;
             _trailPool = new ObjectPool<TrailRenderer>(CreateTrail);
-            _model = modelPrefab.InstantiateAsync(parent).WaitForCompletion();
-            _model.transform.SetParent(parent, false);
-            _model.transform.localPosition = spawnPosition;
-            _model.transform.localRotation = Quaternion.Euler(spawnRotation);
-            
-            _shootSystem = _model.GetComponentInChildren<ParticleSystem>();
         }
 
         public void Shoot()
@@ -47,21 +31,21 @@ namespace Weapon
             if(Time.time > shootConfiguration.fireRate + _lastShootTime)
             {
                 _lastShootTime = Time.time;
-                _shootSystem.Play();
-                Vector3 shootDirection = _shootSystem.transform.forward + new Vector3(
+                shootSystem.Play();
+                Vector3 shootDirection = shootSystem.transform.forward + new Vector3(
                     Random.Range(-shootConfiguration.spread.x, shootConfiguration.spread.x), 
                     Random.Range(-shootConfiguration.spread.y, shootConfiguration.spread.y), 
                     Random.Range(-shootConfiguration.spread.z, shootConfiguration.spread.z)
                     );
                 shootDirection.Normalize();
                 
-                if(Physics.Raycast(_shootSystem.transform.position, shootDirection, out var hit, float.MaxValue, shootConfiguration.hitMask))
+                if(Physics.Raycast(shootSystem.transform.position, shootDirection, out var hit, float.MaxValue, shootConfiguration.hitMask))
                 {
-                    _activeMonoBehaviour.StartCoroutine(PlayTrail(_shootSystem.transform.position, hit.point, hit));
+                    StartCoroutine(PlayTrail(shootSystem.transform.position, hit.point, hit));
                 }
                 else
                 {
-                    _activeMonoBehaviour.StartCoroutine(PlayTrail(_shootSystem.transform.position, _shootSystem.transform.position + shootDirection * trailConfiguration.missDistance, new RaycastHit()));
+                    StartCoroutine(PlayTrail(shootSystem.transform.position, shootSystem.transform.position + shootDirection * trailConfiguration.missDistance, new RaycastHit()));
                 }
             }
         }
@@ -77,6 +61,7 @@ namespace Weapon
         {
             var trail = _trailPool.Get();
             trail.gameObject.SetActive(true);
+            trail.transform.SetParent(trailPoolParent, false);
             trail.transform.position = start;
             yield return null; // Wait for the trail to be initialized
             
@@ -97,6 +82,8 @@ namespace Weapon
                 // TODO: Handle impact when the bullet hits something
                 Debug.Log("Hit " + hit.collider.name);
             }
+            else
+                Debug.Log("Miss");
             
             yield return new WaitForSeconds(trailConfiguration.duration);
             yield return null;
@@ -112,7 +99,7 @@ namespace Weapon
         private TrailRenderer CreateTrail()
         {
             var trail = new GameObject("Bullet Trail").AddComponent<TrailRenderer>();
-            trail.transform.SetParent(_model.transform, false);
+            trail.transform.SetParent(gameObject.transform, false);
             trail.colorGradient = trailConfiguration.color;
             trail.material = trailConfiguration.material;
             trail.widthCurve = trailConfiguration.widthCurve;

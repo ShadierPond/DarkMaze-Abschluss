@@ -8,8 +8,7 @@ namespace Weapon
     [DisallowMultipleComponent]
     public class PlayerWeaponSelector : MonoBehaviour
     {
-        [SerializeField] private WeaponType weapon;
-        [SerializeField] private Transform weaponParent;
+        [SerializeField] private WeaponType activeWeapon;
         [SerializeField] private List<Weapon> weapons;
 
         [Space]
@@ -17,10 +16,9 @@ namespace Weapon
 
         private void Start()
         {
-            var newGun = weapons.Find(g => g.type == weapon);
+            var newGun = weapons.Find(g => g.type == activeWeapon);
 
             activeGun = newGun;
-            newGun.Spawn(weaponParent, this);
         }
     }
 }
