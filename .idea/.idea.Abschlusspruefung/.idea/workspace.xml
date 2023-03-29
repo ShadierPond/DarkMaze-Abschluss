@@ -4,17 +4,10 @@
     <list default="true" id="f7ab1e7f-ca5b-4a20-acbd-a44a16c6bef8" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/.idea.Abschlusspruefung/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.Abschlusspruefung/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Animations/Human/Player.controller" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Animations/Human/Player.controller" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Animations/Human/Weapon.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Animations/Human/Weapon/weapon_holding.anim" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Animations/Human/Weapon/weapon_holding.anim.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Meshes/Weapons/Pistol.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Meshes/Weapons/Pistol.prefab" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Meshes/Weapons/Rifle.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Meshes/Weapons/Rifle.prefab" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Meshes/Weapons/Shotgun.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Meshes/Weapons/Shotgun.prefab" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Plugins/ConsolePro/Remote/LiteNetLib/LiteNetLib.csproj.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/PlayerEnv.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/PlayerEnv.prefab" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Player/Movement.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Player/Movement.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Weapon/PlayerWeaponSelector.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Weapon/PlayerWeaponSelector.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Weapon/Weapon.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Weapon/Weapon.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Animations/Human/Weapons/ThirdPerson.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Animations/Human/Weapons/ThirdPerson/Weapon_TP_Pistol_Idle.anim" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Animations/Human/Weapons/ThirdPerson/Weapon_TP_Pistol_Idle.anim.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scenes/New Scene.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/New Scene.unity" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -155,7 +148,7 @@
       <workItem from="1679943056878" duration="631000" />
       <workItem from="1679985635175" duration="9535000" />
       <workItem from="1680017777234" duration="8087000" />
-      <workItem from="1680075612266" duration="2936000" />
+      <workItem from="1680075612266" duration="5675000" />
     </task>
     <servers />
   </component>
