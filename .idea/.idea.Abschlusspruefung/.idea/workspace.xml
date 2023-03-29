@@ -3,89 +3,18 @@
   <component name="ChangeListManager">
     <list default="true" id="f7ab1e7f-ca5b-4a20-acbd-a44a16c6bef8" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/.idea.Abschlusspruefung/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.Abschlusspruefung/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Animations/Human/Crouch.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Animations/Human/Crouch/Crouch-Stand.anim" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Animations/Human/Crouch/Crouch-Stand.anim.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Animations/Human/Crouch/Crouch_Idle.anim" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Animations/Human/Crouch/Crouch_Idle.anim.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Animations/Human/Crouch/Crouch_Left.anim" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Animations/Human/Crouch/Crouch_Left.anim.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Animations/Human/Crouch/Crouch_Right.anim" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Animations/Human/Crouch/Crouch_Right.anim.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Animations/Human/Crouch/Crouch_Walk.anim" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Animations/Human/Crouch/Crouch_Walk.anim.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Animations/Human/Crouch/Stand-Crouch.anim" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Animations/Human/Crouch/Stand-Crouch.anim.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Animations/Human/DeSpawn.anim" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Animations/Human/DeSpawn.anim.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Animations/Human/Enemy.controller" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Animations/Human/Enemy.controller" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Animations/Human/Enemy.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Animations/Human/Enemy/HitBat.anim" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Animations/Human/Enemy/HitBat.anim.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Animations/Human/Enemy/HoldingBat.anim" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Animations/Human/Enemy/HoldingBat.anim.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Animations/Human/Locomotion/Backward_Walk.anim" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Animations/Human/Locomotion/Backward_Walk.anim" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Animations/Human/Locomotion/Forward_Walk.anim" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Animations/Human/Locomotion/Forward_Walk.anim" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Animations/Human/Locomotion/Strafe_Left.anim" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Animations/Human/Locomotion/Strafe_Left.anim" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Animations/Human/Locomotion/Strafe_Right.anim" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Animations/Human/Locomotion/Strafe_Right.anim" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Animations/Human/Player.controller" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Animations/Human/Player.controller" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Animations/Human/Spawn.anim" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Animations/Human/Spawn.anim.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Materials/BaseGun/InnerBlocks.mat" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Materials/BaseGun/InnerBlocks.mat" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Materials/BaseGun/OuterBlocks.mat" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Materials/BaseGun/OuterBlocks.mat" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Materials/Energy Cell/Chip001.mat" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Materials/Energy Cell/Chip001.mat" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Materials/Energy Cell/Chip003.mat" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Materials/Energy Cell/Chip003.mat" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Materials/Energy Cell/Chip004.mat" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Materials/Energy Cell/Chip004.mat" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Materials/Energy Cell/Display/Display.mat" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Materials/Energy Cell/Display/Display.mat" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Materials/Ground/Ground.mat" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Materials/Ground/Ground.mat" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Materials/Human/Dissolve.mat" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Materials/Human/Dissolve.mat.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Models.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Models/Alpha_Body_MAT.mat" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Models/Alpha_Body_MAT.mat.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Models/Alpha_Joints_MAT.mat" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Models/Alpha_Joints_MAT.mat.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Models/Blender.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Models/Blender/Bat.blend" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Models/Blender/Bat.blend.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Models/Blender/Bat.blend1" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Models/Blender/Bat.blend1.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Models/Blender/Enemy.blend" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Models/Blender/Enemy.blend.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Models/Blender/Weapon.blend" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Models/Blender/Weapon.blend.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Models/Blender/Weapon.blend1" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Models/Blender/Weapon.blend1.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Models/Human.fbx" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Models/Human.fbx.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Models/ref_Alpha_Body.mat" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Models/ref_Alpha_Body.mat.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Models/ref_Alpha_Joints.mat" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Models/ref_Alpha_Joints.mat.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/Enemy.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/Enemy.prefab" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/Maze/PlayerSpawner.prefab" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/Maze/PlayerSpawner.prefab.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/Player.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/Player.prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Animations/Human/Weapon.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Animations/Human/Weapon/weapon_holding.anim" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Animations/Human/Weapon/weapon_holding.anim.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Meshes/Weapons/Pistol.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Meshes/Weapons/Pistol.prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Meshes/Weapons/Rifle.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Meshes/Weapons/Rifle.prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Meshes/Weapons/Shotgun.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Meshes/Weapons/Shotgun.prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Plugins/ConsolePro/Remote/LiteNetLib/LiteNetLib.csproj.meta" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Prefabs/PlayerEnv.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/PlayerEnv.prefab" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/UI/Button.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/UI/Button.prefab" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/UI/DropDown.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/UI/DropDown.prefab" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/UI/Slider.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/UI/Slider.prefab" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/UI/Toggle.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/UI/Toggle.prefab" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/Weapon.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/Weapon/Pistol.prefab" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/Weapon/Pistol.prefab.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/Weapon/Rifle.prefab" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/Weapon/Rifle.prefab.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/Weapon/Shotgun.prefab" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/Weapon/Shotgun.prefab.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scenes/Intro.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/Intro.unity" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scenes/New Scene.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/New Scene.unity" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Maze/MazeGenerator.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Maze/MazeGenerator.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scripts/Player/Movement.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Player/Movement.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Player/Spawner.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Player/Spawner.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Weapon/PlayerWeaponSelector.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Weapon/PlayerWeaponSelector.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scripts/Weapon/Weapon.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Weapon/Weapon.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ProjectSettings/Packages/com.unity.probuilder/Settings.json" beforeDir="false" afterPath="$PROJECT_DIR$/ProjectSettings/Packages/com.unity.probuilder/Settings.json" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -122,9 +51,9 @@
   },
   "keyToStringList": {
     "rider.external.source.directories": [
-      "C:\\Users\\basmj\\AppData\\Roaming\\JetBrains\\Rider2022.3\\resharper-host\\DecompilerCache",
-      "C:\\Users\\basmj\\AppData\\Roaming\\JetBrains\\Rider2022.3\\resharper-host\\SourcesCache",
-      "C:\\Users\\basmj\\AppData\\Local\\Symbols\\src"
+      "C:\\Users\\Teilnehmer2021\\AppData\\Roaming\\JetBrains\\Rider2022.3\\resharper-host\\DecompilerCache",
+      "C:\\Users\\Teilnehmer2021\\AppData\\Roaming\\JetBrains\\Rider2022.3\\resharper-host\\SourcesCache",
+      "C:\\Users\\Teilnehmer2021\\AppData\\Local\\Symbols\\src"
     ]
   }
 }]]></component>
@@ -138,7 +67,7 @@
       <method v="2" />
     </configuration>
     <configuration name="Start Unity" type="RunUnityExe" factoryName="Unity Executable">
-      <option name="EXE_PATH" value="F:\Editor\2022.1.16f1\Editor\Unity.exe" />
+      <option name="EXE_PATH" value="C:\Program Files\Unity\Hub\Editor\2022.1.16f1\Editor\Unity.exe" />
       <option name="PROGRAM_PARAMETERS" value="-projectPath F:\Projects\AbschlussPruefung -debugCodeOptimization" />
       <option name="WORKING_DIRECTORY" value="F:\Projects\AbschlussPruefung" />
       <option name="PASS_PARENT_ENVS" value="1" />
@@ -146,7 +75,7 @@
       <method v="2" />
     </configuration>
     <configuration name="UnitTests (batch mode)" type="RunUnityExe" factoryName="Unity Executable">
-      <option name="EXE_PATH" value="F:\Editor\2022.1.16f1\Editor\Unity.exe" />
+      <option name="EXE_PATH" value="C:\Program Files\Unity\Hub\Editor\2022.1.16f1\Editor\Unity.exe" />
       <option name="PROGRAM_PARAMETERS" value="-runTests -batchmode -projectPath F:\Projects\AbschlussPruefung -testResults Logs/results.xml -testPlatform EditMode -debugCodeOptimization" />
       <option name="WORKING_DIRECTORY" value="F:\Projects\AbschlussPruefung" />
       <option name="PASS_PARENT_ENVS" value="1" />
@@ -226,6 +155,7 @@
       <workItem from="1679943056878" duration="631000" />
       <workItem from="1679985635175" duration="9535000" />
       <workItem from="1680017777234" duration="8087000" />
+      <workItem from="1680075612266" duration="2936000" />
     </task>
     <servers />
   </component>

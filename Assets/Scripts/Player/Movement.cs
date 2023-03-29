@@ -273,7 +273,7 @@ namespace Player
         private IEnumerator AimWeapon(bool state)
         {
             var time = 0f;
-            var endValue = state ? 1 : 0.5f;
+            var endValue = state ? 1 : 0f;
             while (time < 1)
             {
                 time += Time.deltaTime * aimSpeed;
