@@ -2,6 +2,7 @@ using System.Collections;
 using Management;
 using UnityEngine;
 using UnityEngine.Animations.Rigging;
+using UnityEngine.Serialization;
 using Weapon;
 
 namespace Player
@@ -43,9 +44,9 @@ namespace Player
         private bool _startJump;
         private float _jumpGroundCheckTimer;
         private const float JumpGroundCheckDelay = 0.2f;
-
+        
         [Header("Animation Settings")]
-        [SerializeField] private Animator animator;
+        [SerializeField] private Animator playerAnimator;
         private static readonly int MoveX = Animator.StringToHash("MoveX");
         private static readonly int MoveY = Animator.StringToHash("MoveY");
         
@@ -70,7 +71,7 @@ namespace Player
             _controls.Player.Jump.canceled += _ => _jumpInput = false;
             
             _controls.Player.Interact.performed += _ => GameManager.Instance.SaveData();
-            _controls.Player.Shoot.performed += _ => gunSelector.activeGun.Shoot();
+            _controls.Player.Shoot.performed += _ => gunSelector.currentWeapon.Shoot();
             _controls.Player.Aim.performed += _ =>
             {
                 if(_aimCoroutine != null)
@@ -149,8 +150,8 @@ namespace Player
         /// </summary>
         private void UpdateAnimation()
         {
-            animator.SetFloat(MoveX, Mathf.Lerp(animator.GetFloat(MoveX), _input.x, Time.deltaTime * 10));
-            animator.SetFloat(MoveY, Mathf.Lerp(animator.GetFloat(MoveY), _input.y, Time.deltaTime * 10));
+            playerAnimator.SetFloat(MoveX, Mathf.Lerp(playerAnimator.GetFloat(MoveX), _input.x, Time.deltaTime * 10));
+            playerAnimator.SetFloat(MoveY, Mathf.Lerp(playerAnimator.GetFloat(MoveY), _input.y, Time.deltaTime * 10));
         }
         
         /// <summary>

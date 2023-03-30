@@ -9,7 +9,6 @@ namespace Weapon
         public WeaponType type;
         public ShootConfiguration shootConfiguration;
         public TrailConfiguration trailConfiguration;
-        public AnimationClip weaponAnimation;
         [SerializeField] private ParticleSystem shootSystem;
         private float _lastShootTime;
         private ObjectPool<TrailRenderer> _trailPool;

@@ -3,11 +3,32 @@
   <component name="ChangeListManager">
     <list default="true" id="f7ab1e7f-ca5b-4a20-acbd-a44a16c6bef8" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/.idea.Abschlusspruefung/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.Abschlusspruefung/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Animations/Human/Bat/HoldingBat.anim" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Animations/Human/Bat/HoldingBat.anim" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Animations/Human/Enemy.controller" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Animations/Human/Enemy.controller" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Animations/Human/Locomotion/Backward_Walk.anim" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Animations/Human/Locomotion/Backward_Walk.anim" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Animations/Human/Locomotion/Forward_Walk.anim" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Animations/Human/Locomotion/Forward_Walk.anim" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Animations/Human/Locomotion/Idle.anim" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Animations/Human/Locomotion/Idle.anim" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Animations/Human/Locomotion/Strafe_Left.anim" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Animations/Human/Locomotion/Strafe_Left.anim" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Animations/Human/Locomotion/Strafe_Right.anim" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Animations/Human/Locomotion/Strafe_Right.anim" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Animations/Human/Player.controller" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Animations/Human/Player.controller" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Animations/Human/Weapons/ThirdPerson.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Animations/Human/Weapons/ThirdPerson/Weapon_TP_Pistol_Idle.anim" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Animations/Human/Weapons/ThirdPerson/Weapon_TP_Pistol_Idle.anim.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Animations/Human/Weapons/Weapon_Empty.anim" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Animations/Human/Weapons/Weapon_Empty.anim.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Animations/Human/Weapons/Weapon_Pistol_Idle.anim" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Animations/Human/Weapons/Weapon_Pistol_Idle.anim.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Animations/Human/Weapons/Weapon_Pistol_Walking.anim" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Animations/Human/Weapons/Weapon_Pistol_Walking.anim.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Animations/Human/Weapons/Weapon_Rifle.anim" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Animations/Human/Weapons/Weapon_Rifle.anim.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Animations/Human/Weapons/Weapon_Shotgun.anim" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Animations/Human/Weapons/Weapon_Shotgun.anim.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Meshes/Weapons/Pistol.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Meshes/Weapons/Pistol.prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/Enemy.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/Enemy.prefab" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scenes/New Scene.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/New Scene.unity" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Player/Movement.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Player/Movement.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Weapon/PlayerWeaponSelector.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Weapon/PlayerWeaponSelector.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Weapon/Weapon.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Weapon/Weapon.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Weapon/WeaponTypes.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Weapon/WeaponTypes.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ProjectSettings/Packages/com.unity.probuilder/Settings.json" beforeDir="false" afterPath="$PROJECT_DIR$/ProjectSettings/Packages/com.unity.probuilder/Settings.json" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -44,9 +65,9 @@
   },
   "keyToStringList": {
     "rider.external.source.directories": [
-      "C:\\Users\\Teilnehmer2021\\AppData\\Roaming\\JetBrains\\Rider2022.3\\resharper-host\\DecompilerCache",
-      "C:\\Users\\Teilnehmer2021\\AppData\\Roaming\\JetBrains\\Rider2022.3\\resharper-host\\SourcesCache",
-      "C:\\Users\\Teilnehmer2021\\AppData\\Local\\Symbols\\src"
+      "C:\\Users\\basmj\\AppData\\Roaming\\JetBrains\\Rider2022.3\\resharper-host\\DecompilerCache",
+      "C:\\Users\\basmj\\AppData\\Roaming\\JetBrains\\Rider2022.3\\resharper-host\\SourcesCache",
+      "C:\\Users\\basmj\\AppData\\Local\\Symbols\\src"
     ]
   }
 }]]></component>
@@ -60,7 +81,7 @@
       <method v="2" />
     </configuration>
     <configuration name="Start Unity" type="RunUnityExe" factoryName="Unity Executable">
-      <option name="EXE_PATH" value="C:\Program Files\Unity\Hub\Editor\2022.1.16f1\Editor\Unity.exe" />
+      <option name="EXE_PATH" value="F:\Editor\2022.1.16f1\Editor\Unity.exe" />
       <option name="PROGRAM_PARAMETERS" value="-projectPath F:\Projects\AbschlussPruefung -debugCodeOptimization" />
       <option name="WORKING_DIRECTORY" value="F:\Projects\AbschlussPruefung" />
       <option name="PASS_PARENT_ENVS" value="1" />
@@ -68,7 +89,7 @@
       <method v="2" />
     </configuration>
     <configuration name="UnitTests (batch mode)" type="RunUnityExe" factoryName="Unity Executable">
-      <option name="EXE_PATH" value="C:\Program Files\Unity\Hub\Editor\2022.1.16f1\Editor\Unity.exe" />
+      <option name="EXE_PATH" value="F:\Editor\2022.1.16f1\Editor\Unity.exe" />
       <option name="PROGRAM_PARAMETERS" value="-runTests -batchmode -projectPath F:\Projects\AbschlussPruefung -testResults Logs/results.xml -testPlatform EditMode -debugCodeOptimization" />
       <option name="WORKING_DIRECTORY" value="F:\Projects\AbschlussPruefung" />
       <option name="PASS_PARENT_ENVS" value="1" />
@@ -149,6 +170,7 @@
       <workItem from="1679985635175" duration="9535000" />
       <workItem from="1680017777234" duration="8087000" />
       <workItem from="1680075612266" duration="5675000" />
+      <workItem from="1680110472332" duration="7944000" />
     </task>
     <servers />
   </component>
