@@ -12,7 +12,7 @@ GameObject:
   - component: {fileID: 8511136677993779967}
   - component: {fileID: 1641482676823800657}
   - component: {fileID: 3062796118599322258}
-  m_Layer: 0
+  m_Layer: 12
   m_Name: Maze Ceiling
   m_TagString: Untagged
   m_Icon: {fileID: 0}

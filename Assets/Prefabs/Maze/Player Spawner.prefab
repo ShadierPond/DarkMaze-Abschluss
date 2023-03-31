@@ -14,7 +14,7 @@ GameObject:
   - component: {fileID: 4674009873561112065}
   - component: {fileID: 3061207967520991196}
   - component: {fileID: 4936083513985405978}
-  m_Layer: 0
+  m_Layer: 14
   m_Name: Cylinder
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -739,7 +739,7 @@ GameObject:
   - component: {fileID: 6381959684221264827}
   - component: {fileID: 8089779049125098314}
   - component: {fileID: 6055222113432574959}
-  m_Layer: 0
+  m_Layer: 14
   m_Name: Player Spawner
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -836,7 +836,7 @@ GameObject:
   - component: {fileID: 2924055638929230765}
   - component: {fileID: 5050807946477244482}
   - component: {fileID: 3227283386064546995}
-  m_Layer: 0
+  m_Layer: 14
   m_Name: Particle System
   m_TagString: Untagged
   m_Icon: {fileID: 0}
