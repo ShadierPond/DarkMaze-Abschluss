@@ -19,7 +19,10 @@ namespace NPC
         private void OnEnable()
         {
             player = GameObject.FindGameObjectWithTag("Player");
-            GameManager.Instance.RegisterEnemy(gameObject);
+            if(GameManager.Instance != null)
+                GameManager.Instance.RegisterEnemy(gameObject);
+            else
+                Debug.LogWarning("GameManager not found. Maybe it is not in the scene? Or the Enemy is being instantiated before the GameManager?");
         }
 
         private void OnDisable()

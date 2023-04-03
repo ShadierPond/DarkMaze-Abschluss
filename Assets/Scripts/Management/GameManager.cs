@@ -3,11 +3,10 @@ using System.Linq;
 using Management.SaveSystem;
 using MazeSystem;
 using UnityEngine;
-using UnityEngine.AddressableAssets;
 using UnityEngine.Playables;
-using UnityEngine.Rendering.PostProcessing;
-using UnityEngine.ResourceManagement.AsyncOperations;
+using UnityEngine.Rendering;
 using UnityEngine.SceneManagement;
+using UnityEngine.Serialization;
 
 namespace Management
 {
@@ -15,7 +14,8 @@ namespace Management
     {
         public static GameManager Instance { get; private set; }
         public SaveManager saveManager;
-        public PostProcessVolume postProcessVolume;
+        public Volume globalVolume;
+        public VolumeProfile profile;
         [HideInInspector] public MazeGenerator mazeGenerator;
 
         // Loading Screen
@@ -71,7 +71,8 @@ namespace Management
             LoadingOperations = new List<AsyncOperation>();
             IsGameLoading = false;
             saveManager = GetComponent<SaveManager>();
-            postProcessVolume = GetComponent<PostProcessVolume>();
+            globalVolume = GetComponent<Volume>();
+            profile = globalVolume.profile;
         }
 
         private void Update()
@@ -198,6 +199,20 @@ namespace Management
         public void UnregisterEnemy(GameObject enemy)
         {
             enemiesAlive.Remove(enemy);
+        }
+
+        public void OnMazeExit()
+        {
+            
+        }
+        
+        public void ExitGame()
+        {
+            #if UNITY_EDITOR
+                UnityEditor.EditorApplication.isPlaying = false;
+            #else
+                Application.Quit();
+            #endif
         }
     }
 }

@@ -20,7 +20,7 @@ namespace Management.Sound.Detection
 
         private void EmitSound()
         {
-            if(audioSource.isPlaying)
+            if(audioSource.isPlaying && SoundDetectionManager.Instance != null)
                 SoundDetectionManager.Instance.EmitSound(this);
             /*
             var results = new Collider[maxObjectsToEmitSoundTo];

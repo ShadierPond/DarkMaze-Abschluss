@@ -138,7 +138,6 @@ namespace Player
         /// </summary>
         private void UpdateMovement()
         {
-            Debug.Log(_input);
             _moveDirection = transform.forward * _input.y + transform.right * _input.x;
             Debug.DrawRay(transform.position, _moveDirection, Color.red);
             _rigidbody.AddForce(!isJumping? _moveDirection * (currentSpeed * speedMultiplier * 2) : isGrounded ? _moveDirection.normalized * (currentSpeed * speedMultiplier) : _moveDirection.normalized * (currentSpeed * speedMultiplier * airSpeedMultiplier), ForceMode.Force);

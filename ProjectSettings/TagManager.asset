@@ -14,14 +14,14 @@ TagManager:
   - UI
   - Player
   - Shootable
-  - IgnoreCamera
+  - Ignore Camera
   - Weapon
-  - MinimapIcon
+  - Minimap Icon
   - Enemy
   - Ceiling
   - Wall
   - Floor
-  - 
+  - Post Processing
   - 
   - 
   - 

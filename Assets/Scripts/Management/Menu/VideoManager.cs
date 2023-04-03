@@ -1,22 +1,20 @@
 ﻿using Management.SaveSystem;
 using TMPro;
 using UnityEngine;
-using UnityEngine.Rendering.PostProcessing;
+using UnityEngine.Rendering;
+using UnityEngine.Rendering.HighDefinition;
 using UnityEngine.UI;
-using MotionBlur = UnityEngine.Rendering.PostProcessing.MotionBlur;
-using ScreenSpaceReflections = UnityEngine.Rendering.PostProcessing.ScreenSpaceReflections;
 using ShadowQuality = UnityEngine.ShadowQuality;
-using FilmGrain = UnityEngine.Rendering.PostProcessing.Grain;
 
 namespace Management.Menu
 {
     public class VideoManager : MonoBehaviour
     {
-        private PostProcessVolume _postProcessVolume;
+        private VolumeProfile _postProcessVolume;
         private AmbientOcclusion _ambientOcclusion;
         private Bloom _bloom;
         private MotionBlur _motionBlur;
-        private ScreenSpaceReflections _screenSpaceReflections;
+        private ScreenSpaceRefraction _screenSpaceReflections;
         private FilmGrain _filmGrain;
         
         // Display
@@ -65,11 +63,11 @@ namespace Management.Menu
 
             // Get the post processing volume and the settings and the Save data
             var data = SaveManager.Instance.settingsDataClass;
-            _postProcessVolume = Management.GameManager.Instance.postProcessVolume;
-            _postProcessVolume.profile.TryGetSettings(out _ambientOcclusion);
-            _postProcessVolume.profile.TryGetSettings(out _bloom);
-            _postProcessVolume.profile.TryGetSettings(out _motionBlur);
-            _postProcessVolume.profile.TryGetSettings(out _filmGrain);
+            _postProcessVolume = Management.GameManager.Instance.profile;
+            _postProcessVolume.TryGet(out _ambientOcclusion);
+            _postProcessVolume.TryGet(out _bloom);
+            _postProcessVolume.TryGet(out _motionBlur);
+            _postProcessVolume.TryGet(out _filmGrain);
 
             // Get the saved settings
             resolutionDropdown.value = data.resolutionIndex;
@@ -216,7 +214,7 @@ namespace Management.Menu
         
         private void SetMotionBlurSlider(float motionBlurValue)
         {
-            _motionBlur.shutterAngle.value = motionBlurValue;
+            _motionBlur.intensity.value = motionBlurValue;
             Save();
         }
 

@@ -3,32 +3,487 @@
   <component name="ChangeListManager">
     <list default="true" id="f7ab1e7f-ca5b-4a20-acbd-a44a16c6bef8" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/.idea.Abschlusspruefung/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.Abschlusspruefung/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Animations/Human/Bat/HoldingBat.anim" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Animations/Human/Bat/HoldingBat.anim" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Animations/Human/Enemy.controller" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Animations/Human/Enemy.controller" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Animations/Human/Locomotion/Backward_Walk.anim" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Animations/Human/Locomotion/Backward_Walk.anim" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Animations/Human/Locomotion/Forward_Walk.anim" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Animations/Human/Locomotion/Forward_Walk.anim" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Animations/Human/Locomotion/Idle.anim" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Animations/Human/Locomotion/Idle.anim" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Animations/Human/Locomotion/Strafe_Left.anim" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Animations/Human/Locomotion/Strafe_Left.anim" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Animations/Human/Locomotion/Strafe_Right.anim" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Animations/Human/Locomotion/Strafe_Right.anim" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Animations/Human/Player.controller" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Animations/Human/Player.controller" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Animations/Human/Weapons/Weapon_Empty.anim" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Animations/Human/Weapons/Weapon_Empty.anim.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Animations/Human/Weapons/Weapon_Pistol_Idle.anim" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Animations/Human/Weapons/Weapon_Pistol_Idle.anim.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Animations/Human/Weapons/Weapon_Pistol_Walking.anim" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Animations/Human/Weapons/Weapon_Pistol_Walking.anim.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Animations/Human/Weapons/Weapon_Rifle.anim" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Animations/Human/Weapons/Weapon_Rifle.anim.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Animations/Human/Weapons/Weapon_Shotgun.anim" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Animations/Human/Weapons/Weapon_Shotgun.anim.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Animations/Human/Weapons/unarmed.anim" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Animations/Human/Weapons/unarmed.anim.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Data/AddressableAssetsData/AssetGroups/Maze.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Data/AddressableAssetsData/AssetGroups/Maze.asset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Materials/BaseGun.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Materials/BaseGun/Grip.mat" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Materials/BaseGun/Grip.mat.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Materials/BaseGun/Handle.mat" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Materials/BaseGun/Handle.mat.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Materials/BaseGun/InnerBlocks.mat" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Materials/BaseGun/InnerBlocks.mat.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Materials/BaseGun/OuterBlocks.mat" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Materials/BaseGun/OuterBlocks.mat.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Materials/Default/CarbonFiber.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Materials/Default/CarbonFiber/CarbonFiber.mat" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Materials/Default/CarbonFiber/CarbonFiber.mat.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Materials/Default/CarbonFiber/CarbonFiber.shadergraph" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Materials/Default/CarbonFiber/CarbonFiber.shadergraph.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Materials/Default/CarbonFiber/Textures.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Materials/Default/CarbonFiber/Textures/CarbonFiber_BC.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Materials/Default/CarbonFiber/Textures/CarbonFiber_BC.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Materials/Default/CarbonFiber/Textures/CarbonFiber_M.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Materials/Default/CarbonFiber/Textures/CarbonFiber_M.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Materials/Default/CarbonFiber/Textures/CarbonFiber_NM.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Materials/Default/CarbonFiber/Textures/CarbonFiber_NM.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Materials/Default/Checker.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Materials/Default/Checker/Checker.mat" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Materials/Default/Checker/Checker.mat.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Materials/Default/Checker/Checker.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Materials/Default/Checker/Checker.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Materials/Default/Checker/Materials.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Materials/Default/Checker/Materials/Checker.mat" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Materials/Default/Checker/Materials/Checker.mat.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Materials/Default/Glass.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Materials/Default/Glass/Glass.mat" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Materials/Default/Glass/Glass.mat.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Materials/Default/Glass/Glass.shadergraph" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Materials/Default/Glass/Glass.shadergraph.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Materials/Default/Glass/Textures.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Materials/Default/Glass/Textures/GlassDirt_M.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Materials/Default/Glass/Textures/GlassDirt_M.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Materials/Default/Metal/Aluminum/Textures.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Materials/Default/Metal/Aluminum/Textures/AluminumBrushed_M.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Materials/Default/Metal/Aluminum/Textures/AluminumBrushed_M.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Materials/Default/Metal/Aluminum/Textures/AluminumScratched_M.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Materials/Default/Metal/Aluminum/Textures/AluminumScratched_M.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Materials/Default/Metal/Aluminum/Textures/Aluminum_M.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Materials/Default/Metal/Aluminum/Textures/Aluminum_M.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Materials/Default/Metal/Chrome/Textures.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Materials/Default/Metal/Chrome/Textures/ChromeDirtSatin_M.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Materials/Default/Metal/Chrome/Textures/ChromeDirtSatin_M.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Materials/Default/Metal/Chrome/Textures/ChromeDirt_M.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Materials/Default/Metal/Chrome/Textures/ChromeDirt_M.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Materials/Default/Metal/Chrome/Textures/ChromeSatinScratched_M.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Materials/Default/Metal/Chrome/Textures/ChromeSatinScratched_M.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Materials/Default/Metal/Chrome/Textures/ChromeScratched_M.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Materials/Default/Metal/Chrome/Textures/ChromeScratched_M.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Materials/Default/Metal/Metal.shadergraph" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Materials/Default/Metal/Metal.shadergraph.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Materials/Default/Metal/MetalPlate.shadergraph" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Materials/Default/Metal/MetalPlate.shadergraph.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Materials/Default/Metal/Textures.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Materials/Default/Metal/Textures/MetalBumpy_M.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Materials/Default/Metal/Textures/MetalBumpy_M.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Materials/Default/Metal/Textures/MetalBumpy_NM.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Materials/Default/Metal/Textures/MetalBumpy_NM.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Materials/Default/Metal/Textures/MetalPlates002_4K-PNG.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Materials/Default/Metal/Textures/MetalPlates002_4K-PNG/MetalPlates002_4K-PNG.usda" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Materials/Default/Metal/Textures/MetalPlates002_4K-PNG/MetalPlates002_4K-PNG.usda.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Materials/Default/Metal/Textures/MetalPlates002_4K-PNG/MetalPlates002_4K-PNG.usdc" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Materials/Default/Metal/Textures/MetalPlates002_4K-PNG/MetalPlates002_4K-PNG.usdc.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Materials/Default/Metal/Textures/MetalPlates002_4K-PNG/MetalPlates002_4K_Color.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Materials/Default/Metal/Textures/MetalPlates002_4K-PNG/MetalPlates002_4K_Color.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Materials/Default/Metal/Textures/MetalPlates002_4K-PNG/MetalPlates002_4K_Displacement.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Materials/Default/Metal/Textures/MetalPlates002_4K-PNG/MetalPlates002_4K_Displacement.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Materials/Default/Metal/Textures/MetalPlates002_4K-PNG/MetalPlates002_4K_Metalness.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Materials/Default/Metal/Textures/MetalPlates002_4K-PNG/MetalPlates002_4K_Metalness.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Materials/Default/Metal/Textures/MetalPlates002_4K-PNG/MetalPlates002_4K_NormalDX.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Materials/Default/Metal/Textures/MetalPlates002_4K-PNG/MetalPlates002_4K_NormalDX.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Materials/Default/Metal/Textures/MetalPlates002_4K-PNG/MetalPlates002_4K_NormalGL.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Materials/Default/Metal/Textures/MetalPlates002_4K-PNG/MetalPlates002_4K_NormalGL.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Materials/Default/Metal/Textures/MetalPlates002_4K-PNG/MetalPlates002_4K_Roughness.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Materials/Default/Metal/Textures/MetalPlates002_4K-PNG/MetalPlates002_4K_Roughness.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Materials/Default/Metal/Textures/MetalPlates002_4K-PNG/MetalPlates002_PREVIEW.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Materials/Default/Metal/Textures/MetalPlates002_4K-PNG/MetalPlates002_PREVIEW.jpg.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Materials/Default/Metal/Textures/MetalScratched_M.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Materials/Default/Metal/Textures/MetalScratched_M.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Materials/Default/Metal/Textures/Metal_M.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Materials/Default/Metal/Textures/Metal_M.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Materials/Default/Paint.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Materials/Default/Paint/Paint.mat" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Materials/Default/Paint/Paint.mat.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Materials/Default/Paint/Paint.shadergraph" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Materials/Default/Paint/Paint.shadergraph.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Materials/Default/Plastic/Plastic.shadergraph" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Materials/Default/Plastic/Plastic.shadergraph.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Materials/Default/Plastic/Textures.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Materials/Default/Plastic/Textures/PlasticDirt_M.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Materials/Default/Plastic/Textures/PlasticDirt_M.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Materials/Default/Plastic/Textures/PlasticGrainy_Normal.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Materials/Default/Plastic/Textures/PlasticGrainy_Normal.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Materials/Default/Plastic/Textures/PlasticTransparentDirt_M.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Materials/Default/Plastic/Textures/PlasticTransparentDirt_M.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Materials/Default/Rubber/Rubber.shadergraph" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Materials/Default/Rubber/Rubber.shadergraph.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Materials/Default/Rubber/Textures.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Materials/Default/Rubber/Textures/Rubber_BC.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Materials/Default/Rubber/Textures/Rubber_BC.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Materials/Default/Rubber/Textures/Rubber_M.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Materials/Default/Rubber/Textures/Rubber_M.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Materials/Default/Rubber/Textures/Rubber_NM.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Materials/Default/Rubber/Textures/Rubber_NM.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Materials/Default/Rubber/Textures/rubble_tile_occlusion.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Materials/Default/Rubber/Textures/rubble_tile_occlusion.jpg.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Materials/Default/Subgraphs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Materials/Default/Subgraphs/Procedural Patterns.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Materials/Default/Subgraphs/Procedural Patterns/.sample.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Materials/Default/Subgraphs/Procedural Patterns/Bacteria.ShaderSubGraph" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Materials/Default/Subgraphs/Procedural Patterns/Bacteria.ShaderSubGraph.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Materials/Default/Subgraphs/Procedural Patterns/BacteriaSmoothstep.shadersubgraph" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Materials/Default/Subgraphs/Procedural Patterns/BacteriaSmoothstep.shadersubgraph.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Materials/Default/Subgraphs/Procedural Patterns/Brick.ShaderSubGraph" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Materials/Default/Subgraphs/Procedural Patterns/Brick.ShaderSubGraph.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Materials/Default/Subgraphs/Procedural Patterns/Dots.ShaderSubGraph" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Materials/Default/Subgraphs/Procedural Patterns/Dots.ShaderSubGraph.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Materials/Default/Subgraphs/Procedural Patterns/Grid.ShaderSubGraph" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Materials/Default/Subgraphs/Procedural Patterns/Grid.ShaderSubGraph.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Materials/Default/Subgraphs/Procedural Patterns/Herringbone.ShaderSubGraph" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Materials/Default/Subgraphs/Procedural Patterns/Herringbone.ShaderSubGraph.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Materials/Default/Subgraphs/Procedural Patterns/Hex Lattice.ShaderSubGraph" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Materials/Default/Subgraphs/Procedural Patterns/Hex Lattice.ShaderSubGraph.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Materials/Default/Subgraphs/Procedural Patterns/Houndstooth.ShaderSubGraph" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Materials/Default/Subgraphs/Procedural Patterns/Houndstooth.ShaderSubGraph.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Materials/Default/Subgraphs/Procedural Patterns/Smooth Wave.ShaderSubGraph" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Materials/Default/Subgraphs/Procedural Patterns/Smooth Wave.ShaderSubGraph.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Materials/Default/Subgraphs/Procedural Patterns/Spiral.ShaderSubGraph" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Materials/Default/Subgraphs/Procedural Patterns/Spiral.ShaderSubGraph.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Materials/Default/Subgraphs/Procedural Patterns/Stripes.ShaderSubGraph" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Materials/Default/Subgraphs/Procedural Patterns/Stripes.ShaderSubGraph.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Materials/Default/Subgraphs/Procedural Patterns/Truchet.ShaderSubGraph" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Materials/Default/Subgraphs/Procedural Patterns/Truchet.ShaderSubGraph.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Materials/Default/Subgraphs/Procedural Patterns/Whirl.ShaderSubGraph" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Materials/Default/Subgraphs/Procedural Patterns/Whirl.ShaderSubGraph.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Materials/Default/Subgraphs/Procedural Patterns/Zig Zag.ShaderSubGraph" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Materials/Default/Subgraphs/Procedural Patterns/Zig Zag.ShaderSubGraph.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Materials/Default/Subgraphs/UVFlakesNormal.shadersubgraph" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Materials/Default/Subgraphs/UVFlakesNormal.shadersubgraph.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Materials/Default/Subgraphs/UVMask.shadersubgraph" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Materials/Default/Subgraphs/UVMask.shadersubgraph.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Materials/Default/Subgraphs/UVMetalness.shadersubgraph" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Materials/Default/Subgraphs/UVMetalness.shadersubgraph.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Materials/Default/Subgraphs/UVNoise.shadersubgraph" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Materials/Default/Subgraphs/UVNoise.shadersubgraph.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Materials/Default/Subgraphs/UVNormal.shadersubgraph" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Materials/Default/Subgraphs/UVNormal.shadersubgraph.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Materials/Default/Subgraphs/UVRoughness.shadersubgraph" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Materials/Default/Subgraphs/UVRoughness.shadersubgraph.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Materials/Default/Subgraphs/UVTesselation.shadersubgraph" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Materials/Default/Subgraphs/UVTesselation.shadersubgraph.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Materials/Default/Subgraphs/UVTexture.shadersubgraph" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Materials/Default/Subgraphs/UVTexture.shadersubgraph.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Materials/Default/Texture.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Materials/Default/Texture/PavingStones068_4K-PNG.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Materials/Default/Texture/PavingStones068_4K-PNG/PavingStones068_4K-PNG.usda" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Materials/Default/Texture/PavingStones068_4K-PNG/PavingStones068_4K-PNG.usda.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Materials/Default/Texture/PavingStones068_4K-PNG/PavingStones068_4K-PNG.usdc" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Materials/Default/Texture/PavingStones068_4K-PNG/PavingStones068_4K-PNG.usdc.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Materials/Default/Texture/PavingStones068_4K-PNG/PavingStones068_4K_AmbientOcclusion.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Materials/Default/Texture/PavingStones068_4K-PNG/PavingStones068_4K_AmbientOcclusion.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Materials/Default/Texture/PavingStones068_4K-PNG/PavingStones068_4K_Color.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Materials/Default/Texture/PavingStones068_4K-PNG/PavingStones068_4K_Color.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Materials/Default/Texture/PavingStones068_4K-PNG/PavingStones068_4K_Displacement.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Materials/Default/Texture/PavingStones068_4K-PNG/PavingStones068_4K_Displacement.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Materials/Default/Texture/PavingStones068_4K-PNG/PavingStones068_4K_NormalDX.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Materials/Default/Texture/PavingStones068_4K-PNG/PavingStones068_4K_NormalDX.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Materials/Default/Texture/PavingStones068_4K-PNG/PavingStones068_4K_NormalGL.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Materials/Default/Texture/PavingStones068_4K-PNG/PavingStones068_4K_NormalGL.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Materials/Default/Texture/PavingStones068_4K-PNG/PavingStones068_4K_Roughness.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Materials/Default/Texture/PavingStones068_4K-PNG/PavingStones068_4K_Roughness.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Materials/Default/Texture/PavingStones068_4K-PNG/PavingStones068_PREVIEW.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Materials/Default/Texture/PavingStones068_4K-PNG/PavingStones068_PREVIEW.jpg.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Materials/Default/Texture/TextureMaterial.mat" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Materials/Default/Texture/TextureMaterial.mat.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Materials/Default/Texture/TextureMaterial.shadergraph" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Materials/Default/Texture/TextureMaterial.shadergraph.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Materials/Default/Wood.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Materials/Default/Wood/FloatingMahogany.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Materials/Default/Wood/FloatingMahogany/FloatingMahoganyCoat_Black.mat" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Materials/Default/Wood/FloatingMahogany/FloatingMahoganyCoat_Black.mat.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Materials/Default/Wood/FloatingMahogany/FloatingMahoganyCoat_Bronze.mat" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Materials/Default/Wood/FloatingMahogany/FloatingMahoganyCoat_Bronze.mat.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Materials/Default/Wood/FloatingMahogany/FloatingMahoganyCoat_Brown.mat" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Materials/Default/Wood/FloatingMahogany/FloatingMahoganyCoat_Brown.mat.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Materials/Default/Wood/FloatingMahogany/FloatingMahoganyCoat_DarkBrown.mat" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Materials/Default/Wood/FloatingMahogany/FloatingMahoganyCoat_DarkBrown.mat.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Materials/Default/Wood/FloatingMahogany/FloatingMahoganyCoat_Natural.mat" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Materials/Default/Wood/FloatingMahogany/FloatingMahoganyCoat_Natural.mat.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Materials/Default/Wood/FloatingMahogany/FloatingMahoganyCoat_Sienna.mat" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Materials/Default/Wood/FloatingMahogany/FloatingMahoganyCoat_Sienna.mat.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Materials/Default/Wood/FloatingMahogany/FloatingMahogany_Black.mat" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Materials/Default/Wood/FloatingMahogany/FloatingMahogany_Black.mat.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Materials/Default/Wood/FloatingMahogany/FloatingMahogany_Bronze.mat" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Materials/Default/Wood/FloatingMahogany/FloatingMahogany_Bronze.mat.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Materials/Default/Wood/FloatingMahogany/FloatingMahogany_Brown.mat" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Materials/Default/Wood/FloatingMahogany/FloatingMahogany_Brown.mat.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Materials/Default/Wood/FloatingMahogany/FloatingMahogany_DarkBrown.mat" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Materials/Default/Wood/FloatingMahogany/FloatingMahogany_DarkBrown.mat.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Materials/Default/Wood/FloatingMahogany/FloatingMahogany_Natural.mat" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Materials/Default/Wood/FloatingMahogany/FloatingMahogany_Natural.mat.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Materials/Default/Wood/FloatingMahogany/FloatingMahogany_Sienna.mat" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Materials/Default/Wood/FloatingMahogany/FloatingMahogany_Sienna.mat.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Materials/Default/Wood/FloatingMahogany/Textures.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Materials/Default/Wood/FloatingMahogany/Textures/FloatingMahogany_Black_BC.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Materials/Default/Wood/FloatingMahogany/Textures/FloatingMahogany_Black_BC.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Materials/Default/Wood/FloatingMahogany/Textures/FloatingMahogany_Bronze_BC.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Materials/Default/Wood/FloatingMahogany/Textures/FloatingMahogany_Bronze_BC.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Materials/Default/Wood/FloatingMahogany/Textures/FloatingMahogany_Brown_BC.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Materials/Default/Wood/FloatingMahogany/Textures/FloatingMahogany_Brown_BC.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Materials/Default/Wood/FloatingMahogany/Textures/FloatingMahogany_DarkBrown_BC.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Materials/Default/Wood/FloatingMahogany/Textures/FloatingMahogany_DarkBrown_BC.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Materials/Default/Wood/FloatingMahogany/Textures/FloatingMahogany_M.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Materials/Default/Wood/FloatingMahogany/Textures/FloatingMahogany_M.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Materials/Default/Wood/FloatingMahogany/Textures/FloatingMahogany_NM.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Materials/Default/Wood/FloatingMahogany/Textures/FloatingMahogany_NM.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Materials/Default/Wood/FloatingMahogany/Textures/FloatingMahogany_Natural_BC.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Materials/Default/Wood/FloatingMahogany/Textures/FloatingMahogany_Natural_BC.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Materials/Default/Wood/FloatingMahogany/Textures/FloatingMahogany_Sienna_BC.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Materials/Default/Wood/FloatingMahogany/Textures/FloatingMahogany_Sienna_BC.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Materials/Default/Wood/MapleFundy.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Materials/Default/Wood/MapleFundy/MapleFundyCoat_Black.mat" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Materials/Default/Wood/MapleFundy/MapleFundyCoat_Black.mat.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Materials/Default/Wood/MapleFundy/MapleFundyCoat_Bronze.mat" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Materials/Default/Wood/MapleFundy/MapleFundyCoat_Bronze.mat.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Materials/Default/Wood/MapleFundy/MapleFundyCoat_Brown.mat" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Materials/Default/Wood/MapleFundy/MapleFundyCoat_Brown.mat.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Materials/Default/Wood/MapleFundy/MapleFundyCoat_DarkBrown.mat" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Materials/Default/Wood/MapleFundy/MapleFundyCoat_DarkBrown.mat.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Materials/Default/Wood/MapleFundy/MapleFundyCoat_Natural.mat" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Materials/Default/Wood/MapleFundy/MapleFundyCoat_Natural.mat.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Materials/Default/Wood/MapleFundy/MapleFundyCoat_Sienna.mat" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Materials/Default/Wood/MapleFundy/MapleFundyCoat_Sienna.mat.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Materials/Default/Wood/MapleFundy/MapleFundy_Black.mat" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Materials/Default/Wood/MapleFundy/MapleFundy_Black.mat.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Materials/Default/Wood/MapleFundy/MapleFundy_Bronze.mat" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Materials/Default/Wood/MapleFundy/MapleFundy_Bronze.mat.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Materials/Default/Wood/MapleFundy/MapleFundy_Brown.mat" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Materials/Default/Wood/MapleFundy/MapleFundy_Brown.mat.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Materials/Default/Wood/MapleFundy/MapleFundy_DarkBrown.mat" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Materials/Default/Wood/MapleFundy/MapleFundy_DarkBrown.mat.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Materials/Default/Wood/MapleFundy/MapleFundy_Natural.mat" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Materials/Default/Wood/MapleFundy/MapleFundy_Natural.mat.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Materials/Default/Wood/MapleFundy/MapleFundy_Sienna.mat" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Materials/Default/Wood/MapleFundy/MapleFundy_Sienna.mat.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Materials/Default/Wood/MapleFundy/Textures.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Materials/Default/Wood/MapleFundy/Textures/MapleFundy_Black_BC.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Materials/Default/Wood/MapleFundy/Textures/MapleFundy_Black_BC.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Materials/Default/Wood/MapleFundy/Textures/MapleFundy_Bronze_BC.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Materials/Default/Wood/MapleFundy/Textures/MapleFundy_Bronze_BC.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Materials/Default/Wood/MapleFundy/Textures/MapleFundy_Brown_BC.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Materials/Default/Wood/MapleFundy/Textures/MapleFundy_Brown_BC.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Materials/Default/Wood/MapleFundy/Textures/MapleFundy_DarkBrown_BC.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Materials/Default/Wood/MapleFundy/Textures/MapleFundy_DarkBrown_BC.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Materials/Default/Wood/MapleFundy/Textures/MapleFundy_M.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Materials/Default/Wood/MapleFundy/Textures/MapleFundy_M.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Materials/Default/Wood/MapleFundy/Textures/MapleFundy_NM.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Materials/Default/Wood/MapleFundy/Textures/MapleFundy_NM.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Materials/Default/Wood/MapleFundy/Textures/MapleFundy_Natural_BC.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Materials/Default/Wood/MapleFundy/Textures/MapleFundy_Natural_BC.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Materials/Default/Wood/MapleFundy/Textures/MapleFundy_Sienna_BC.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Materials/Default/Wood/MapleFundy/Textures/MapleFundy_Sienna_BC.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Materials/Default/Wood/QuiltedMaple.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Materials/Default/Wood/QuiltedMaple/QuiltedMapleCoat_Black.mat" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Materials/Default/Wood/QuiltedMaple/QuiltedMapleCoat_Black.mat.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Materials/Default/Wood/QuiltedMaple/QuiltedMapleCoat_Bronze.mat" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Materials/Default/Wood/QuiltedMaple/QuiltedMapleCoat_Bronze.mat.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Materials/Default/Wood/QuiltedMaple/QuiltedMapleCoat_Brown.mat" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Materials/Default/Wood/QuiltedMaple/QuiltedMapleCoat_Brown.mat.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Materials/Default/Wood/QuiltedMaple/QuiltedMapleCoat_DarkBrown.mat" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Materials/Default/Wood/QuiltedMaple/QuiltedMapleCoat_DarkBrown.mat.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Materials/Default/Wood/QuiltedMaple/QuiltedMapleCoat_Natural.mat" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Materials/Default/Wood/QuiltedMaple/QuiltedMapleCoat_Natural.mat.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Materials/Default/Wood/QuiltedMaple/QuiltedMapleCoat_Sienna.mat" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Materials/Default/Wood/QuiltedMaple/QuiltedMapleCoat_Sienna.mat.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Materials/Default/Wood/QuiltedMaple/QuiltedMaple_Black.mat" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Materials/Default/Wood/QuiltedMaple/QuiltedMaple_Black.mat.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Materials/Default/Wood/QuiltedMaple/QuiltedMaple_Bronze.mat" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Materials/Default/Wood/QuiltedMaple/QuiltedMaple_Bronze.mat.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Materials/Default/Wood/QuiltedMaple/QuiltedMaple_Brown.mat" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Materials/Default/Wood/QuiltedMaple/QuiltedMaple_Brown.mat.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Materials/Default/Wood/QuiltedMaple/QuiltedMaple_DarkBrown.mat" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Materials/Default/Wood/QuiltedMaple/QuiltedMaple_DarkBrown.mat.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Materials/Default/Wood/QuiltedMaple/QuiltedMaple_Natural.mat" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Materials/Default/Wood/QuiltedMaple/QuiltedMaple_Natural.mat.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Materials/Default/Wood/QuiltedMaple/QuiltedMaple_Sienna.mat" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Materials/Default/Wood/QuiltedMaple/QuiltedMaple_Sienna.mat.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Materials/Default/Wood/QuiltedMaple/Textures.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Materials/Default/Wood/QuiltedMaple/Textures/QuiltedMaple_Black_BC.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Materials/Default/Wood/QuiltedMaple/Textures/QuiltedMaple_Black_BC.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Materials/Default/Wood/QuiltedMaple/Textures/QuiltedMaple_Bronze_BC.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Materials/Default/Wood/QuiltedMaple/Textures/QuiltedMaple_Bronze_BC.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Materials/Default/Wood/QuiltedMaple/Textures/QuiltedMaple_Brown_BC.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Materials/Default/Wood/QuiltedMaple/Textures/QuiltedMaple_Brown_BC.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Materials/Default/Wood/QuiltedMaple/Textures/QuiltedMaple_DarkBrown_BC.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Materials/Default/Wood/QuiltedMaple/Textures/QuiltedMaple_DarkBrown_BC.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Materials/Default/Wood/QuiltedMaple/Textures/QuiltedMaple_M.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Materials/Default/Wood/QuiltedMaple/Textures/QuiltedMaple_M.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Materials/Default/Wood/QuiltedMaple/Textures/QuiltedMaple_NM.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Materials/Default/Wood/QuiltedMaple/Textures/QuiltedMaple_NM.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Materials/Default/Wood/QuiltedMaple/Textures/QuiltedMaple_Natural_BC.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Materials/Default/Wood/QuiltedMaple/Textures/QuiltedMaple_Natural_BC.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Materials/Default/Wood/QuiltedMaple/Textures/QuiltedMaple_Sienna_BC.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Materials/Default/Wood/QuiltedMaple/Textures/QuiltedMaple_Sienna_BC.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Materials/Default/Wood/SapelePommele.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Materials/Default/Wood/SapelePommele/SapelePommeleCoat_Black.mat" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Materials/Default/Wood/SapelePommele/SapelePommeleCoat_Black.mat.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Materials/Default/Wood/SapelePommele/SapelePommeleCoat_Bronze.mat" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Materials/Default/Wood/SapelePommele/SapelePommeleCoat_Bronze.mat.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Materials/Default/Wood/SapelePommele/SapelePommeleCoat_Brown.mat" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Materials/Default/Wood/SapelePommele/SapelePommeleCoat_Brown.mat.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Materials/Default/Wood/SapelePommele/SapelePommeleCoat_DarkBrown.mat" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Materials/Default/Wood/SapelePommele/SapelePommeleCoat_DarkBrown.mat.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Materials/Default/Wood/SapelePommele/SapelePommeleCoat_Natural.mat" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Materials/Default/Wood/SapelePommele/SapelePommeleCoat_Natural.mat.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Materials/Default/Wood/SapelePommele/SapelePommeleCoat_Sienna.mat" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Materials/Default/Wood/SapelePommele/SapelePommeleCoat_Sienna.mat.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Materials/Default/Wood/SapelePommele/SapelePommele_Black.mat" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Materials/Default/Wood/SapelePommele/SapelePommele_Black.mat.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Materials/Default/Wood/SapelePommele/SapelePommele_Bronze.mat" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Materials/Default/Wood/SapelePommele/SapelePommele_Bronze.mat.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Materials/Default/Wood/SapelePommele/SapelePommele_Brown.mat" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Materials/Default/Wood/SapelePommele/SapelePommele_Brown.mat.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Materials/Default/Wood/SapelePommele/SapelePommele_DarkBrown.mat" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Materials/Default/Wood/SapelePommele/SapelePommele_DarkBrown.mat.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Materials/Default/Wood/SapelePommele/SapelePommele_Natural.mat" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Materials/Default/Wood/SapelePommele/SapelePommele_Natural.mat.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Materials/Default/Wood/SapelePommele/SapelePommele_Sienna.mat" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Materials/Default/Wood/SapelePommele/SapelePommele_Sienna.mat.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Materials/Default/Wood/SapelePommele/Textures.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Materials/Default/Wood/SapelePommele/Textures/SapelePommele_Black_BC.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Materials/Default/Wood/SapelePommele/Textures/SapelePommele_Black_BC.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Materials/Default/Wood/SapelePommele/Textures/SapelePommele_Bronze_BC.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Materials/Default/Wood/SapelePommele/Textures/SapelePommele_Bronze_BC.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Materials/Default/Wood/SapelePommele/Textures/SapelePommele_Brown_BC.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Materials/Default/Wood/SapelePommele/Textures/SapelePommele_Brown_BC.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Materials/Default/Wood/SapelePommele/Textures/SapelePommele_DarkBrown_BC.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Materials/Default/Wood/SapelePommele/Textures/SapelePommele_DarkBrown_BC.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Materials/Default/Wood/SapelePommele/Textures/SapelePommele_M.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Materials/Default/Wood/SapelePommele/Textures/SapelePommele_M.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Materials/Default/Wood/SapelePommele/Textures/SapelePommele_NM.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Materials/Default/Wood/SapelePommele/Textures/SapelePommele_NM.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Materials/Default/Wood/SapelePommele/Textures/SapelePommele_Natural_BC.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Materials/Default/Wood/SapelePommele/Textures/SapelePommele_Natural_BC.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Materials/Default/Wood/SapelePommele/Textures/SapelePommele_Sienna_BC.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Materials/Default/Wood/SapelePommele/Textures/SapelePommele_Sienna_BC.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Materials/Default/Wood/Wood.shadergraph" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Materials/Default/Wood/Wood.shadergraph.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Materials/Default/Wood/WoodAnisotropy.shadergraph" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Materials/Default/Wood/WoodAnisotropy.shadergraph.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Materials/Default/Wood/WoodCoat.shadergraph" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Materials/Default/Wood/WoodCoat.shadergraph.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Materials/Default/Wood/WoodCoatAnisotropy.shadergraph" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Materials/Default/Wood/WoodCoatAnisotropy.shadergraph.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Materials/Energy Cell.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Materials/Energy Cell/Chip.shadergraph" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Materials/Energy Cell/Chip.shadergraph.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Materials/Energy Cell/Chip001.mat" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Materials/Energy Cell/Chip001.mat.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Materials/Energy Cell/Chip001_4K-PNG.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Materials/Energy Cell/Chip001_4K-PNG/Chip001_4K-PNG.usda" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Materials/Energy Cell/Chip001_4K-PNG/Chip001_4K-PNG.usda.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Materials/Energy Cell/Chip001_4K-PNG/Chip001_4K-PNG.usdc" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Materials/Energy Cell/Chip001_4K-PNG/Chip001_4K-PNG.usdc.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Materials/Energy Cell/Chip001_4K-PNG/Chip001_4K_Color.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Materials/Energy Cell/Chip001_4K-PNG/Chip001_4K_Color.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Materials/Energy Cell/Chip001_4K-PNG/Chip001_4K_Displacement.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Materials/Energy Cell/Chip001_4K-PNG/Chip001_4K_Displacement.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Materials/Energy Cell/Chip001_4K-PNG/Chip001_4K_Metalness.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Materials/Energy Cell/Chip001_4K-PNG/Chip001_4K_Metalness.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Materials/Energy Cell/Chip001_4K-PNG/Chip001_4K_NormalDX.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Materials/Energy Cell/Chip001_4K-PNG/Chip001_4K_NormalDX.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Materials/Energy Cell/Chip001_4K-PNG/Chip001_4K_NormalGL.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Materials/Energy Cell/Chip001_4K-PNG/Chip001_4K_NormalGL.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Materials/Energy Cell/Chip001_4K-PNG/Chip001_4K_Roughness.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Materials/Energy Cell/Chip001_4K-PNG/Chip001_4K_Roughness.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Materials/Energy Cell/Chip001_4K-PNG/Chip001_PREVIEW.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Materials/Energy Cell/Chip001_4K-PNG/Chip001_PREVIEW.jpg.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Materials/Energy Cell/Chip003.mat" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Materials/Energy Cell/Chip003.mat.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Materials/Energy Cell/Chip003_4K-PNG.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Materials/Energy Cell/Chip003_4K-PNG/Chip003_4K-PNG.usda" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Materials/Energy Cell/Chip003_4K-PNG/Chip003_4K-PNG.usda.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Materials/Energy Cell/Chip003_4K-PNG/Chip003_4K-PNG.usdc" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Materials/Energy Cell/Chip003_4K-PNG/Chip003_4K-PNG.usdc.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Materials/Energy Cell/Chip003_4K-PNG/Chip003_4K_Color.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Materials/Energy Cell/Chip003_4K-PNG/Chip003_4K_Color.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Materials/Energy Cell/Chip003_4K-PNG/Chip003_4K_Displacement.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Materials/Energy Cell/Chip003_4K-PNG/Chip003_4K_Displacement.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Materials/Energy Cell/Chip003_4K-PNG/Chip003_4K_Metalness.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Materials/Energy Cell/Chip003_4K-PNG/Chip003_4K_Metalness.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Materials/Energy Cell/Chip003_4K-PNG/Chip003_4K_NormalDX.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Materials/Energy Cell/Chip003_4K-PNG/Chip003_4K_NormalDX.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Materials/Energy Cell/Chip003_4K-PNG/Chip003_4K_NormalGL.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Materials/Energy Cell/Chip003_4K-PNG/Chip003_4K_NormalGL.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Materials/Energy Cell/Chip003_4K-PNG/Chip003_4K_Roughness.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Materials/Energy Cell/Chip003_4K-PNG/Chip003_4K_Roughness.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Materials/Energy Cell/Chip003_4K-PNG/Chip003_PREVIEW.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Materials/Energy Cell/Chip003_4K-PNG/Chip003_PREVIEW.jpg.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Materials/Energy Cell/Chip004.mat" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Materials/Energy Cell/Chip004.mat.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Materials/Energy Cell/Chip004_4K-PNG.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Materials/Energy Cell/Chip004_4K-PNG/Chip004_4K-PNG.usda" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Materials/Energy Cell/Chip004_4K-PNG/Chip004_4K-PNG.usda.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Materials/Energy Cell/Chip004_4K-PNG/Chip004_4K-PNG.usdc" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Materials/Energy Cell/Chip004_4K-PNG/Chip004_4K-PNG.usdc.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Materials/Energy Cell/Chip004_4K-PNG/Chip004_4K_Color.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Materials/Energy Cell/Chip004_4K-PNG/Chip004_4K_Color.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Materials/Energy Cell/Chip004_4K-PNG/Chip004_4K_Displacement.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Materials/Energy Cell/Chip004_4K-PNG/Chip004_4K_Displacement.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Materials/Energy Cell/Chip004_4K-PNG/Chip004_4K_Metalness.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Materials/Energy Cell/Chip004_4K-PNG/Chip004_4K_Metalness.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Materials/Energy Cell/Chip004_4K-PNG/Chip004_4K_NormalDX.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Materials/Energy Cell/Chip004_4K-PNG/Chip004_4K_NormalDX.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Materials/Energy Cell/Chip004_4K-PNG/Chip004_4K_NormalGL.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Materials/Energy Cell/Chip004_4K-PNG/Chip004_4K_NormalGL.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Materials/Energy Cell/Chip004_4K-PNG/Chip004_4K_Roughness.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Materials/Energy Cell/Chip004_4K-PNG/Chip004_4K_Roughness.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Materials/Energy Cell/Chip004_4K-PNG/Chip004_PREVIEW.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Materials/Energy Cell/Chip004_4K-PNG/Chip004_PREVIEW.jpg.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Materials/Energy Cell/Display.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Materials/Energy Cell/Display/Display.mat" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Materials/Energy Cell/Display/Display.mat.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Materials/Energy Cell/Display/Display.shadergraph" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Materials/Energy Cell/Display/Display.shadergraph.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Materials/Ground.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Materials/Ground/Ground.mat" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Materials/Ground/Ground.mat.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Materials/Ground/Ground.shadergraph" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Materials/Ground/Ground.shadergraph.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Materials/Human.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Materials/Human.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Materials/Human/Dissolve.shadergraph" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Materials/Human/Dissolve.shadergraph.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Materials/Human/ref_Alpha_Body.mat" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Materials/Human/ref_Alpha_Body.mat.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Materials/Human/ref_Alpha_Joints.mat" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Materials/Human/ref_Alpha_Joints.mat.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Materials/Wall.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Materials/Wall/Wall.mat" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Materials/Wall/Wall.mat.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Materials/Wall/Wall.shadergraph" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Materials/Wall/Wall.shadergraph.meta" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Meshes/Weapons/Pistol.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Meshes/Weapons/Pistol.prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Meshes/Weapons/Rifle.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Meshes/Weapons/Rifle.prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Meshes/Weapons/Shotgun.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Meshes/Weapons/Shotgun.prefab" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Prefabs/Enemy.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/Enemy.prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/Maze/Maze Ceiling.prefab" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/Maze/Maze Ceiling.prefab.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/Maze/Player Spawner.prefab" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/Maze/Player Spawner.prefab.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/PlayerEnv.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/PlayerEnv.prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scenes/Game.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/Game.unity" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scenes/Intro.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/Intro.unity" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scenes/New Scene.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/New Scene.meta" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scenes/New Scene.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/New Scene.unity" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scenes/New Scene/NavMesh.asset" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scenes/New Scene/NavMesh.asset.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Management/GameManager.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Management/GameManager.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Management/Menu/VideoManager.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Management/Menu/VideoManager.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Management/Sound/Detection/SoundEmitter.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Management/Sound/Detection/SoundEmitter.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Maze/MazeGenerator.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Maze/MazeGenerator.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/NPC/Stats.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/NPC/Stats.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scripts/Player/Movement.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Player/Movement.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Weapon/PlayerWeaponSelector.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Weapon/PlayerWeaponSelector.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Weapon/Weapon.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Weapon/Weapon.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Weapon/WeaponTypes.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Weapon/WeaponTypes.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Settings/DefaultLighting.lighting" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Settings/DefaultLighting.lighting.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Settings/Global Profile.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Settings/Global Profile.asset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Settings/GlobalVolume.asset" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Settings/GlobalVolume.asset.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Settings/HDRP High Fidelity.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Settings/HDRP High Fidelity.asset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Packages/manifest.json" beforeDir="false" afterPath="$PROJECT_DIR$/Packages/manifest.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Packages/packages-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/Packages/packages-lock.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/ProjectSettings/Packages/com.unity.probuilder/Settings.json" beforeDir="false" afterPath="$PROJECT_DIR$/ProjectSettings/Packages/com.unity.probuilder/Settings.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ProjectSettings/TagManager.asset" beforeDir="false" afterPath="$PROJECT_DIR$/ProjectSettings/TagManager.asset" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -38,6 +493,7 @@
   <component name="HighlightingSettingsPerFile">
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/Management/Menu/MenuManager.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/Management/SaveSystem/SaveTypes/JsonSave.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Scripts/Maze/ExitCell.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Library/PackageCache/com.unity.addressables@1.20.5/Runtime/AddressablesImpl.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Library/PackageCache/com.unity.probuilder@5.0.4/Editor/EditorCore/ProBuilderShapeEditor.cs" root0="SKIP_HIGHLIGHTING" />
   </component>
@@ -53,24 +509,24 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "Discover.Launch.Via.Unity": "true",
-    "RunOnceActivity.OpenProjectViewOnStart": "true",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "WebServerToolWindowFactoryState": "false",
-    "nodejs_package_manager_path": "npm",
-    "settings.editor.selected.configurable": "preferences.lookFeel",
-    "vue.rearranger.settings.migration": "true"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;Discover.Launch.Via.Unity&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
+    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;preferences.lookFeel&quot;,
+    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
   },
-  "keyToStringList": {
-    "rider.external.source.directories": [
-      "C:\\Users\\basmj\\AppData\\Roaming\\JetBrains\\Rider2022.3\\resharper-host\\DecompilerCache",
-      "C:\\Users\\basmj\\AppData\\Roaming\\JetBrains\\Rider2022.3\\resharper-host\\SourcesCache",
-      "C:\\Users\\basmj\\AppData\\Local\\Symbols\\src"
+  &quot;keyToStringList&quot;: {
+    &quot;rider.external.source.directories&quot;: [
+      &quot;C:\\Users\\basmj\\AppData\\Roaming\\JetBrains\\Rider2022.3\\resharper-host\\DecompilerCache&quot;,
+      &quot;C:\\Users\\basmj\\AppData\\Roaming\\JetBrains\\Rider2022.3\\resharper-host\\SourcesCache&quot;,
+      &quot;C:\\Users\\basmj\\AppData\\Local\\Symbols\\src&quot;
     ]
   }
-}]]></component>
+}</component>
   <component name="RunManager" selected="Attach to Unity Editor.Attach to Unity Editor">
     <configuration name="Standalone Player" type="RunUnityExe" factoryName="Unity Executable">
       <option name="EXE_PATH" value="$PROJECT_DIR$/Build\Abschlus.exe" />
@@ -171,6 +627,8 @@
       <workItem from="1680017777234" duration="8087000" />
       <workItem from="1680075612266" duration="5675000" />
       <workItem from="1680110472332" duration="7944000" />
+      <workItem from="1680265780763" duration="5469000" />
+      <workItem from="1680507349005" duration="11432000" />
     </task>
     <servers />
   </component>

@@ -18,7 +18,6 @@ namespace MazeSystem
         [SerializeField] private float wallThickness = 0.1f;
         [SerializeField] private AssetReferenceGameObject wallReference;
         [SerializeField] private AssetReferenceGameObject floorReference;
-        [SerializeField] private AssetReferenceGameObject ceilingReference;
 
         [Header("Player Settings")]
         [SerializeField] private AssetReferenceGameObject playerSpawnerReference;
@@ -52,8 +51,6 @@ namespace MazeSystem
         private readonly List<AsyncOperationHandle<GameObject>> _objectsSpawning = new();
         private MazeCell _startCell = new(0, 0);
         private MazeCell _endCell = new(0, 0);
-        [SerializeField] private bool showCeilings = true;
-
         private MazeCell[,] _mazeCells;
 
         private void OnValidate()
@@ -74,18 +71,30 @@ namespace MazeSystem
         private void Awake()
         {
             _gameManager = GameManager.Instance;
-            _gameManager.mazeGenerator = this;
+            if(_gameManager == null)
+                Debug.LogError("GameManager not found. Maybe it is not in the scene? Or the MazeGenerator is being instantiated before the GameManager? Anyways, the MazeGenerator will start with default values.");
+            else
+                _gameManager.mazeGenerator = this;
             navMeshSurface = GetComponent<NavMeshSurface>();
         }
 
         private void Start()
         {
-            seed = _gameManager.Seed;
-            mazeSize = _gameManager.MazeSize;
-            if(seed == 0)
-                _gameManager.Seed = seed = Random.Range(0, int.MaxValue);
-            if(mazeSize == Vector2Int.zero)
-                _gameManager.MazeSize = mazeSize = new Vector2Int(Random.Range(5, 20), Random.Range(5, 20));
+            if (_gameManager != null)
+            {
+                seed = _gameManager.Seed;
+                mazeSize = _gameManager.MazeSize;
+                if(seed == 0)
+                    _gameManager.Seed = seed = Random.Range(0, int.MaxValue);
+                if(mazeSize == Vector2Int.zero)
+                    _gameManager.MazeSize = mazeSize = new Vector2Int(Random.Range(10, 30), Random.Range(10, 30));
+            }
+            else
+            {
+                seed = Random.Range(0, int.MaxValue);
+                mazeSize = new Vector2Int(Random.Range(10, 30), Random.Range(10, 30));
+            }
+            
 
             Random.InitState(seed);
             GenerateMaze();
@@ -224,9 +233,6 @@ namespace MazeSystem
                     
                     if(!cell.NoFloor)
                         InstantiateAsync(floorReference, cellPosition + new Vector3(0, -cellSize.y / 2, 0), new Vector3(cellSize.x, wallThickness, cellSize.z), Vector3.zero);
-                    
-                    if (showCeilings)
-                        InstantiateAsync(ceilingReference, cellPosition + new Vector3(0, cellSize.y / 2, 0), new Vector3(cellSize.x, wallThickness, cellSize.z), Vector3.zero);
                 }
         }
         
@@ -236,6 +242,11 @@ namespace MazeSystem
         /// </summary>
         private void RandomSpreadObjects()
         {
+            if (_gameManager == null)
+            {
+                Debug.LogError("GameManager not found! no objects and enemies will be spawned!");
+                return;
+            }
             for (var i = 0; i < decorations.Length; i++)
                 for (var j = 0; j < decorationAmounts[i]; j++)
                 {
@@ -258,88 +269,19 @@ namespace MazeSystem
                 for (var i = 0; i < GameManager.Instance.enemyPositions.Length; i++)
                     InstantiateAsync(enemy, GameManager.Instance.enemyPositions[i], Vector3.one, new Vector3(0, GameManager.Instance.enemyRotations[i].y, 0));
         }
-        
-        /*
-        /// <summary>
-        /// Randomly picks a wall in a given cell and replaces it with a given wall like spawner, door, etc (AssetReference)
-        /// </summary>
-        /// <param name="spawnCell">MazeCell- The cell in which the wall should be replaced</param>
-        /// <param name="wall">AssetReferenceGameObject - The reference to the wall to replace the old one with</param>
-        private void RandomReplaceWallInCell(MazeCell spawnCell, AssetReference wall)
-        {
-            var cell = _mazeCells[spawnCell.X, spawnCell.Y];
-            var cellPosition = new Vector3(cell.X * cellSize.x, 0, cell.Y * cellSize.z);
-            var neighbours = GetNeighbours(cell, true);
-            var availableWalls = new List<string>();
-            
-            if (cell.WallLeft)
-                availableWalls.Add("Left");
-            if (cell.WallRight)
-                availableWalls.Add("Right");
-            if (cell.WallTop)
-                availableWalls.Add("Top");
-            if (cell.WallBottom)
-                availableWalls.Add("Bottom");
-            
-            switch (availableWalls[Random.Range(0, availableWalls.Count)])
-            {
-                case "Left":
-                    cell.WallLeft = false;
-                    foreach (var neighbour in neighbours.Where(neighbour => neighbour.Cell != null))
-                    {
-                        if(neighbour.Direction == Direction.Left)
-                            neighbour.Cell.WallRight = false;
-                        _mazeCells[neighbour.Cell.X, neighbour.Cell.Y] = neighbour.Cell;
-                    }
-                    InstantiateAsync(wall, cellPosition + new Vector3(-cellSize.x / 2, 0, 0), new Vector3(cellSize.x, cellSize.y, wallThickness), new Vector3(0, 90, 0));
-                    break;
-                case "Right":
-                    cell.WallRight = false;
-                    foreach (var neighbour in neighbours.Where(neighbour => neighbour.Cell != null))
-                    {
-                        if(neighbour.Direction == Direction.Right)
-                            neighbour.Cell.WallLeft = false;
-                        _mazeCells[neighbour.Cell.X, neighbour.Cell.Y] = neighbour.Cell;
-                    }
-                    InstantiateAsync(wall, cellPosition + new Vector3(cellSize.x / 2, 0, 0), new Vector3(cellSize.x, cellSize.y, wallThickness), new Vector3(0, -90, 0));
-                    break;
-                case "Top":
-                    cell.WallTop = false;
-                    foreach (var neighbour in neighbours.Where(neighbour => neighbour.Cell != null))
-                    {
-                        if(neighbour.Direction == Direction.Top)
-                            neighbour.Cell.WallBottom = false;
-                        _mazeCells[neighbour.Cell.X, neighbour.Cell.Y] = neighbour.Cell;
-                    }
-                    InstantiateAsync(wall, cellPosition + new Vector3(0, 0, cellSize.z / 2),  new Vector3(cellSize.x, cellSize.y, wallThickness), new Vector3(0, 180, 0));
-                    break;
-                case "Bottom":
-                    cell.WallBottom = false;
-                    foreach (var neighbour in neighbours.Where(neighbour => neighbour.Cell != null))
-                    {
-                        if(neighbour.Direction == Direction.Bottom)
-                            neighbour.Cell.WallTop = false;
-                        _mazeCells[neighbour.Cell.X, neighbour.Cell.Y] = neighbour.Cell;
-                    }
-                    InstantiateAsync(wall, cellPosition + new Vector3(0, 0, -cellSize.z / 2), new Vector3(cellSize.x, cellSize.y, wallThickness), Vector3.zero);
-                    break;
-            }
-            _mazeCells[cell.X, cell.Y] = cell;
-        }
-        */
-        
+
         private void ReplaceFloorInCell(MazeCell spawnCell, AssetReference floor)
         {
             var cell = _mazeCells[spawnCell.X, spawnCell.Y];
             cell.NoFloor = true;
-            var cellPosition = new Vector3(cell.X * cellSize.x, 0, cell.Y * cellSize.z);
-            InstantiateAsync(floor, cellPosition + new Vector3(0, -cellSize.y / 2, 0), new Vector3(cellSize.x, wallThickness, cellSize.z), Vector3.zero);
+            var cellPosition = new Vector3(cell.X * cellSize.x, -(cellSize.y / 2), cell.Y * cellSize.z);
+            InstantiateAsync(floor, cellPosition , new Vector3(cellSize.x, wallThickness, cellSize.z), Vector3.zero);
         }
         
         
         private void InstantiateAsync(AssetReference assetReferenceGameObject, Vector3 position, Vector3 scale, Vector3 eulerRotation)
         {
-            var handle = assetReferenceGameObject.InstantiateAsync(position, Quaternion.identity, gameObject.transform);
+            var handle = assetReferenceGameObject.InstantiateAsync(new Vector3(position.x + (cellSize.x / 2), position.y + (cellSize.y / 2), position.z + (cellSize.z / 2)), Quaternion.identity, gameObject.transform);
             handle.Completed += obj =>
             {
                 if (obj.Result.name.Contains("PlayerEnv"))
@@ -363,6 +305,11 @@ namespace MazeSystem
         {
             if (_objectsSpawning.Count != 0)
                 return;
+            if (_gameManager == null)
+            {
+                Debug.LogError("GameManager not found! can't complete spawning process!");
+                return;
+            }
             if(_gameManager.IsGameLoaded)
                 _gameManager.OnGameLoaded();
             navMeshSurface.BuildNavMesh();
@@ -376,7 +323,7 @@ namespace MazeSystem
                 for (var y = 0; y < mazeSize.y; y++)
                 {
                     Gizmos.color = Color.green;
-                    Gizmos.DrawWireCube(new Vector3(x * cellSize.x, 0, y * cellSize.z), cellSize);
+                    Gizmos.DrawWireCube(new Vector3(x * cellSize.x + (cellSize.x / 2), cellSize.y / 2, y * cellSize.z + (cellSize.z / 2)), cellSize);
                 }
         }
     }

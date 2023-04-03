@@ -52085,7 +52085,7 @@ MeshCollider:
   m_IsTrigger: 0
   m_Enabled: 1
   serializedVersion: 4
-  m_Convex: 0
+  m_Convex: 1
   m_CookingOptions: 30
   m_Mesh: {fileID: 0}
 --- !u!1 &4818007190421851364
@@ -53331,7 +53331,7 @@ MeshCollider:
   m_IsTrigger: 0
   m_Enabled: 1
   serializedVersion: 4
-  m_Convex: 0
+  m_Convex: 1
   m_CookingOptions: 30
   m_Mesh: {fileID: 0}
 --- !u!1 &5058347742236088488
@@ -56731,11 +56731,11 @@ MonoBehaviour:
   - {x: 0.024999999, y: 0.031250052}
   - {x: 0.031249998, y: 0.025000054}
   - {x: 0.031249998, y: 0.018750027}
-  - {x: 2.4820476, y: 1.5917494}
+  - {x: 2.4820476, y: 0.10172101}
   - {x: 2.4820476, y: 0.8982934}
   - {x: 2.3953657, y: 0.8982934}
-  - {x: 2.3953657, y: 1.2450213}
-  - {x: 2.3953657, y: 1.5917494}
+  - {x: 2.3953657, y: 0.49997774}
+  - {x: 2.3953657, y: 0.10172101}
   - {x: 2.6046343, y: 0.6991471}
   - {x: 2.6046343, y: 0.30085263}
   - {x: 2.5179524, y: 0.30085263}
@@ -57886,11 +57886,11 @@ MonoBehaviour:
   - {x: 1, y: -0.0000002235176, z: 0, w: -1}
   - {x: 1, y: -0.00000007450589, z: 0, w: -1}
   - {x: 1, y: 0.00000007450581, z: 0, w: -1}
-  - {x: 0, y: 0.00000034381273, z: -1, w: -1}
-  - {x: 0, y: 0.00000034381273, z: -1, w: -1}
-  - {x: 0, y: 0, z: -1, w: -1}
-  - {x: 0, y: 0.00000022920851, z: -1, w: -1}
-  - {x: 0, y: 0, z: -1, w: -1}
+  - {x: 0, y: -0.00014793206, z: -1, w: 1}
+  - {x: 0, y: -0.00014793206, z: -1, w: 1}
+  - {x: 0, y: 0, z: -1, w: 1}
+  - {x: 0, y: -0.00009862138, z: -1, w: 1}
+  - {x: 0, y: 0, z: -1, w: 1}
   - {x: 0, y: -0.00000007482514, z: -1, w: -1}
   - {x: 0, y: -0.00000007482514, z: -1, w: -1}
   - {x: 0, y: 0, z: -1, w: -1}
@@ -57905,7 +57905,7 @@ MonoBehaviour:
   m_PreserveMeshAssetOnDestroy: 0
   assetGuid: 
   m_Mesh: {fileID: 0}
-  m_VersionIndex: 7222
+  m_VersionIndex: 7258
   m_IsSelectable: 1
   m_SelectedFaces: 
   m_SelectedEdges: []
@@ -57999,6 +57999,6 @@ MeshCollider:
   m_IsTrigger: 0
   m_Enabled: 1
   serializedVersion: 4
-  m_Convex: 0
+  m_Convex: 1
   m_CookingOptions: 30
   m_Mesh: {fileID: 0}
