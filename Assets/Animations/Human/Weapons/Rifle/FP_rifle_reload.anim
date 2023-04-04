@@ -6,7 +6,7 @@ AnimationClip:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: rifle_unequip
+  m_Name: FP_rifle_reload
   serializedVersion: 7
   m_Legacy: 0
   m_Compressed: 0

@@ -32,6 +32,16 @@ MonoBehaviour:
     m_ReadOnly: 0
     m_SerializedLabels: []
     FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 823bee3a41df6794083f0bb3e656118f
+    m_Address: Prefabs/Player Start.prefab
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 42e8f04efe4cfae4998eda6d87cab943
+    m_Address: Prefabs/Player Exit.prefab
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
   m_ReadOnly: 0
   m_Settings: {fileID: 11400000, guid: 4238d1a742f739247940f48a6d434942, type: 2}
   m_SchemaSet:

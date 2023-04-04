@@ -99,6 +99,7 @@ namespace MazeSystem
             Random.InitState(seed);
             GenerateMaze();
             ReplaceFloorInCell(_startCell, playerSpawnerReference);
+            ReplaceFloorInCell(_endCell, exitReference);
             InstantiateAsync(playerReference, new Vector3(_startCell.X * cellSize.x + playerSpawnOffset.x, playerSpawnOffset.y, _startCell.Y * cellSize.z + playerSpawnOffset.z), Vector3.zero, Vector3.zero);
             DrawMaze();
             RandomSpreadObjects();
