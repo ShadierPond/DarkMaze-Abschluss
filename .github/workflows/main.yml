@@ -34,27 +34,3 @@ jobs:
         with:
           name: Build-${{ matrix.targetPlatform }}
           path: build/${{ matrix.targetPlatform }}
-  release:
-    name: Release
-    needs: buildForAllSupportedPlatforms
-    runs-on: ubuntu-latest
-    steps:
-      - uses: actions/checkout@v2
-        with:
-          fetch-depth: 0
-          lfs: true
-      - uses: actions/download-artifact@v2
-        with:
-          name: Build-StandaloneWindows64
-          path: build/StandaloneWindows64
-      - uses: actions/upload-artifact@v2
-        with:
-          name: Build-StandaloneWindows64
-          path: build/StandaloneWindows64
-      - uses: softprops/action-gh-release@v1
-        with:
-          files: build/StandaloneWindows64/*
-          draft: true
-          prerelease: true
-          tag_name: ${{ github.ref }}
-          token: ${{ secrets.GITHUB_TOKEN }}
