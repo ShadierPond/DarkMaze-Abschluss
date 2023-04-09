@@ -1,0 +1,31 @@
+- name: Git Semantic Version
+  # You may pin to the exact commit or the version.
+  # uses: PaulHatch/semantic-version@61243c92212f7939f340bd2f8072bee529ac77df
+  uses: PaulHatch/semantic-version@v5.0.3
+  with:
+    # Set to specify a specific branch, default is the current HEAD
+    branch: # default is HEAD
+    # The prefix to use to identify tags
+    tag_prefix: # optional, default is v
+    # Use branches instead of tags
+    use_branches: # optional, default is false
+    # A string which, if present in a git commit, indicates that a change represents a major (breaking) change. Wrap with '/' to match using a regular expression.
+    major_pattern: # default is (MAJOR)
+    # A string which indicates the flags used by the `major_pattern` regular expression. Supported flags: idgs
+    major_regexp_flags: # optional, default is 
+    # A string which, if present in a git commit, indicates that a change represents a minor (feature) change. Wrap with '/' to match using a regular expression.
+    minor_pattern: # default is (MINOR)
+    # A string which indicates the flags used by the `minor_pattern` regular expression. Supported flags: idgs
+    minor_regexp_flags: # optional, default is 
+    # Pattern to use when formatting output version
+    version_format: # default is ${major}.${minor}.${patch}
+    # Path to check for changes. If any changes are detected in the path the 'changed' output will true. Enter multiple paths separated by spaces.
+    change_path: # optional
+    # Use to create a named sub-version. This value will be appended to tags created for this version.
+    namespace: # optional
+    # If true, every commit will be treated as a bump to the version.
+    bump_each_commit: # default is false
+    # If true, the body of commits will also be searched for major/minor patterns to determine the version type.
+    search_commit_body: # default is false
+    # The output method used to generate list of users, 'csv' or 'json'. Default is 'csv'.
+    user_format_type: # default is csv
