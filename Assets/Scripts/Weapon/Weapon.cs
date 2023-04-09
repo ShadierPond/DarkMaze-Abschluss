@@ -32,20 +32,23 @@ namespace Weapon
             {
                 _lastShootTime = Time.time;
                 shootSystem.Play();
-                Vector3 shootDirection = shootSystem.transform.forward + new Vector3(
-                    Random.Range(-shootConfiguration.spread.x, shootConfiguration.spread.x), 
-                    Random.Range(-shootConfiguration.spread.y, shootConfiguration.spread.y), 
-                    Random.Range(-shootConfiguration.spread.z, shootConfiguration.spread.z)
-                    );
-                shootDirection.Normalize();
-                
-                if(Physics.Raycast(shootSystem.transform.position, shootDirection, out var hit, float.MaxValue, shootConfiguration.hitMask))
+                for (int i = 0; i < shootConfiguration.trailCount; i++)
                 {
-                    StartCoroutine(PlayTrail(shootSystem.transform.position, hit.point, hit));
-                }
-                else
-                {
-                    StartCoroutine(PlayTrail(shootSystem.transform.position, shootSystem.transform.position + shootDirection * trailConfiguration.missDistance, new RaycastHit()));
+                    Vector3 shootDirection = shootSystem.transform.forward + new Vector3(
+                        Random.Range(-shootConfiguration.spread.x, shootConfiguration.spread.x), 
+                        Random.Range(-shootConfiguration.spread.y, shootConfiguration.spread.y), 
+                        Random.Range(-shootConfiguration.spread.z, shootConfiguration.spread.z)
+                        );
+                    shootDirection.Normalize();
+
+                    StartCoroutine(
+                        Physics.Raycast(shootSystem.transform.position, shootDirection, out var hit, float.MaxValue,
+                            shootConfiguration.hitMask)
+                            ? PlayTrail(shootSystem.transform.position, hit.point, hit)
+                            : PlayTrail(shootSystem.transform.position,
+                                shootSystem.transform.position + shootDirection * trailConfiguration.missDistance,
+                                new RaycastHit())
+                            );
                 }
             }
         }

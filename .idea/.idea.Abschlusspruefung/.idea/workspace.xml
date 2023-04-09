@@ -3,11 +3,21 @@
   <component name="ChangeListManager">
     <list default="true" id="f7ab1e7f-ca5b-4a20-acbd-a44a16c6bef8" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/.idea.Abschlusspruefung/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.Abschlusspruefung/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Plugins/ConsolePro/Remote/LiteNetLib/LiteNetLib.csproj.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Animations/Human/Weapons/Pistol/FP_pistol_idle.anim" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Animations/Human/Weapons/Pistol/FP_pistol_idle.anim" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Animations/Human/Weapons/Rifle/FP_rifle_idle.anim" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Animations/Human/Weapons/Rifle/FP_rifle_idle.anim" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Animations/Maze/ExitCellHalo/exitCell_halo_playerInside.anim" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Animations/Maze/ExitCellHalo/exitCell_halo_playerInside.anim.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Meshes/Weapons/Pistol.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Meshes/Weapons/Pistol.prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Meshes/Weapons/Rifle.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Meshes/Weapons/Rifle.prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Meshes/Weapons/Shotgun.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Meshes/Weapons/Shotgun.prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/Maze/Player Exit.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/Maze/Player Exit.prefab" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Prefabs/PlayerEnv.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/PlayerEnv.prefab" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scenes/New Scene.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/New Scene.unity" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Maze/MazeGenerator.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Maze/MazeGenerator.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/MiniMap/Minimap Texture.renderTexture" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/MiniMap/Minimap Texture.renderTexture" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scenes/NewIntro.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/NewIntro.unity" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Maze/ExitCell.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Maze/ExitCell.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Weapon/ShootConfiguration.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Weapon/ShootConfiguration.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Weapon/TrailConfiguration.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Weapon/TrailConfiguration.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Weapon/Weapon.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Weapon/Weapon.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/ProjectSettings/Packages/com.unity.probuilder/Settings.json" beforeDir="false" afterPath="$PROJECT_DIR$/ProjectSettings/Packages/com.unity.probuilder/Settings.json" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -46,9 +56,9 @@
   },
   &quot;keyToStringList&quot;: {
     &quot;rider.external.source.directories&quot;: [
-      &quot;C:\\Users\\Teilnehmer2021\\AppData\\Roaming\\JetBrains\\Rider2022.3\\resharper-host\\DecompilerCache&quot;,
-      &quot;C:\\Users\\Teilnehmer2021\\AppData\\Roaming\\JetBrains\\Rider2022.3\\resharper-host\\SourcesCache&quot;,
-      &quot;C:\\Users\\Teilnehmer2021\\AppData\\Local\\Symbols\\src&quot;
+      &quot;C:\\Users\\basmj\\AppData\\Roaming\\JetBrains\\Rider2022.3\\resharper-host\\DecompilerCache&quot;,
+      &quot;C:\\Users\\basmj\\AppData\\Roaming\\JetBrains\\Rider2022.3\\resharper-host\\SourcesCache&quot;,
+      &quot;C:\\Users\\basmj\\AppData\\Local\\Symbols\\src&quot;
     ]
   }
 }</component>
@@ -62,7 +72,7 @@
       <method v="2" />
     </configuration>
     <configuration name="Start Unity" type="RunUnityExe" factoryName="Unity Executable">
-      <option name="EXE_PATH" value="C:\Program Files\Unity\Hub\Editor\2022.1.16f1\Editor\Unity.exe" />
+      <option name="EXE_PATH" value="F:\Editor\2022.1.16f1\Editor\Unity.exe" />
       <option name="PROGRAM_PARAMETERS" value="-projectPath F:\Projects\AbschlussPruefung -debugCodeOptimization" />
       <option name="WORKING_DIRECTORY" value="F:\Projects\AbschlussPruefung" />
       <option name="PASS_PARENT_ENVS" value="1" />
@@ -70,7 +80,7 @@
       <method v="2" />
     </configuration>
     <configuration name="UnitTests (batch mode)" type="RunUnityExe" factoryName="Unity Executable">
-      <option name="EXE_PATH" value="C:\Program Files\Unity\Hub\Editor\2022.1.16f1\Editor\Unity.exe" />
+      <option name="EXE_PATH" value="F:\Editor\2022.1.16f1\Editor\Unity.exe" />
       <option name="PROGRAM_PARAMETERS" value="-runTests -batchmode -projectPath F:\Projects\AbschlussPruefung -testResults Logs/results.xml -testPlatform EditMode -debugCodeOptimization" />
       <option name="WORKING_DIRECTORY" value="F:\Projects\AbschlussPruefung" />
       <option name="PASS_PARENT_ENVS" value="1" />
@@ -156,6 +166,9 @@
       <workItem from="1680507349005" duration="11432000" />
       <workItem from="1680592276206" duration="2631000" />
       <workItem from="1680609038671" duration="1614000" />
+      <workItem from="1680792316996" duration="595000" />
+      <workItem from="1681038017240" duration="1412000" />
+      <workItem from="1681041948210" duration="2256000" />
     </task>
     <servers />
   </component>

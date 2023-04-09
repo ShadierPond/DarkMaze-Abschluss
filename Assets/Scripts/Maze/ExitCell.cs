@@ -9,16 +9,27 @@ namespace MazeSystem
 {
     public class ExitCell : MonoBehaviour
     {
-        [SerializeField] private float coolDown = 1f;
-        private Coroutine exitMazeCoroutine;
+        private enum WhereToGo
+        {
+            Lobby,
+            NextLevel,
+            RandomLevel,
+            Level1,
+            Level2,
+            Level3,
+            Credits
+        }
+        [SerializeField] private WhereToGo whereToGo;
+        [SerializeField] private Animator animator;
+        private static readonly int PlayerIn = Animator.StringToHash("PlayerIn");
+        private Transform _playerTransform;
 
         private void OnTriggerStay(Collider other)
         {
             if (other.CompareTag("Player"))
             {
-                if (exitMazeCoroutine != null)
-                    StopCoroutine(exitMazeCoroutine);
-                exitMazeCoroutine = StartCoroutine(ExitMaze());
+                animator.SetBool(PlayerIn, true);
+                _playerTransform = other.transform;
             }
         }
         
@@ -26,21 +37,18 @@ namespace MazeSystem
         {
             if (other.CompareTag("Player"))
             {
-                if (exitMazeCoroutine != null)
-                    StopCoroutine(exitMazeCoroutine);
+                animator.SetBool(PlayerIn, false);
+                _playerTransform = null;
             }
         }
         
-        private IEnumerator ExitMaze()
+        public void Exit()
         {
-            var time = 0f;
-            while (time < coolDown)
+            if (_playerTransform != null)
             {
-                time += Time.deltaTime;
-                
-                yield return null;
+                //GameManager.Instance.LoadNextLevel();
+                Debug.Log("Exit");
             }
-            GameManager.Instance.OnMazeExit();
         }
     }
 }

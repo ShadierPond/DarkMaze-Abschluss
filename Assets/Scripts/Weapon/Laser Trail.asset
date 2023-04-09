@@ -19,17 +19,17 @@ MonoBehaviour:
     - serializedVersion: 3
       time: 0
       value: 0.1
-      inSlope: 0
-      outSlope: 0
+      inSlope: -0.05
+      outSlope: -0.05
       tangentMode: 34
       weightedMode: 0
       inWeight: 0
       outWeight: 0.33333334
     - serializedVersion: 3
       time: 1
-      value: 0.1
-      inSlope: 0
-      outSlope: 0
+      value: 0.05
+      inSlope: -0.05
+      outSlope: -0.05
       tangentMode: 34
       weightedMode: 0
       inWeight: 0.33333334
@@ -41,9 +41,9 @@ MonoBehaviour:
   minVertexDistance: 0.1
   color:
     serializedVersion: 2
-    key0: {r: 1, g: 1, b: 1, a: 1}
-    key1: {r: 1, g: 1, b: 1, a: 1}
-    key2: {r: 0, g: 0, b: 0, a: 0}
+    key0: {r: 1, g: 0.37169808, b: 0.37169808, a: 1}
+    key1: {r: 1, g: 0.37254903, b: 0.37254903, a: 1}
+    key2: {r: 1, g: 0, b: 0, a: 0}
     key3: {r: 0, g: 0, b: 0, a: 0}
     key4: {r: 0, g: 0, b: 0, a: 0}
     key5: {r: 0, g: 0, b: 0, a: 0}
@@ -51,7 +51,7 @@ MonoBehaviour:
     key7: {r: 0, g: 0, b: 0, a: 0}
     ctime0: 0
     ctime1: 32768
-    ctime2: 0
+    ctime2: 32768
     ctime3: 0
     ctime4: 0
     ctime5: 0
