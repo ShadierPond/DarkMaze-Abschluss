@@ -6,11 +6,6 @@ on:
 jobs:
   build-StandaloneWindows64:
     runs-on: ubuntu-latest
-    strategy:
-      fail-fast: false
-      matrix:
-        projectPath:
-          - ./
     steps:
     - uses: game-ci/unity-builder@v2
       env:
@@ -19,3 +14,4 @@ jobs:
         UNITY_SERIAL: ${{ secrets.UNITY_SERIAL }}
       with:
         targetPlatform: StandaloneWindows64
+        projectPath: ./
