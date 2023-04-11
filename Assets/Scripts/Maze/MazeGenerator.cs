@@ -6,6 +6,7 @@ using UnityEngine;
 using Random = UnityEngine.Random;
 using UnityEngine.AddressableAssets;
 using UnityEngine.ResourceManagement.AsyncOperations;
+using UnityEngine.Serialization;
 
 namespace MazeSystem
 {
@@ -20,18 +21,10 @@ namespace MazeSystem
         [SerializeField] private AssetReferenceGameObject floorReference;
 
         [Header("Player Settings")]
-        [SerializeField] private AssetReferenceGameObject playerSpawnerReference;
         [SerializeField] private AssetReferenceGameObject playerReference;
         [SerializeField] private Vector3 playerSpawnOffset = new(0, 0, 0);
-        
-        [Header("Exit Settings")]
-        [SerializeField] private AssetReferenceGameObject exitReference;
-
-        [Header("Decorations Settings")]
-        [SerializeField] private AssetReferenceGameObject[] decorations;
-        [SerializeField] private Vector3[] decorationOffsets;
-        [SerializeField] private int[] decorationAmounts;
-        [SerializeField] private float[] decorationSpawnChance;
+        [SerializeField] private AssetReferenceGameObject playerSpawnerReference;
+        [SerializeField] private AssetReferenceGameObject playerExitReference;
         
         [Header("Enemy Settings")]
         [SerializeField] private AssetReferenceGameObject enemy;
@@ -59,13 +52,6 @@ namespace MazeSystem
                 mazeSize.x = 1;
             if (mazeSize.y < 1)
                 mazeSize.y = 1;
-
-            if (decorations.Length != decorationAmounts.Length || decorations.Length != decorationSpawnChance.Length)
-            {
-                decorationAmounts = new int[decorations.Length];
-                decorationSpawnChance = new float[decorations.Length];
-                decorationOffsets = new Vector3[decorations.Length];
-            }
         }
 
         private void Awake()
@@ -75,7 +61,6 @@ namespace MazeSystem
                 Debug.LogError("GameManager not found. Maybe it is not in the scene? Or the MazeGenerator is being instantiated before the GameManager? Anyways, the MazeGenerator will start with default values.");
             else
                 _gameManager.mazeGenerator = this;
-            navMeshSurface = GetComponent<NavMeshSurface>();
         }
 
         private void Start()
@@ -99,7 +84,7 @@ namespace MazeSystem
             Random.InitState(seed);
             GenerateMaze();
             ReplaceFloorInCell(_startCell, playerSpawnerReference);
-            ReplaceFloorInCell(_endCell, exitReference);
+            ReplaceFloorInCell(_endCell, playerExitReference);
             InstantiateAsync(playerReference, new Vector3(_startCell.X * cellSize.x + playerSpawnOffset.x, playerSpawnOffset.y, _startCell.Y * cellSize.z + playerSpawnOffset.z), Vector3.zero, Vector3.zero);
             DrawMaze();
             RandomSpreadObjects();
@@ -248,15 +233,6 @@ namespace MazeSystem
                 Debug.LogError("GameManager not found! no objects and enemies will be spawned!");
                 return;
             }
-            for (var i = 0; i < decorations.Length; i++)
-                for (var j = 0; j < decorationAmounts[i]; j++)
-                {
-                    var spawnCell = _mazeCells[Random.Range(0, mazeSize.x), Random.Range(0, mazeSize.y)];
-                    while (spawnCell.ContainsObject)
-                        spawnCell = _mazeCells[Random.Range(0, mazeSize.x), Random.Range(0, mazeSize.y)];
-                    spawnCell.ContainsObject = true;
-                    InstantiateAsync(decorations[i], new Vector3(spawnCell.X * cellSize.x + decorationOffsets[i].x, decorationOffsets[i].y, spawnCell.Y * cellSize.z + decorationOffsets[i].z), Vector3.zero, Vector3.zero);
-                }
             if(!GameManager.Instance.IsGameLoaded) 
                 for (var j = 0; j < enemyAmount; j++)
                 {

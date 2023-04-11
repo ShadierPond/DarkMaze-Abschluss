@@ -2846,7 +2846,7 @@ GameObject:
   - component: {fileID: 4406384921450530529}
   m_Layer: 6
   m_Name: Camera
-  m_TagString: Untagged
+  m_TagString: MainCamera
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -4033,9 +4033,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d85ddfad5f344e80b21d6eb9755bd6d9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  activeWeapon: 0
+  activeWeapon: 1
   weapons:
-  - {fileID: 0}
+  - {fileID: 1519770423698535378}
+  - {fileID: 5806565822471038737}
+  - {fileID: 1050945561295693599}
   playerAnimator: {fileID: 503702157204813186}
   currentWeapon: {fileID: 0}
 --- !u!1 &5463171290334001337
@@ -8359,6 +8361,18 @@ PrefabInstance:
     m_RemovedComponents: []
     m_AddedGameObjects: []
   m_SourcePrefab: {fileID: 100100000, guid: 3413c74f98df28347b16d270f730b5e3, type: 3}
+--- !u!114 &1519770423698535378 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 7708889433941612940, guid: 3413c74f98df28347b16d270f730b5e3,
+    type: 3}
+  m_PrefabInstance: {fileID: 9217801074342636126}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 72d4c1b30b6a4ec196094ab9f51eeec3, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!4 &5446697255789155190 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 3781540956570941736, guid: 3413c74f98df28347b16d270f730b5e3,
@@ -8388,6 +8402,11 @@ PrefabInstance:
       propertyPath: m_VersionIndex
       value: 5440
       objectReference: {fileID: 0}
+    - target: {fileID: 3420807055359261613, guid: 0175699ee72b89f4d89dafed3763da28,
+        type: 3}
+      propertyPath: trailPoolParent
+      value: 
+      objectReference: {fileID: 9217801075228272626}
     - target: {fileID: 3487389943453130032, guid: 0175699ee72b89f4d89dafed3763da28,
         type: 3}
       propertyPath: m_VersionIndex
@@ -8497,6 +8516,18 @@ Transform:
     type: 3}
   m_PrefabInstance: {fileID: 9217801075016981692}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &5806565822471038737 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 3420807055359261613, guid: 0175699ee72b89f4d89dafed3763da28,
+    type: 3}
+  m_PrefabInstance: {fileID: 9217801075016981692}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 72d4c1b30b6a4ec196094ab9f51eeec3, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1001 &9217801075339503249
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -8615,6 +8646,11 @@ PrefabInstance:
       propertyPath: m_VersionIndex
       value: 7240
       objectReference: {fileID: 0}
+    - target: {fileID: 8176707705501548942, guid: 0f4d189387b66bd4d96d9aab6fb606a6,
+        type: 3}
+      propertyPath: trailPoolParent
+      value: 
+      objectReference: {fileID: 9217801075228272626}
     - target: {fileID: 8295118968331444490, guid: 0f4d189387b66bd4d96d9aab6fb606a6,
         type: 3}
       propertyPath: m_VersionIndex
@@ -8633,6 +8669,18 @@ PrefabInstance:
     m_RemovedComponents: []
     m_AddedGameObjects: []
   m_SourcePrefab: {fileID: 100100000, guid: 0f4d189387b66bd4d96d9aab6fb606a6, type: 3}
+--- !u!114 &1050945561295693599 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 8176707705501548942, guid: 0f4d189387b66bd4d96d9aab6fb606a6,
+    type: 3}
+  m_PrefabInstance: {fileID: 9217801075339503249}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 72d4c1b30b6a4ec196094ab9f51eeec3, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!4 &5446697254772760505 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 3781540956570941736, guid: 0f4d189387b66bd4d96d9aab6fb606a6,

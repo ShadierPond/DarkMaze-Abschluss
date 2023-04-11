@@ -22,16 +22,6 @@ MonoBehaviour:
     m_ReadOnly: 0
     m_SerializedLabels: []
     FlaggedDuringContentUpdateRestriction: 0
-  - m_GUID: a9d8d0e2a56e6ec42b1b3d8627b8fd8f
-    m_Address: Prefabs/Decorations
-    m_ReadOnly: 1
-    m_SerializedLabels: []
-    FlaggedDuringContentUpdateRestriction: 0
-  - m_GUID: af3d9f11837ec9c4391cb9f961eff114
-    m_Address: Assets/Prefabs/PlayerEnv.prefab
-    m_ReadOnly: 0
-    m_SerializedLabels: []
-    FlaggedDuringContentUpdateRestriction: 0
   - m_GUID: 823bee3a41df6794083f0bb3e656118f
     m_Address: Prefabs/Player Start.prefab
     m_ReadOnly: 0

@@ -50,7 +50,7 @@ TextureImporter:
   spritePivot: {x: 0.5, y: 0.5}
   spritePixelsToUnits: 100
   spriteBorder: {x: 0, y: 0, z: 0, w: 0}
-  spriteGenerateFallbackPhysicsShape: 1
+  spriteGenerateFallbackPhysicsShape: 0
   alphaUsage: 1
   alphaIsTransparency: 0
   spriteTessellationDetail: -1
@@ -2760,12 +2760,12 @@ TextureImporter:
       ezgif.com-gif-maker(2)_124: -962166809
       Loading Icon_52: 1398539231
       Loading Icon_50: -1317383896
-      ezgif.com-gif-maker(2)_74: 842329031
-      Loading Icon_73: 733309384
-      Loading Icon_112: -765015254
       ezgif.com-gif-maker(2)_10: -949664373
-      Loading Icon_28: 1241260861
       ezgif.com-gif-maker(2)_54: -2042007547
+      Loading Icon_28: 1241260861
+      ezgif.com-gif-maker(2)_74: 842329031
+      Loading Icon_112: -765015254
+      Loading Icon_73: 733309384
       Loading Icon_30: -1399262165
       ezgif.com-gif-maker(2)_79: -863892519
       Loading Icon_119: -1907982684

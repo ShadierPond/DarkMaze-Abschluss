@@ -1,5 +1,6 @@
 <linker>
   <assembly fullname="Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null">
+    <type fullname="DynamicCulledObject" preserve="all" />
     <type fullname="Management.Sound.AudioManager" preserve="all" />
     <type fullname="Management.Sound.Detection.SoundEmitter" preserve="all" />
     <type fullname="Management.Sound.Detection.SoundReceiver" preserve="all" />
@@ -69,12 +70,11 @@
     <type fullname="UnityEngine.ProBuilder.Shapes.ProBuilderShape" preserve="all" />
     <type fullname="UnityEngine.ProBuilder.AutoUnwrapSettings" preserve="nothing" serialized="true" />
     <type fullname="UnityEngine.ProBuilder.Face" preserve="nothing" serialized="true" />
-    <type fullname="UnityEngine.ProBuilder.Shapes.Cube" preserve="nothing" serialized="true" />
     <type fullname="UnityEngine.ProBuilder.Shapes.Cylinder" preserve="nothing" serialized="true" />
-    <type fullname="UnityEngine.ProBuilder.Shapes.Pipe" preserve="nothing" serialized="true" />
     <type fullname="UnityEngine.ProBuilder.Shapes.Torus" preserve="nothing" serialized="true" />
     <type fullname="UnityEngine.ProBuilder.SharedVertex" preserve="nothing" serialized="true" />
     <type fullname="UnityEngine.ProBuilder.UnwrapParameters" preserve="nothing" serialized="true" />
+    <type fullname="UnityEngine.ProBuilder.Shapes.Cube" preserve="nothing" serialized="true" />
   </assembly>
   <assembly fullname="Unity.RenderPipelines.HighDefinition.Runtime, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null">
     <type fullname="UnityEngine.Rendering.HighDefinition.HDAdditionalCameraData" preserve="all" />

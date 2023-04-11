@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 31.418617, g: 42.359665, b: 92.79826, a: 1}
+  m_IndirectSpecularColor: {r: 0, g: 0, b: 0, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -154,19 +154,19 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   parameters:
-    albedo: {r: 0.18867922, g: 0.18867922, b: 0.18867922, a: 1}
-    meanFreePath: 4
+    albedo: {r: 1, g: 1, b: 1, a: 1}
+    meanFreePath: 1.73
     anisotropy: 0
     volumeMask: {fileID: 0}
     textureScrollingSpeed: {x: 0, y: 0, z: 0}
     textureTiling: {x: 1, y: 1, z: 1}
-    positiveFade: {x: 0.0038461538, y: 0.5, z: 0.0038461538}
-    negativeFade: {x: 0.0038461538, y: 0.5, z: 0.0038461538}
-    m_EditorUniformFade: 0.5
+    positiveFade: {x: 0.0016153846, y: 0.09375, z: 0.0016153846}
+    negativeFade: {x: 0.0016153846, y: 0.09375, z: 0.0016153846}
+    m_EditorUniformFade: 0.21
     m_EditorPositiveFade: {x: 0, y: 0, z: 0}
     m_EditorNegativeFade: {x: 0, y: 0, z: 0}
     m_EditorAdvancedFade: 0
-    size: {x: 130, y: 1, z: 130}
+    size: {x: 130, y: 2.24, z: 130}
     invertFade: 0
     distanceFadeStart: 10000
     distanceFadeEnd: 10000
@@ -327,26 +327,22 @@ MonoBehaviour:
     m_SubObjectName: 
     m_SubObjectType: 
     m_EditorAssetChanged: 1
-  playerSpawnerReference:
-    m_AssetGUID: fa2560138cae84f43990cd332d1134ae
-    m_SubObjectName: 
-    m_SubObjectType: 
-    m_EditorAssetChanged: 0
   playerReference:
     m_AssetGUID: af3d9f11837ec9c4391cb9f961eff114
     m_SubObjectName: 
     m_SubObjectType: 
     m_EditorAssetChanged: 1
   playerSpawnOffset: {x: 0, y: 0.1, z: 0}
-  exitReference:
-    m_AssetGUID: fa2560138cae84f43990cd332d1134ae
+  playerSpawnerReference:
+    m_AssetGUID: 823bee3a41df6794083f0bb3e656118f
     m_SubObjectName: 
     m_SubObjectType: 
-    m_EditorAssetChanged: 0
-  decorations: []
-  decorationOffsets: []
-  decorationAmounts: 
-  decorationSpawnChance: []
+    m_EditorAssetChanged: 1
+  playerExitReference:
+    m_AssetGUID: 42e8f04efe4cfae4998eda6d87cab943
+    m_SubObjectName: 
+    m_SubObjectType: 
+    m_EditorAssetChanged: 1
   enemy:
     m_AssetGUID: 1850f76f05f81ae41a0dbfd0736ebd80
     m_SubObjectName: 
@@ -356,7 +352,7 @@ MonoBehaviour:
   cellSize: {x: 4, y: 4, z: 4}
   mazeSize: {x: 30, y: 30}
   seed: 0
-  navMeshSurface: {fileID: 0}
+  navMeshSurface: {fileID: 920843551}
 --- !u!4 &920843550
 Transform:
   m_ObjectHideFlags: 0
@@ -795,14 +791,14 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   parameters:
     albedo: {r: 0.15886438, g: 0.15901032, b: 0.23584908, a: 1}
-    meanFreePath: 0.3
+    meanFreePath: 4.8
     anisotropy: 0
     volumeMask: {fileID: 0}
     textureScrollingSpeed: {x: 0, y: 0, z: 0}
     textureTiling: {x: 1, y: 1, z: 1}
-    positiveFade: {x: 0.0038461538, y: 0.01, z: 0.0038461538}
-    negativeFade: {x: 0.0038461538, y: 0.01, z: 0.0038461538}
-    m_EditorUniformFade: 0.5
+    positiveFade: {x: 0, y: 0, z: 0}
+    negativeFade: {x: 0, y: 0, z: 0}
+    m_EditorUniformFade: 0
     m_EditorPositiveFade: {x: 0, y: 0, z: 0}
     m_EditorNegativeFade: {x: 0, y: 0, z: 0}
     m_EditorAdvancedFade: 0
@@ -811,7 +807,7 @@ MonoBehaviour:
     distanceFadeStart: 10000
     distanceFadeEnd: 10000
     textureOffset: {x: 0, y: 0, z: 0}
-    falloffMode: 0
+    falloffMode: 1
   m_Version: 2
 --- !u!4 &1135304506
 Transform:
