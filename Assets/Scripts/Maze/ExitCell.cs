@@ -11,8 +11,7 @@ namespace MazeSystem
     {
         private enum WhereToGo
         {
-            Lobby,
-            NextLevel,
+            Hub,
             RandomLevel,
             Level1,
             Level2,
@@ -46,8 +45,7 @@ namespace MazeSystem
         {
             if (_playerTransform != null)
             {
-                //GameManager.Instance.LoadNextLevel();
-                Debug.Log("Exit");
+                
             }
         }
     }

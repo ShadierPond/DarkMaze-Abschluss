@@ -16,14 +16,19 @@ namespace Management.SaveSystem.SaveTypes
     [Serializable]
     public class JsonSave
     {
-        // The JSON Settings used to serialize and deserialize the data
+        /// <summary>
+        /// A field that holds the settings for JSON serialization and deserialization.
+        /// </summary>
+        /// <remarks>
+        /// It requires that the Newtonsoft.Json library is imported and that the custom converters for Vectors, Quaternions and Colors are defined.
+        /// </remarks>
         private JsonSerializerSettings _settings = new()
         {
-            // It contains the Type of the object to be serialized
+            // It specifies that the Type of the object to be serialized should be included in the JSON output, to preserve polymorphism and inheritance
             TypeNameHandling = TypeNameHandling.All,
-            // It formats the JSON file to be more readable
+            // It formats the JSON output to be indented and human-readable
             Formatting = Formatting.Indented,
-            // It uses the custom converters to serialize and deserialize Vectors and Quaternions
+            // It uses the custom converters to handle the serialization and deserialization of Vectors, Quaternions and Colors, which are not natively supported by JSON
             Converters = new JsonConverter[] {
                 new Vector2Converter(),
                 new Vector3Converter(),
@@ -34,46 +39,65 @@ namespace Management.SaveSystem.SaveTypes
         };
 
         
-        // Flush the Save Data
+        /// <summary>
+        /// Clears the data stored in the SaveManager instance.
+        /// </summary>
+        /// <remarks>
+        /// It requires that the SaveManager class is defined and initialized in the project.
+        /// It assigns a new Data object to the dataClass property of the SaveManager instance, effectively erasing any previous data.
+        /// </remarks>
         public void ClearData()
-        {
-            SaveManager.Instance.dataClass = new Data();
-        }
-        
-        // Save the Data to a file with the specified path.
-        // The name of the file is will be specified in the path string.
-        // Choose in the Parameters if you want to pretty print the JSON file.
+            // It assigns a new Data object to the dataClass property of the SaveManager instance, effectively erasing any previous data
+            => SaveManager.Instance.dataClass = new Data();
+
+        /// <summary>
+        /// A method that saves the data stored in the SaveManager instance to a file in JSON format.
+        /// </summary>
+        /// <param name="path">string - The path of the file to save to.</param>
+        /// <remarks>
+        /// It requires that the SaveManager class is defined and that it has a static property called Instance that returns a singleton instance of the class. It also requires that the Data class is defined and that it can be serialized and deserialized using JSON. It also requires that the _settings field is defined and that it holds the settings for JSON serialization and deserialization.
+        /// </remarks>
         public void Save(string path)
         {
-            // Create a new StreamWriter with the specified path
+            // Creates a new StreamWriter with the specified path.
             using StreamWriter writer = new(path);
+            // Serializes the dataClass property of the SaveManager instance to a JSON string, using the _settings field.
             var json = JsonConvert.SerializeObject(SaveManager.Instance.dataClass, _settings);
-            // Write the JSON string to the file
+            // Writes the JSON string to the file.
             writer.Write(json);
-            // TODO: Remove this
-            Debug.Log($"Saved to {path}");
         }
 
-        // Load the Data from a file with the specified path.
-        // The name of the file is will be specified in the path string.
+        /// <summary>
+        /// A method that loads the data from a file in JSON format and stores it in the SaveManager instance.
+        /// </summary>
+        /// <param name="path">string - The path of the file to load from.</param>
+        /// <remarks>
+        /// It requires that the SaveManager class is defined and that it has a static property called Instance that returns a singleton instance of the class. It also requires that the Data class is defined and that it can be serialized and deserialized using JSON. It also requires that the _settings field is defined and that it holds the settings for JSON serialization and deserialization.
+        /// </remarks>
         public void Load(string path)
         {
-            // Create a new StreamReader with the specified path
+            // Creates a new StreamReader with the specified path.
             using StreamReader reader = new(path);
-            // Read the JSON string from the file
+            // Reads the JSON string from the file.
             var json = reader.ReadToEnd();
-            // Deserialize the JSON string to a Data class.
+            // Deserializes the JSON string to a Data class, which holds all the relevant information for the game state, such as player position, enemies, current level, etc.
             SaveManager.Instance.dataClass = JsonConvert.DeserializeObject<Data>(json, _settings);
-            // TODO: Remove this
-            Debug.Log($"Loaded from {path}");
         }
 
+        /// <summary>
+        /// A method that saves the settings data stored in the SaveManager instance to a file in JSON format.
+        /// </summary>
+        /// <param name="path">string - The path of the file to save to.</param>
+        /// <remarks>
+        /// It requires that the SaveManager class is defined and that it has a static property called Instance that returns a singleton instance of the class. It also requires that the SettingsData class is defined and that it can be serialized and deserialized using JSON. It also requires that the _settings field is defined and that it holds the settings for JSON serialization and deserialization.
+        /// </remarks>
         public void SaveSettings(string path)
         {
-            // Create a new StreamWriter with the specified path
+            // Creates a new StreamWriter with the specified path.
             using StreamWriter writer = new(path);
+            // Serializes the settingsDataClass property of the SaveManager instance to a JSON string, using the _settings field.
             var json = JsonConvert.SerializeObject(SaveManager.Instance.settingsDataClass, _settings);
-            // Write the JSON string to the file
+            // Writes the JSON string to the file.
             writer.Write(json);
         }
         

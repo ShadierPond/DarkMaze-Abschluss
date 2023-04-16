@@ -12,7 +12,6 @@ GameObject:
   - component: {fileID: 7762031263577019234}
   - component: {fileID: 7525830306395725162}
   - component: {fileID: 7869373536460785742}
-  - component: {fileID: 8320669049078195120}
   m_Layer: 13
   m_Name: Maze Wall
   m_TagString: Untagged
@@ -98,15 +97,3 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
---- !u!114 &8320669049078195120
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 8518186669814015893}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 7b05de5c805fc7742a55fda9e5295c64, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 

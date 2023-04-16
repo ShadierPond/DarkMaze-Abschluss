@@ -1,3 +1,4 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
@@ -14,7 +15,25 @@ public class DynamicCulledObject : MonoBehaviour
         _renderer = GetComponent<Renderer>();
         _childrenRenderers = GetComponentsInChildren<Renderer>();
     }
+
+    private void OnBecameVisible()
+    {
+        foreach (var childRenderer in _childrenRenderers)
+        {
+            childRenderer.enabled = true;
+        }
+    }
     
+    private void OnBecameInvisible()
+    {
+        foreach (var childRenderer in _childrenRenderers)
+        {
+            childRenderer.enabled = false;
+        }
+    }
+
+
+    /*
     private void Update()
     {
         if (InCameraView() && !BehindObject())
@@ -65,4 +84,5 @@ public class DynamicCulledObject : MonoBehaviour
             }
         }
     }
+    */
 }

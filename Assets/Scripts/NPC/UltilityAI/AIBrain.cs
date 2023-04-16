@@ -8,9 +8,24 @@ namespace NPC.UtilityAI
         public Action bestAction;
         [HideInInspector] public NonPlayerCharacter npc;
         
+        /// <summary>
+        /// Initializes the object at the start of the scene.
+        /// </summary>
+        /// <returns>void - This method does not return a value.</returns>
+        /// <remarks>
+        /// This method assigns the npc field to the NonPlayerCharacter component of the object.
+        /// </remarks>
         public void Start() 
             => npc = GetComponent<NonPlayerCharacter>();
 
+        /// <summary>
+        /// Updates the state of the object every frame.
+        /// </summary>
+        /// <returns>void - This method does not return a value.</returns>
+        /// <remarks>
+        /// This method checks if the bestAction field is null. If so, it calls the DecideBestAction method 
+        /// with the npc.actionsAvailable array as an argument.
+        /// </remarks>
         private void Update()
         {
             if (bestAction is null)
@@ -18,10 +33,15 @@ namespace NPC.UtilityAI
         }
 
         /// <summary>
-        /// This method will loop through every action and determine which one is the best to take.
-        /// Best action is determined by the highest score.
+        /// Decides the best action to take from a list of available actions.
         /// </summary>
-        /// <param name="actionsAvailable">List of available Actions for the NPC</param>
+        /// <param name="actionsAvailable">Action[] - An array of Action objects that represent the possible actions to take.</param>
+        /// <returns>void - This method does not return a value.</returns>
+        /// <remarks>
+        /// This method uses the ScoreAction method to evaluate each action and assigns a score to it. 
+        /// It then selects the action with the highest score and sets it as the bestAction field. 
+        /// It also sets the finishedDeciding field to true when done.
+        /// </remarks>
         public void DecideBestAction(Action[] actionsAvailable)
         {
             var score = 0f;
@@ -39,12 +59,15 @@ namespace NPC.UtilityAI
         }
         
         /// <summary>
-        /// This method will loop through every action and score it based on the NPC's Considerations
-        /// Score all the considerations for each action
-        /// Average consideration score is the score for the action.
+        /// Scores an action based on its considerations and a rescaling scheme.
         /// </summary>
-        /// <param name="action">The Action to be evaluated</param>
-        /// <returns name="score"> The calculated score for the action</returns>
+        /// <param name="action">Action - An Action object that represents the action to score.</param>
+        /// <returns>float - The score of the action, ranging from 0 to 1.</returns>
+        /// <remarks>
+        /// This method iterates over the considerations of the action and multiplies their scores. 
+        /// If the score is zero, it returns immediately. Otherwise, it applies a rescaling scheme based on 
+        /// Behavioral Mathematics for Game AI to adjust the score. It also sets the Score field of the action to the final score.
+        /// </remarks>
         private float ScoreAction(Action action)
         {
             float score = 1;

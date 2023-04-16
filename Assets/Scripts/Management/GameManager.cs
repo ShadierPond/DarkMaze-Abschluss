@@ -6,7 +6,6 @@ using UnityEngine;
 using UnityEngine.Playables;
 using UnityEngine.Rendering;
 using UnityEngine.SceneManagement;
-using UnityEngine.Serialization;
 
 namespace Management
 {
@@ -24,17 +23,7 @@ namespace Management
         
         // Save Data
         public bool IsGameLoaded { get; set; }
-        
-        // Current Scene
-        public enum CurrentScene
-        {
-            MainMenu,
-            Game,
-            LoadingScreen
-        }
-        [Header("Loading Screen")]
-        public CurrentScene currentScene;
-    
+
         // Timeline
         public PlayableDirector director;
         public List<PlayableAsset> playableAssets;
@@ -86,7 +75,7 @@ namespace Management
         public void LoadGame()
         {
             IsGameLoading = true;
-            LoadingOperations.Add(SceneManager.LoadSceneAsync((int)CurrentScene.Game, LoadSceneMode.Single));
+            LoadingOperations.Add(SceneManager.LoadSceneAsync("Game", LoadSceneMode.Single));
         }
         
         /// <summary>
@@ -95,7 +84,7 @@ namespace Management
         public void LoadMainMenu()
         {
             IsGameLoading = true;
-            LoadingOperations.Add(SceneManager.LoadSceneAsync((int)CurrentScene.MainMenu, LoadSceneMode.Single));
+            LoadingOperations.Add(SceneManager.LoadSceneAsync("MainMenu", LoadSceneMode.Single));
         }
         
         /// <summary>
@@ -108,7 +97,6 @@ namespace Management
         {
             if (IsGameLoading)
             {
-                currentScene = CurrentScene.LoadingScreen;
                 director.Play(playableAssets.Find(x => x.name == "Start Loading"));
                 var isDone = true;
                 foreach (var operation in LoadingOperations)
@@ -124,7 +112,6 @@ namespace Management
                     IsGameLoading = false;
                     LoadingOperations.Clear();
                     director.Play(playableAssets.Find(x => x.name == "Stop Loading"));
-                    currentScene = GetCurrentSceneName() == "Game" ? CurrentScene.Game : CurrentScene.MainMenu;
                 }
             }
         }

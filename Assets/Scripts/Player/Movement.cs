@@ -1,8 +1,6 @@
 using System.Collections;
 using Management;
 using UnityEngine;
-using UnityEngine.Animations.Rigging;
-using UnityEngine.Serialization;
 using Weapon;
 
 namespace Player
@@ -24,27 +22,12 @@ namespace Player
         [Header("Movement Settings")]
         [SerializeField] private float walkingSpeed;
         private Vector3 _moveDirection;
-        
-        [Header("Aim Settings")]
-        [SerializeField] private Rig aimRig;
-        [SerializeField] private float aimSpeed = 1;
-        private Coroutine _aimCoroutine;
 
         [Header("Running Settings")]
         [SerializeField] private float runningSpeed;
         [SerializeField] private bool holdToRun;
         private bool _isRunning;
-        
-        [Header("Jumping Settings")]
-        [SerializeField] private float jumpForce;
-        [SerializeField] private float airSpeedMultiplier = 0.5f;
-        [SerializeField] private bool holdToJump;
-        [SerializeField, Tooltip("Debug")] private bool isJumping;
-        private bool _jumpInput;
-        private bool _startJump;
-        private float _jumpGroundCheckTimer;
-        private const float JumpGroundCheckDelay = 0.2f;
-        
+
         [Header("Animation Settings")]
         [SerializeField] private Animator playerAnimator;
         private static readonly int MoveX = Animator.StringToHash("MoveX");
@@ -67,23 +50,9 @@ namespace Player
             _controls.Player.Sprint.performed += ctx => _isRunning = holdToRun ? ctx.ReadValueAsButton() : ctx.ReadValueAsButton() ? !_isRunning : _isRunning;
             if(holdToRun)
                 _controls.Player.Sprint.canceled += _ => _isRunning = false;
-            _controls.Player.Jump.performed += ctx => _jumpInput = ctx.ReadValueAsButton();
-            _controls.Player.Jump.canceled += _ => _jumpInput = false;
-            
+
             _controls.Player.Interact.performed += _ => GameManager.Instance.SaveData();
             _controls.Player.Shoot.performed += _ => gunSelector.currentWeapon.Shoot();
-            _controls.Player.Aim.performed += _ =>
-            {
-                if(_aimCoroutine != null)
-                    StopCoroutine(_aimCoroutine);
-                _aimCoroutine = StartCoroutine(AimWeapon(true));
-            };
-            _controls.Player.Aim.canceled += _ =>
-            {
-                if(_aimCoroutine != null)
-                    StopCoroutine(_aimCoroutine);
-                _aimCoroutine = StartCoroutine(AimWeapon(false));
-            };
         }
         
         /// <summary>
@@ -115,6 +84,8 @@ namespace Player
             GroundCheck();
             StateHandler();
             UpdateAnimation();
+            
+            _moveDirection = transform.forward * _input.y + transform.right * _input.x;
         }
         
         /// <summary>
@@ -125,7 +96,6 @@ namespace Player
         private void FixedUpdate()
         {
             UpdateMovement();
-            UpdateJump();
         }
         
         /// <summary>
@@ -138,9 +108,7 @@ namespace Player
         /// </summary>
         private void UpdateMovement()
         {
-            _moveDirection = transform.forward * _input.y + transform.right * _input.x;
-            Debug.DrawRay(transform.position, _moveDirection, Color.red);
-            _rigidbody.AddForce(!isJumping? _moveDirection * (currentSpeed * speedMultiplier * 2) : isGrounded ? _moveDirection.normalized * (currentSpeed * speedMultiplier) : _moveDirection.normalized * (currentSpeed * speedMultiplier * airSpeedMultiplier), ForceMode.Force);
+            _rigidbody.AddForce(_moveDirection.normalized * (currentSpeed * speedMultiplier), ForceMode.Force);
         }
 
         /// <summary>
@@ -151,38 +119,6 @@ namespace Player
         {
             playerAnimator.SetFloat(MoveX, Mathf.Lerp(playerAnimator.GetFloat(MoveX), _input.x, Time.deltaTime * 10));
             playerAnimator.SetFloat(MoveY, Mathf.Lerp(playerAnimator.GetFloat(MoveY), _input.y, Time.deltaTime * 10));
-        }
-        
-        /// <summary>
-        /// This method updates the jumping behavior for a player character in a game.<br/>
-        /// When the player is on the ground and initiates a jump, the character jumps by setting its vertical velocity to 0 and adding an upward force.<br/>
-        /// The method also keeps track of whether the player is currently jumping using a boolean <c>"isJumping"</c>.<br/>
-        /// To prevent the player from double jumping, a <c>"_startJump"</c> boolean is used to track if the player has started jumping.<br/>
-        /// The method also includes a timer <c>"_jumpGroundCheckTimer"</c> to wait a set time after jumping before resetting the isJumping boolean.
-        /// It is used because in the first few frames after jumping, the player is still technically on the ground.
-        /// </summary>
-        private void UpdateJump()
-        {
-            var velocity = _rigidbody.velocity;
-            if (isGrounded && _jumpInput && !_startJump)
-            {
-                isJumping = true;
-                _startJump = true;
-                velocity.y = 0;
-                _rigidbody.velocity = velocity;
-                _rigidbody.AddForce(Vector3.up * jumpForce, ForceMode.Impulse);
-                _jumpGroundCheckTimer = JumpGroundCheckDelay;
-            }
-
-            if (isGrounded)
-            {
-                if(_jumpGroundCheckTimer <= 0)
-                    isJumping = false;
-                if (_jumpGroundCheckTimer <= 0 && (holdToJump || !_jumpInput))
-                   _startJump = false;
-            }
-            else
-                _jumpGroundCheckTimer -= Time.deltaTime;
         }
 
         /// <summary>
@@ -214,9 +150,7 @@ namespace Player
         /// </summary>
         private void GroundCheck()
         {
-            var transform1 = transform;
-            isGrounded = Physics.Raycast(transform1.position, Vector3.down, transform1.localScale.y / 4);
-            Debug.DrawRay(transform1.position, Vector3.down * transform1.localScale.y / 4, Color.green);
+            isGrounded = Physics.Raycast(transform.position, Vector3.down, transform.localScale.y / 4);
             _rigidbody.drag = isGrounded ? drag : 0;
         }
 
@@ -268,19 +202,6 @@ namespace Player
                 yield return null;
             }
             currentSpeed = _desiredSpeed;
-        }
-
-        private IEnumerator AimWeapon(bool state)
-        {
-            var time = 0f;
-            var endValue = state ? 1 : 0f;
-            while (time < 1)
-            {
-                time += Time.deltaTime * aimSpeed;
-                aimRig.weight = Mathf.Lerp(aimRig.weight, endValue, time);
-                yield return null;
-            }
-            aimRig.weight = endValue;
         }
     }
 }

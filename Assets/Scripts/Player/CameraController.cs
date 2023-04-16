@@ -7,7 +7,6 @@ namespace Player
     public class CameraController : MonoBehaviour
     {
         [Header("General Settings")] 
-        [SerializeField] private Camera mainCamera;
         [SerializeField] private bool invertYAxis;
         [SerializeField] private float mouseSensitivity = 1;
         [SerializeField] private float maxLookAngle = 90;
@@ -31,6 +30,8 @@ namespace Player
             _controls.Enable();
             _controls.Player.Look.performed += ctx => _axis = ctx.ReadValue<Vector2>();
             _controls.Player.Look.canceled += _ => _axis = Vector2.zero;
+            
+            _rotation = transform.localEulerAngles;
         }
         
         /// <summary>
@@ -56,7 +57,6 @@ namespace Player
         /// </summary>
         private void OnValidate()
         {
-            //mainCamera.cullingMask &= ~(1 << LayerMask.NameToLayer("Player"));
             if(firstPersonCamera)
                 firstPersonCamera.m_Lens.FieldOfView = firstPersonFOV;
         }
