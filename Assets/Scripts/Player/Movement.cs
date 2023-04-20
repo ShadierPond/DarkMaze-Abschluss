@@ -1,7 +1,5 @@
 using System.Collections;
-using Management;
 using UnityEngine;
-using Weapon;
 
 namespace Player
 {
@@ -32,51 +30,57 @@ namespace Player
         [SerializeField] private Animator playerAnimator;
         private static readonly int MoveX = Animator.StringToHash("MoveX");
         private static readonly int MoveY = Animator.StringToHash("MoveY");
-        
-        [Header("Shoot Settings")]
-        [SerializeField] private PlayerWeaponSelector gunSelector;
+        private static readonly int Shoot = Animator.StringToHash("Shoot");
+
 
         /// <summary>
-        /// This is called when the script instance is being loaded.
-        /// This creates a new instance of the DefaultControls class and enables it.
-        /// It sets the the input actions to the variables and adds a listener to the actions.
+        /// A method that is called when the game object is enabled.
         /// </summary>
+        /// <remarks>
+        /// It requires that the game object has a DefaultControls component and a playerAnimator component attached.
+        /// This method creates a new instance of the DefaultControls component and assigns it to the _controls field. It also enables the _controls component and subscribes to its events for moving, sprinting and shooting. It uses lambda expressions to define the event handlers for each event. It updates the _input field with the value of the Move event, the _isRunning field with the value of the Sprint event, and triggers the Shoot animation of the playerAnimator component with the Shoot event. It also checks if the holdToRun field is true and if so, it unsubscribes from the Sprint event when it is canceled and sets the _isRunning field to false.
+        /// </remarks>
         private void OnEnable()
         {
+            // Create a new instance of the DefaultControls component and assign it to the _controls field.
             _controls = new DefaultControls();
+            // Enable the _controls component.
             _controls.Enable();
+            // Subscribe to the Move event of the Player action map of the _controls component and update the _input field with the value of the event using a lambda expression.
             _controls.Player.Move.performed += ctx => _input = ctx.ReadValue<Vector2>();
+            // Subscribe to the Move cancel event of the Player action map of the _controls component and set the _input field to zero using a lambda expression.
             _controls.Player.Move.canceled += _ => _input = Vector2.zero;
+            // Subscribe to the Sprint event of the Player action map of the _controls component and update the _isRunning field with the value of the event using a lambda expression. If holdToRun is false, toggle the _isRunning field with each button press. If holdToRun is true, set the _isRunning field to true or false depending on whether the button is pressed or released.
             _controls.Player.Sprint.performed += ctx => _isRunning = holdToRun ? ctx.ReadValueAsButton() : ctx.ReadValueAsButton() ? !_isRunning : _isRunning;
+            // If holdToRun is true, subscribe to the Sprint cancel event of the Player action map of the _controls component and set the _isRunning field to false using a lambda expression.
             if(holdToRun)
                 _controls.Player.Sprint.canceled += _ => _isRunning = false;
-
-            _controls.Player.Interact.performed += _ => GameManager.Instance.SaveData();
-            _controls.Player.Shoot.performed += _ => gunSelector.currentWeapon.Shoot();
+            // Subscribe to the Shoot event of the Player action map of the _controls component and trigger the Shoot animation of the playerAnimator component using a lambda expression.
+            _controls.Player.Shoot.performed += _ => playerAnimator.SetTrigger(Shoot);
         }
         
         /// <summary>
-        /// This is called when the script instance is being disabled.
-        /// This disables the controls.
+        /// Disables the controls when the game object is disabled.
         /// </summary>
+        /// <remarks>
+        /// It requires that the game object has a _controls field of type InputActionAsset.
+        /// </remarks>
         private void OnDisable()
-        {
-            _controls.Disable();
-        }
+            => _controls.Disable();
 
         /// <summary>
-        /// This sets the orientation variable to the first child of the player.
-        /// It is called before Start.
+        /// Initializes the _rigidbody and gunSelector fields when the game object is awake.
         /// </summary>
+        /// <remarks>
+        /// It requires that the game object has a Rigidbody component and a PlayerWeaponSelector component.
+        /// </remarks>
         private void Awake()
         {
             _rigidbody = GetComponent<Rigidbody>();
-            gunSelector = GetComponent<PlayerWeaponSelector>();
         }
-        
+
         /// <summary>
-        /// Called once per frame.
-        /// Calls the methods that are needed to update the player.
+        /// Updates the game object's state every frame.
         /// </summary>
         private void Update()
         {
@@ -84,123 +88,134 @@ namespace Player
             GroundCheck();
             StateHandler();
             UpdateAnimation();
-            
-            _moveDirection = transform.forward * _input.y + transform.right * _input.x;
-        }
-        
-        /// <summary>
-        /// Called every fixed framerate frame.
-        /// Calls the methods that are needed to update the player.
-        /// The Methods Called use Physics.
-        /// </summary>
-        private void FixedUpdate()
-        {
-            UpdateMovement();
-        }
-        
-        /// <summary>
-        /// This method controls the movement of the player.<br/>
-        /// It gets the input values from the controls.<br/>
-        /// And calculates the direction the player is moving in.<br/>
-        /// Then adds a force to the player in that direction. If the player is on a slope it adds a force in the direction of the slope.<br/>
-        /// It also checks if the player is on a slope and if so it adds a force to the player in the direction of the slope.<br/>
-        /// The Player also stops sliding when they are standing on a slope.
-        /// </summary>
-        private void UpdateMovement()
-        {
-            _rigidbody.AddForce(_moveDirection.normalized * (currentSpeed * speedMultiplier), ForceMode.Force);
+    
+            // Calculate the move direction based on the input and the transform
+            var transform1 = transform;
+            _moveDirection = transform1.forward * _input.y + transform1.right * _input.x;
         }
 
         /// <summary>
-        /// It controls the animation of the player.
-        /// When player is moving it sets the moveX and moveY parameters of the animator to the input values.
+        /// Updates the game object's movement every fixed frame.
         /// </summary>
+        private void FixedUpdate()
+            => UpdateMovement();
+
+        /// <summary>
+        /// Applies a force to the rigidbody based on the move direction and speed.
+        /// </summary>
+        private void UpdateMovement()
+            => _rigidbody.AddForce(_moveDirection.normalized * (currentSpeed * speedMultiplier), ForceMode.Force);
+        
+        /// <summary>
+        /// Updates the animation parameters based on the input values.
+        /// </summary>
+        /// <remarks>
+        /// It requires that the game object has a playerAnimator field of type Animator and an _input field of type Vector2.
+        /// </remarks>
         private void UpdateAnimation()
         {
+            // Set the MoveX and MoveY parameters of the animator using a linear interpolation of the input values
             playerAnimator.SetFloat(MoveX, Mathf.Lerp(playerAnimator.GetFloat(MoveX), _input.x, Time.deltaTime * 10));
             playerAnimator.SetFloat(MoveY, Mathf.Lerp(playerAnimator.GetFloat(MoveY), _input.y, Time.deltaTime * 10));
         }
 
         /// <summary>
-        /// The "SpeedControl" method is used to control the speed of the Player with a <c>"Rigidbody"</c> component.<br/>
-        /// It checks the magnitude of the object's velocity and limits it to a certain value, <c>"currentSpeed"</c>, if it exceeds that value.<br/>
-        /// The method takes into account if the object is on a slope or not and adjusts the velocity accordingly.<br/>
-        /// The purpose of this method is to keep the object's speed within certain bounds for smoother and more controlled movement.
+        /// Controls the speed of the game object based on its rigidbody velocity.
         /// </summary>
+        /// <remarks>
+        /// It requires that the game object has a _rigidbody field of type Rigidbody, a currentSpeed field of type float and a speedMultiplier field of type float.
+        /// </remarks>
         private void SpeedControl()
         {
+            // Get the velocity of the rigidbody
             var velocity = _rigidbody.velocity;
+            // Create a copy of the velocity with zero y component
             var flatVelocity = velocity;
             flatVelocity.y = 0;
 
+            // If the magnitude of the flat velocity is greater than the current speed
             if (flatVelocity.magnitude > currentSpeed)
             {
+                // Normalize the flat velocity and multiply it by the current speed
                 flatVelocity = flatVelocity.normalized * currentSpeed;
+                // Set the velocity to the modified flat velocity with the original y component
                 velocity = flatVelocity;
                 velocity.y = _rigidbody.velocity.y;
             }
+            // Set the rigidbody velocity to the modified velocity
             _rigidbody.velocity = velocity;
         }
         
         /// <summary>
-        /// This Method checks if the Player is touching the ground by using a raycast.<br/>
-        /// The raycast is shot downwards from the center of the Player and the length of the raycast is set to a quarter of the Player's height.<br/>
-        /// If the raycast hits the ground, the Method sets the Player's drag value to a specified number.<br/>
-        /// If the raycast does not hit the ground, the drag value is set to 0.
+        /// Checks if the game object is grounded by casting a ray downwards.
         /// </summary>
+        /// <remarks>
+        /// It requires that the game object has an isGrounded field of type bool, a _rigidbody field of type Rigidbody and a drag field of type float.
+        /// </remarks>
         private void GroundCheck()
         {
-            isGrounded = Physics.Raycast(transform.position, Vector3.down, transform.localScale.y / 4);
+            // Cast a ray from the position of the game object downwards
+            var transform1 = transform;
+            isGrounded = Physics.Raycast(transform1.position, Vector3.down, transform1.localScale.y / 4);
+            // Set the drag of the rigidbody depending on whether the game object is grounded or not
             _rigidbody.drag = isGrounded ? drag : 0;
         }
 
-
         /// <summary>
-        /// This Method determines the movement speed of the Player based on its current state (climbing, sliding, crouching, sprinting, walking, or in the air).
-        /// The Method sets the desired speed of the Player based on its state and, if the desired speed changes drastically from the previous frame, smoothly changes the Player's current speed to the new desired speed.
-        /// The current speed of the Player is continuously updated to match the desired speed.
+        /// Handles the state of the game object based on its grounded status and input values.
         /// </summary>
+        /// <remarks>
+        /// It requires that the game object has an isGrounded field of type bool, an _isRunning field of type bool, a _desiredSpeed field of type float, a runningSpeed field of type float, a walkingSpeed field of type float, a _lastDesiredSpeed field of type float, a currentSpeed field of type float and a speedMultiplier field of type float.
+        /// </remarks>
         private void StateHandler()
         {
-            // Sprinting
-            if(isGrounded && _isRunning)
-                _desiredSpeed = runningSpeed;
-            // Walking
-            else if (isGrounded)
-                _desiredSpeed = walkingSpeed;
-            // Air
-            else
+            _desiredSpeed = isGrounded switch
             {
-            }
+                // Sprinting
+                true when _isRunning => runningSpeed,
+                // Walking
+                true => walkingSpeed,
+                _ => _desiredSpeed
+            };
             
+            // If the difference between the desired speed and the last desired speed is large and the current speed is not zero
             if(Mathf.Abs(_desiredSpeed - _lastDesiredSpeed) > 4f && currentSpeed != 0)
             {
+                // Stop all coroutines and start a new one to smoothly lerp the current speed to the desired speed
                 StopAllCoroutines();
                 StartCoroutine(SmoothlyLerpMoveSpeed());
             }
             else
+                // Otherwise, set the current speed to the desired speed
                 currentSpeed = _desiredSpeed;
             
+            // Set the last desired speed to the desired speed
             _lastDesiredSpeed = _desiredSpeed;
         }
-        
+
         /// <summary>
-        /// This Coroutine smoothly changes the Player's current speed to the new desired speed.
-        /// The Coroutine is called in the <c>StateHandler</c> method.
+        /// Smoothly lerps the current speed to the desired speed over time.
         /// </summary>
-        /// <returns></returns>
+        /// <returns>A IEnumerator that can be used with StartCoroutine.</returns>
         private IEnumerator SmoothlyLerpMoveSpeed()
         {
-            // smoothly lerp movementSpeed to desired value
+            // Initialize a time variable
             float time = 0;
+            // Calculate the difference between the desired speed and the current speed
             var difference = Mathf.Abs(_desiredSpeed - currentSpeed);
+            // Store the current speed as a start value
             var startValue = currentSpeed;
+            // While the time is less than the difference
             while (time < difference)
             {
+                // Lerp the current speed from the start value to the desired value based on the time and difference ratio
                 currentSpeed = Mathf.Lerp(startValue, _desiredSpeed, time / difference);
+                // Increment the time by delta time multiplied by speed multiplier
                 time += Time.deltaTime * speedMultiplier;
+                // Yield until next frame
                 yield return null;
             }
+            // Set the current speed to the desired speed
             currentSpeed = _desiredSpeed;
         }
     }

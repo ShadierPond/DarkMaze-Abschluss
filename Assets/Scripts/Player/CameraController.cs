@@ -38,9 +38,7 @@ namespace Player
         /// Disables the Input System controls when the script is disabled.
         /// </summary>
         private void OnDisable()
-        {
-            _controls.Disable();
-        }
+            => _controls.Disable();
 
         /// <summary>
         /// Sets the follow target to the child of the Player object.
@@ -67,9 +65,7 @@ namespace Player
         /// It also stops the Rotation if the camera type is not first person or third person.
         /// </summary>
         private void Update()
-        {
-            CameraRotation();
-        }
+            => CameraRotation();
 
         /// <summary>
         /// Rotates the follow target. The follow target is the child of the player object.

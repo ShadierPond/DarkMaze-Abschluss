@@ -6,8 +6,6 @@ namespace Weapon
     public class ShootConfiguration : ScriptableObject
     {
         public LayerMask hitMask;
-        public int trailCount = 1;
-        public Vector3 spread = new Vector3(0.1f, 0.1f, 0f);
-        public float fireRate = 0.25f;
+        public float damage = 10f;
     }
 }

@@ -8,12 +8,9 @@ public class LookAtPlayer : MonoBehaviour
     [SerializeField] private float damping = 6.0f;
     
     /// <summary>
-    /// This method makes the game object look at the player's position with a smooth rotation.
+    /// This method is called once per frame. It rotates the game object to face the player smoothly, ignoring the y-axis.
     /// </summary>
-    /// <remarks>
-    /// It requires that the game object has a reference to the player's transform component.
-    /// </remarks>
-    void Update()
+    private void Update()
     {
         // Calculate the direction vector from this game object to the player, ignoring the y-axis
         var lookPos = player.position - transform.position;

@@ -14,7 +14,7 @@ GameObject:
   - component: {fileID: 6636771893199117832}
   - component: {fileID: 8139684839468758190}
   - component: {fileID: 6403826200122043725}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: Halo_2
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -4932,12 +4932,12 @@ GameObject:
   - component: {fileID: 4936083513985405978}
   - component: {fileID: 873566296}
   - component: {fileID: 4118241288605767172}
-  m_Layer: 14
+  m_Layer: 7
   m_Name: Cylinder
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
+  m_StaticEditorFlags: 2147483647
   m_IsActive: 1
 --- !u!4 &6808176669431107084
 Transform:
@@ -5751,7 +5751,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: cee166f7264419644a6a2a32b9ed601a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  whereToGo: 2
+  whereToGo: 1
   animator: {fileID: 873566296}
 --- !u!1 &2762372514292888600
 GameObject:
@@ -5765,12 +5765,12 @@ GameObject:
   - component: {fileID: 6381959684221264827}
   - component: {fileID: 8089779049125098314}
   - component: {fileID: 6055222113432574959}
-  m_Layer: 14
+  m_Layer: 7
   m_Name: Player Exit
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
+  m_StaticEditorFlags: 2147483647
   m_IsActive: 1
 --- !u!4 &5608712312620116790
 Transform:
@@ -5865,7 +5865,7 @@ GameObject:
   - component: {fileID: 6530372955657016695}
   - component: {fileID: 4481681584602952911}
   - component: {fileID: 2308531157185814272}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: Halo_1
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -10780,7 +10780,7 @@ GameObject:
   - component: {fileID: 3202359221316310134}
   - component: {fileID: 1594964699102371432}
   - component: {fileID: 6564214020151531566}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: Halo_3
   m_TagString: Untagged
   m_Icon: {fileID: 0}

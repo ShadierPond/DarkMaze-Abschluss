@@ -52,7 +52,6 @@ namespace NPC.UtilityAI
                     continue;
                 nextBestActionIndex = i;
                 score = actionsAvailable[i].Score;
-                npc.actionsScores[i] = score;
             }
             bestAction = actionsAvailable[nextBestActionIndex];
             finishedDeciding = true;

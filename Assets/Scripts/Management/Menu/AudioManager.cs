@@ -19,6 +19,8 @@ namespace Management.Menu
         [SerializeField] private Toggle ambientToggle;
         [Header("Audio Mixer")]
         public AudioMixer audioMixer;
+        
+        private SaveManager _saveManager;
 
         
         /// <summary>
@@ -29,8 +31,10 @@ namespace Management.Menu
         /// </remarks>
         private void Start()
         {
+            _saveManager = Management.GameManager.Instance.saveManager;
+            
             // Get the saved audio settings data from the SaveManager
-            var data = SaveManager.Instance.settingsDataClass;
+            var data = _saveManager.settingsDataClass;
     
             // Set the initial values of the sliders and toggles based on the saved data
             masterSlider.value = data.masterVolume;
@@ -72,7 +76,7 @@ namespace Management.Menu
         private void Save()
         {
             // Get the audio settings data from the SaveManager
-            var data = SaveManager.Instance.settingsDataClass;
+            var data = _saveManager.settingsDataClass;
             // Update the data with the current values of the sliders and toggles
             data.ambientVolume = ambientSlider.value;
             data.masterVolume = masterSlider.value;
@@ -84,7 +88,7 @@ namespace Management.Menu
             data.isMusicMuted = musicToggle.isOn;
             data.isSfxMuted = sfxToggle.isOn;
             // Save the updated data to the SaveManager and write it to a file
-            SaveManager.Instance.SaveSettings();
+            _saveManager.SaveSettings();
         }
         
 // ------ Master ------

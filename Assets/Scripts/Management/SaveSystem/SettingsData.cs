@@ -20,13 +20,11 @@
         public bool runInBackground = true;
         
         // Graphics Data
-        public int qualityLevel = 1;
         public int vSyncCount = 1;
         public int textureQuality = 1;
         public bool textureStreaming = true;
         public int shadowQuality = 2;
         public bool ambientOcclusion = true;
-        public bool bloom = true;
         public bool motionBlur = true;
         public float motionBlurShutterAngle = 270;
         public bool filmGrain = true;

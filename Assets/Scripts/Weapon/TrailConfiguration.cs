@@ -13,7 +13,5 @@ namespace Weapon
         
         public float missDistance = 100f;
         public float simulationSpeed = 100f;
-        
-        
     }
 }

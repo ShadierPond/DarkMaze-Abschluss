@@ -15,6 +15,7 @@ namespace Management.Menu
         private MotionBlur _motionBlur;
         private ScreenSpaceRefraction _screenSpaceReflections;
         private FilmGrain _filmGrain;
+        private SaveManager _saveManager;
         
         // Display
         private Resolution[] _resolutions;
@@ -63,6 +64,8 @@ namespace Management.Menu
         /// </remarks>
         private void Start()
         {
+            _saveManager = Management.GameManager.Instance.saveManager;
+            
             // Get the available resolutions and refresh rates
             _resolutions = Screen.resolutions;
             // Remove duplicate resolutions
@@ -91,7 +94,7 @@ namespace Management.Menu
             fullscreenDropdown.RefreshShownValue();
 
             // Get the post processing volume and the settings and the Save data
-            var data = SaveManager.Instance.settingsDataClass;
+            var data = _saveManager.settingsDataClass;
             _postProcessVolume = Management.GameManager.Instance.profile;
             _postProcessVolume.TryGet(out _ambientOcclusion);
             _postProcessVolume.TryGet(out _motionBlur);
@@ -152,7 +155,7 @@ namespace Management.Menu
         private void Save()
         {
             // Get the graphics settings data from the SaveManager
-            var data = SaveManager.Instance.settingsDataClass;
+            var data = _saveManager.settingsDataClass;
             // Update the data with the current values of the dropdowns and toggles
             data.resolutionIndex = resolutionDropdown.value;
             data.fullscreenIndex = fullscreenDropdown.value;
@@ -169,7 +172,7 @@ namespace Management.Menu
             data.filmGrain = filmGrainToggle.isOn;
             data.filmGrainIntensity = filmGrainSlider.value;
             // Save the updated data to the SaveManager and write it to a file
-            SaveManager.Instance.SaveSettings();
+            _saveManager.SaveSettings();
         } 
 
 // ------------------ Display ------------------

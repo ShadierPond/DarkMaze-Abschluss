@@ -6,7 +6,7 @@
         public MazeCell Cell { get; set; }
         
         // The direction of the neighbour cell relative to the current cell
-        public Direction Direction { get; set; }
+        private Direction Direction { get; set; }
         
         // Constructor for the neighbour cell
         public NeighbourCell(MazeCell cell, Direction direction)

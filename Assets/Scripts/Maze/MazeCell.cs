@@ -22,6 +22,9 @@
         
         // Cell contains an Enemy Spawn Point
         public bool ContainsEnemySpawnPoint { get; set; }
+        
+        // Cell contains a Jump scare
+        public bool ContainsJumpScare { get; set; }
 
         // Constructor. Sets the cell's position in the maze
         public MazeCell(int x, int y)

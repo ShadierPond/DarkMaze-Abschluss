@@ -32,6 +32,31 @@ MonoBehaviour:
     m_ReadOnly: 0
     m_SerializedLabels: []
     FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: b951ef8ab821a5b498a1a67ab95ffe54
+    m_Address: Assets/Prefabs/PlayerEnv.prefab
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: f2841d8771476f34590253f0c9be7614
+    m_Address: Assets/Prefabs/Maze/Spawn Cell.prefab
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 88cae2ad77861d146ba0b327faec7bf9
+    m_Address: Assets/Audio/SFX/Weapon Shoot
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 77b233d3d5ca3044d9d0536bae410115
+    m_Address: Assets/Audio/SFX/Footsteps
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: f1a6f54de632f744d9a03dac911a1f6f
+    m_Address: Assets/Audio/Music
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
   m_ReadOnly: 0
   m_Settings: {fileID: 11400000, guid: 4238d1a742f739247940f48a6d434942, type: 2}
   m_SchemaSet:

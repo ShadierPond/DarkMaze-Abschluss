@@ -9,13 +9,13 @@ public class DummySpawner : MonoBehaviour
     private float _spawnTime;
 
     /// <summary>
-    /// This method spawns dummy game objects at a regular interval until the maximum number of dummies is reached.
+    /// This method is called once per frame. It spawns new dummies from a prefab at a fixed interval until the maximum number of dummies is reached.
     /// </summary>
     private void Update()
     {
         // Get the current number of dummies by counting the children of this game object
         _currentDummies = transform.childCount;
-    
+
         // Increase the spawn time by the elapsed time since the last frame
         _spawnTime += Time.deltaTime;
         // If the spawn time is greater than or equal to the spawn delay and the current number of dummies is less than the maximum number of dummies
