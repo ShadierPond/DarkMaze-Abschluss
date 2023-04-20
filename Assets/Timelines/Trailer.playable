@@ -6024,7 +6024,7 @@ MonoBehaviour:
   m_Name: RecorderClip
   m_EditorClassIdentifier: 
   enabled: 1
-  take: 8
+  take: 10
   captureEveryNthFrame: 1
   fileNameGenerator:
     m_Path:
@@ -6050,7 +6050,7 @@ MonoBehaviour:
       m_OutputResolution:
         m_CustomWidth: 1024
         m_CustomHeight: 1024
-        imageHeight: 2160
+        imageHeight: 1440
         maxSupportedHeight: 2160
         m_AspectRatio:
           m_CustomAspectX: 1
