@@ -1,4 +1,4 @@
-A Demo version for WebGL has been only created for visual purposes, any Bugs or errors there are because Target platform is supposed to be windows. An EXE Version is located in Anwendung folder!
+A Demo version for WebGL cannot be created because the project uses HDRP and webgl doesnt support it. An EXE Version is located in Build folder!
 # DarkMaze
 ![alt text](blob/Bild1.png)
 
