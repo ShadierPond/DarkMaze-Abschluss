@@ -1,8 +1,6 @@
 A Demo version for WebGL cannot be created because the project uses HDRP and webgl doesnt support it. An EXE Version is located in Build folder!
 # DarkMaze
-<video width="960" height="540" controls>
-  <source src="blob/Trailer.mp4" type="video/mp4">
-</video>
+https://raw.githubusercontent.com/ShadierPond/AbschlussPruefung/main/blob/Trailer.mp4?token=GHSAT0AAAAAAB6IPPZEUZLNGCSSGQ2PIKCSZCSYOEQ
 
 ## Game Genre
 Survival
