@@ -1,6 +1,7 @@
 ﻿using Management.SaveSystem;
 using UnityEngine;
 using UnityEngine.Audio;
+using UnityEngine.Serialization;
 using UnityEngine.UI;
 
 namespace Management.Menu
@@ -20,6 +21,7 @@ namespace Management.Menu
         [Header("Audio Mixer")]
         public AudioMixer audioMixer;
         
+        public bool settingsLoaded;
         private SaveManager _saveManager;
 
         
@@ -68,6 +70,8 @@ namespace Management.Menu
             musicToggle.onValueChanged.Invoke(data.isMusicMuted);
             sfxToggle.onValueChanged.Invoke(data.isSfxMuted);
             ambientToggle.onValueChanged.Invoke(data.isAmbientMuted);
+            
+            settingsLoaded = true;
         }
         
         /// <summary>

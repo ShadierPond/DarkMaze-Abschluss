@@ -3,6 +3,7 @@ using TMPro;
 using UnityEngine;
 using UnityEngine.Rendering;
 using UnityEngine.Rendering.HighDefinition;
+using UnityEngine.Serialization;
 using UnityEngine.UI;
 using ShadowQuality = UnityEngine.ShadowQuality;
 
@@ -16,6 +17,8 @@ namespace Management.Menu
         private ScreenSpaceRefraction _screenSpaceReflections;
         private FilmGrain _filmGrain;
         private SaveManager _saveManager;
+        
+        public bool settingsLoaded;
         
         // Display
         private Resolution[] _resolutions;
@@ -147,6 +150,8 @@ namespace Management.Menu
             motionBlurSlider.onValueChanged.AddListener(delegate { SetMotionBlurSlider(motionBlurSlider.value); });
             filmGrainToggle.onValueChanged.AddListener(delegate { SetFilmGrain(filmGrainToggle.isOn); });
             filmGrainSlider.onValueChanged.AddListener(delegate { SetFilmGrainSlider(filmGrainSlider.value); });
+            
+            settingsLoaded = true;
         }
 
         /// <summary>
@@ -187,6 +192,8 @@ namespace Management.Menu
         /// <param name="refreshRateIndex">int - The index of the refresh rate to set.</param>
         private void SetScreen(int resolutionIndex, int fullscreenIndex, int refreshRateIndex)
         {
+            if(resolutionIndex >= _resolutions.Length) 
+                resolutionIndex = Screen.resolutions.Length - 1;
             // Set the screen resolution, fullscreen mode and refresh rate using the Screen class
             Screen.SetResolution(_resolutions[resolutionIndex].width, _resolutions[resolutionIndex].height, _fullScreenModes[fullscreenIndex], _refreshRates[refreshRateIndex]);
             // Save the settings using a custom method

@@ -1,3 +1,4 @@
+using System.Collections;
 using UnityEngine;
 using UnityEngine.InputSystem;
 
@@ -15,6 +16,9 @@ namespace Management.Menu
             [SerializeField] private GameObject audioMenu;
             [SerializeField] private GameObject graphicsMenu;
             [SerializeField] private GameObject gameplayMenu;
+            
+        [Header("Cover")]
+            [SerializeField] private GameObject cover;
 
         private void Awake()
         {
@@ -27,6 +31,18 @@ namespace Management.Menu
         /// </summary>
         private void Start()
         {
+            StartCoroutine(WaitForSettings());
+        }
+        
+        private IEnumerator WaitForSettings()
+        {
+            var audioManager = audioMenu.GetComponent<AudioManager>();
+            var graphicsManager = graphicsMenu.GetComponent<VideoManager>();
+            
+            // Wait until the settings are loaded
+            yield return new WaitUntil(() => audioManager.settingsLoaded && graphicsManager.settingsLoaded);
+            
+            cover.SetActive(false);
             // Deactivate the main menu game object
             mainMenu.SetActive(false);
             // Deactivate the credits menu game object
@@ -40,6 +56,7 @@ namespace Management.Menu
             // Deactivate the gameplay menu game object
             gameplayMenu.SetActive(false);
         }
+        
 
         /// <summary>
         /// This method is called once per frame. It checks if the escape key was pressed and calls the Return method if it was.
@@ -177,6 +194,7 @@ namespace Management.Menu
         /// </summary>
         public void ReturnToHub()
         {
+            Return();
             // Call the LoadScene method of the GameManager instance with the scene name "Hub"
             Management.GameManager.Instance.LoadScene("Hub");
         }

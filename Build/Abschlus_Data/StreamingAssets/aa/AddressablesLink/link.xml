@@ -1,6 +1,5 @@
 <linker>
   <assembly fullname="Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null">
-    <type fullname="DynamicCulledObject" preserve="all" />
     <type fullname="Management.Sound.AudioManager" preserve="all" />
     <type fullname="Management.Sound.Detection.SoundEmitter" preserve="all" />
     <type fullname="Management.Sound.Detection.SoundReceiver" preserve="all" />
@@ -21,6 +20,7 @@
     <type fullname="NPC.UtilityAI.Considerations.PlayerOnSight" preserve="all" />
     <type fullname="Player.CameraController" preserve="all" />
     <type fullname="Player.Movement" preserve="all" />
+    <type fullname="SpawnCell" preserve="all" />
     <type fullname="Weapon.PlayerWeaponSelector" preserve="all" />
     <type fullname="Weapon.ShootConfiguration" preserve="all" />
     <type fullname="Weapon.TrailConfiguration" preserve="all" />
@@ -31,7 +31,6 @@
     <type fullname="Cinemachine.CinemachineBrain" preserve="all" />
     <type fullname="Cinemachine.CinemachineHardLookAt" preserve="all" />
     <type fullname="Cinemachine.CinemachinePipeline" preserve="all" />
-    <type fullname="Cinemachine.CinemachineTransposer" preserve="all" />
     <type fullname="Cinemachine.CinemachineVirtualCamera" preserve="all" />
     <type fullname="Cinemachine.CinemachineBlendDefinition" preserve="nothing" serialized="true" />
     <type fullname="Cinemachine.CinemachineBrain/BrainEvent" preserve="nothing" serialized="true" />
@@ -42,6 +41,7 @@
   <assembly fullname="Unity.Addressables, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null" preserve="all">
     <type fullname="UnityEngine.AddressableAssets.Addressables" preserve="all" />
     <type fullname="UnityEngine.AddressableAssets.AssetReference" preserve="nothing" serialized="true" />
+    <type fullname="UnityEngine.AddressableAssets.AssetReferenceGameObject" preserve="nothing" serialized="true" />
   </assembly>
   <assembly fullname="Unity.Animation.Rigging, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null">
     <type fullname="UnityEngine.Animations.Rigging.BoneRenderer" preserve="all" />
@@ -70,11 +70,11 @@
     <type fullname="UnityEngine.ProBuilder.Shapes.ProBuilderShape" preserve="all" />
     <type fullname="UnityEngine.ProBuilder.AutoUnwrapSettings" preserve="nothing" serialized="true" />
     <type fullname="UnityEngine.ProBuilder.Face" preserve="nothing" serialized="true" />
+    <type fullname="UnityEngine.ProBuilder.Shapes.Cube" preserve="nothing" serialized="true" />
     <type fullname="UnityEngine.ProBuilder.Shapes.Cylinder" preserve="nothing" serialized="true" />
     <type fullname="UnityEngine.ProBuilder.Shapes.Torus" preserve="nothing" serialized="true" />
     <type fullname="UnityEngine.ProBuilder.SharedVertex" preserve="nothing" serialized="true" />
     <type fullname="UnityEngine.ProBuilder.UnwrapParameters" preserve="nothing" serialized="true" />
-    <type fullname="UnityEngine.ProBuilder.Shapes.Cube" preserve="nothing" serialized="true" />
   </assembly>
   <assembly fullname="Unity.RenderPipelines.HighDefinition.Runtime, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null">
     <type fullname="UnityEngine.Rendering.HighDefinition.HDAdditionalCameraData" preserve="all" />
@@ -123,11 +123,8 @@
     <type fullname="UnityEngine.MeshFilter" preserve="all" />
     <type fullname="UnityEngine.MeshRenderer" preserve="all" />
     <type fullname="UnityEngine.Object" preserve="all" />
-    <type fullname="UnityEngine.RenderTexture" preserve="all" />
     <type fullname="UnityEngine.Shader" preserve="all" />
     <type fullname="UnityEngine.SkinnedMeshRenderer" preserve="all" />
-    <type fullname="UnityEngine.Sprite" preserve="all" />
-    <type fullname="UnityEngine.SpriteRenderer" preserve="all" />
     <type fullname="UnityEngine.Texture2D" preserve="all" />
     <type fullname="UnityEngine.Transform" preserve="all" />
     <type fullname="UnityEngine.Events.PersistentCallGroup" preserve="nothing" serialized="true" />

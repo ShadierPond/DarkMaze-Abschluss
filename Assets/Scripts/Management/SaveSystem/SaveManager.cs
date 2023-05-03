@@ -89,6 +89,7 @@ namespace Management.SaveSystem
             {
                 // If not, log a warning message
                 Debug.LogWarning($"Settings file not found at {_settingsPath}settings.{fileExtension}. Creating new settings file.");
+                settingsDataClass.resolutionIndex = Screen.resolutions.Length - 1;
                 // Save the default settings data to a new JSON file using the SaveSettings method
                 SaveSettings();
             }

@@ -15,7 +15,7 @@
         
         // Display Data
         public int resolutionIndex;
-        public int fullscreenIndex;
+        public int fullscreenIndex = 1;
         public int refreshRateIndex = 5;
         public bool runInBackground = true;
         
@@ -26,7 +26,7 @@
         public int shadowQuality = 2;
         public bool ambientOcclusion = true;
         public bool motionBlur = true;
-        public float motionBlurShutterAngle = 270;
+        public float motionBlurShutterAngle = 6;
         public bool filmGrain = true;
         public float filmGrainIntensity = 0.5f;
     }

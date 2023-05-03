@@ -1,52 +1,31 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
+  <component name="AutoImportSettings">
+    <option name="autoReloadType" value="SELECTIVE" />
+  </component>
   <component name="ChangeListManager">
     <list default="true" id="f7ab1e7f-ca5b-4a20-acbd-a44a16c6bef8" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/.idea.Abschlusspruefung/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.Abschlusspruefung/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Management/Menu/GameManager.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Management/Menu/GameManager.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Meshes/PlayerArms/PlayerArms.fbx.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Meshes/PlayerArms/PlayerArms.fbx.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scenes/Hub.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/Hub.unity" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Management/Menu/AudioManager.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Management/Menu/AudioManager.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Management/Menu/MenuManager.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Management/Menu/MenuManager.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scripts/Management/Menu/VideoManager.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Management/Menu/VideoManager.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Timelines/Trailer.playable" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Timelines/Trailer.playable" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Build/Abschlus_Data/Managed/Assembly-CSharp-firstpass.dll" beforeDir="false" afterPath="$PROJECT_DIR$/Build/Abschlus_Data/Managed/Assembly-CSharp-firstpass.dll" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Build/Abschlus_Data/Managed/Assembly-CSharp.dll" beforeDir="false" afterPath="$PROJECT_DIR$/Build/Abschlus_Data/Managed/Assembly-CSharp.dll" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Build/Abschlus_Data/Managed/Cinemachine.dll" beforeDir="false" afterPath="$PROJECT_DIR$/Build/Abschlus_Data/Managed/Cinemachine.dll" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Build/Abschlus_Data/Managed/Unity.ProBuilder.dll" beforeDir="false" afterPath="$PROJECT_DIR$/Build/Abschlus_Data/Managed/Unity.ProBuilder.dll" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Build/Abschlus_Data/Managed/Unity.RenderPipelines.HighDefinition.Runtime.dll" beforeDir="false" afterPath="$PROJECT_DIR$/Build/Abschlus_Data/Managed/Unity.RenderPipelines.HighDefinition.Runtime.dll" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Build/Abschlus_Data/Plugins/x86_64/lib_burst_generated.dll" beforeDir="false" afterPath="$PROJECT_DIR$/Build/Abschlus_Data/Plugins/x86_64/lib_burst_generated.dll" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Build/Abschlus_Data/RuntimeInitializeOnLoads.json" beforeDir="false" afterPath="$PROJECT_DIR$/Build/Abschlus_Data/RuntimeInitializeOnLoads.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Build/Abschlus_Data/app.info" beforeDir="false" afterPath="$PROJECT_DIR$/Build/Abschlus_Data/app.info" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Build/Abschlus_Data/boot.config" beforeDir="false" afterPath="$PROJECT_DIR$/Build/Abschlus_Data/boot.config" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Build/Abschlus_Data/globalgamemanagers" beforeDir="false" afterPath="$PROJECT_DIR$/Build/Abschlus_Data/globalgamemanagers" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Build/Abschlus_Data/globalgamemanagers.assets" beforeDir="false" afterPath="$PROJECT_DIR$/Build/Abschlus_Data/globalgamemanagers.assets" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Build/Abschlus_Data/level0" beforeDir="false" afterPath="$PROJECT_DIR$/Build/Abschlus_Data/level0" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Build/Abschlus_Data/level1" beforeDir="false" afterPath="$PROJECT_DIR$/Build/Abschlus_Data/level1" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Build/Abschlus_Data/resources.assets" beforeDir="false" afterPath="$PROJECT_DIR$/Build/Abschlus_Data/resources.assets" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Build/Abschlus_Data/sharedassets0.assets" beforeDir="false" afterPath="$PROJECT_DIR$/Build/Abschlus_Data/sharedassets0.assets" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Build/Abschlus_Data/sharedassets0.assets.resS" beforeDir="false" afterPath="$PROJECT_DIR$/Build/Abschlus_Data/sharedassets0.assets.resS" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Build/Abschlus_Data/sharedassets1.assets" beforeDir="false" afterPath="$PROJECT_DIR$/Build/Abschlus_Data/sharedassets1.assets" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Build/MonoBleedingEdge/etc/mono/2.0/Browsers/Compat.browser" beforeDir="false" afterPath="$PROJECT_DIR$/Build/MonoBleedingEdge/etc/mono/2.0/Browsers/Compat.browser" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Build/MonoBleedingEdge/etc/mono/2.0/DefaultWsdlHelpGenerator.aspx" beforeDir="false" afterPath="$PROJECT_DIR$/Build/MonoBleedingEdge/etc/mono/2.0/DefaultWsdlHelpGenerator.aspx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Build/MonoBleedingEdge/etc/mono/2.0/machine.config" beforeDir="false" afterPath="$PROJECT_DIR$/Build/MonoBleedingEdge/etc/mono/2.0/machine.config" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Build/MonoBleedingEdge/etc/mono/2.0/settings.map" beforeDir="false" afterPath="$PROJECT_DIR$/Build/MonoBleedingEdge/etc/mono/2.0/settings.map" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Build/MonoBleedingEdge/etc/mono/2.0/web.config" beforeDir="false" afterPath="$PROJECT_DIR$/Build/MonoBleedingEdge/etc/mono/2.0/web.config" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Build/MonoBleedingEdge/etc/mono/4.0/Browsers/Compat.browser" beforeDir="false" afterPath="$PROJECT_DIR$/Build/MonoBleedingEdge/etc/mono/4.0/Browsers/Compat.browser" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Build/MonoBleedingEdge/etc/mono/4.0/DefaultWsdlHelpGenerator.aspx" beforeDir="false" afterPath="$PROJECT_DIR$/Build/MonoBleedingEdge/etc/mono/4.0/DefaultWsdlHelpGenerator.aspx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Build/MonoBleedingEdge/etc/mono/4.0/machine.config" beforeDir="false" afterPath="$PROJECT_DIR$/Build/MonoBleedingEdge/etc/mono/4.0/machine.config" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Build/MonoBleedingEdge/etc/mono/4.0/settings.map" beforeDir="false" afterPath="$PROJECT_DIR$/Build/MonoBleedingEdge/etc/mono/4.0/settings.map" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Build/MonoBleedingEdge/etc/mono/4.0/web.config" beforeDir="false" afterPath="$PROJECT_DIR$/Build/MonoBleedingEdge/etc/mono/4.0/web.config" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Build/MonoBleedingEdge/etc/mono/4.5/Browsers/Compat.browser" beforeDir="false" afterPath="$PROJECT_DIR$/Build/MonoBleedingEdge/etc/mono/4.5/Browsers/Compat.browser" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Build/MonoBleedingEdge/etc/mono/4.5/DefaultWsdlHelpGenerator.aspx" beforeDir="false" afterPath="$PROJECT_DIR$/Build/MonoBleedingEdge/etc/mono/4.5/DefaultWsdlHelpGenerator.aspx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Build/MonoBleedingEdge/etc/mono/4.5/machine.config" beforeDir="false" afterPath="$PROJECT_DIR$/Build/MonoBleedingEdge/etc/mono/4.5/machine.config" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Build/MonoBleedingEdge/etc/mono/4.5/settings.map" beforeDir="false" afterPath="$PROJECT_DIR$/Build/MonoBleedingEdge/etc/mono/4.5/settings.map" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Build/MonoBleedingEdge/etc/mono/4.5/web.config" beforeDir="false" afterPath="$PROJECT_DIR$/Build/MonoBleedingEdge/etc/mono/4.5/web.config" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Build/MonoBleedingEdge/etc/mono/browscap.ini" beforeDir="false" afterPath="$PROJECT_DIR$/Build/MonoBleedingEdge/etc/mono/browscap.ini" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Build/MonoBleedingEdge/etc/mono/config" beforeDir="false" afterPath="$PROJECT_DIR$/Build/MonoBleedingEdge/etc/mono/config" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Build/MonoBleedingEdge/etc/mono/mconfig/config.xml" beforeDir="false" afterPath="$PROJECT_DIR$/Build/MonoBleedingEdge/etc/mono/mconfig/config.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Management/SaveSystem/SaveManager.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Management/SaveSystem/SaveManager.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Management/SaveSystem/SettingsData.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Management/SaveSystem/SettingsData.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Timelines/Intro.playable" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Timelines/Intro.playable" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ProjectSettings/Packages/com.unity.polybrush/Settings.json" beforeDir="false" afterPath="$PROJECT_DIR$/ProjectSettings/Packages/com.unity.polybrush/Settings.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ProjectSettings/Packages/com.unity.probuilder/Settings.json" beforeDir="false" afterPath="$PROJECT_DIR$/ProjectSettings/Packages/com.unity.probuilder/Settings.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ProjectSettings/Packages/com.unity.testtools.codecoverage/Settings.json" beforeDir="false" afterPath="$PROJECT_DIR$/ProjectSettings/Packages/com.unity.testtools.codecoverage/Settings.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ProjectSettings/ShaderGraphSettings.asset" beforeDir="false" afterPath="$PROJECT_DIR$/ProjectSettings/ShaderGraphSettings.asset" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
   <component name="HighlightingSettingsPerFile">
     <setting file="file://E:/Downloads/Firefox/GegnerKi.cs" root0="SKIP_HIGHLIGHTING" />
@@ -71,24 +50,30 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent">{
-  &quot;keyToString&quot;: {
-    &quot;Discover.Launch.Via.Unity&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
-    &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
-    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
-    &quot;settings.editor.selected.configurable&quot;: &quot;inlay.hints&quot;,
-    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "Discover.Launch.Via.Unity": "true",
+    "RunOnceActivity.OpenProjectViewOnStart": "true",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "WebServerToolWindowFactoryState": "false",
+    "git-widget-placeholder": "main",
+    "ignore.virus.scanning.warn.message": "true",
+    "node.js.detected.package.eslint": "true",
+    "node.js.detected.package.tslint": "true",
+    "node.js.selected.package.eslint": "(autodetect)",
+    "node.js.selected.package.tslint": "(autodetect)",
+    "nodejs_package_manager_path": "npm",
+    "settings.editor.selected.configurable": "inlay.hints",
+    "vue.rearranger.settings.migration": "true"
   },
-  &quot;keyToStringList&quot;: {
-    &quot;rider.external.source.directories&quot;: [
-      &quot;C:\\Users\\basmj\\AppData\\Roaming\\JetBrains\\Rider2022.3\\resharper-host\\DecompilerCache&quot;,
-      &quot;C:\\Users\\basmj\\AppData\\Roaming\\JetBrains\\Rider2022.3\\resharper-host\\SourcesCache&quot;,
-      &quot;C:\\Users\\basmj\\AppData\\Local\\Symbols\\src&quot;
+  "keyToStringList": {
+    "rider.external.source.directories": [
+      "C:\\Users\\basmj\\AppData\\Roaming\\JetBrains\\Rider2023.1\\resharper-host\\DecompilerCache",
+      "C:\\Users\\basmj\\AppData\\Roaming\\JetBrains\\Rider2023.1\\resharper-host\\SourcesCache",
+      "C:\\Users\\basmj\\AppData\\Local\\Symbols\\src"
     ]
   }
-}</component>
+}]]></component>
   <component name="RunManager" selected="Attach to Unity Editor.Attach to Unity Editor">
     <configuration name="Standalone Player" type="RunUnityExe" factoryName="Unity Executable">
       <option name="EXE_PATH" value="$PROJECT_DIR$/Build\Abschlus.exe" />
@@ -101,6 +86,14 @@
     <configuration name="Start Unity" type="RunUnityExe" factoryName="Unity Executable">
       <option name="EXE_PATH" value="F:\Editor\2022.1.16f1\Editor\Unity.exe" />
       <option name="PROGRAM_PARAMETERS" value="-projectPath F:\Projects\AbschlussPruefung -debugCodeOptimization" />
+      <option name="WORKING_DIRECTORY" value="F:\Projects\AbschlussPruefung" />
+      <option name="PASS_PARENT_ENVS" value="1" />
+      <option name="USE_EXTERNAL_CONSOLE" value="0" />
+      <method v="2" />
+    </configuration>
+    <configuration name="Unit Tests (batch mode)" type="RunUnityExe" factoryName="Unity Executable">
+      <option name="EXE_PATH" value="F:\Editor\2022.1.16f1\Editor\Unity.exe" />
+      <option name="PROGRAM_PARAMETERS" value="-runTests -batchmode -projectPath F:\Projects\AbschlussPruefung -testResults Logs/results.xml -testPlatform EditMode -debugCodeOptimization" />
       <option name="WORKING_DIRECTORY" value="F:\Projects\AbschlussPruefung" />
       <option name="PASS_PARENT_ENVS" value="1" />
       <option name="USE_EXTERNAL_CONSOLE" value="0" />
@@ -211,6 +204,9 @@
       <workItem from="1681895798490" duration="10115000" />
       <workItem from="1681922720740" duration="11516000" />
       <workItem from="1681964568530" duration="8047000" />
+      <workItem from="1682280017536" duration="7421000" />
+      <workItem from="1683051081782" duration="646000" />
+      <workItem from="1683131595066" duration="2411000" />
     </task>
     <servers />
   </component>
