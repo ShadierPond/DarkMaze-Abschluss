@@ -1,6 +1,8 @@
 A Demo version for WebGL cannot be created because the project uses HDRP and webgl doesnt support it. An EXE Version is located in Build folder!
 # DarkMaze
-![alt text](blob/Bild1.png)
+<video width="960" height="540" controls>
+  <source src="blob/Trailer.mp4" type="video/mp4">
+</video>
 
 ## Game Genre
 Survival
@@ -26,17 +28,19 @@ Unity
 
 ## Description
 DarkMaze is a thrilling first person shooter game where you have to survive in a dark and dangerous maze. You start with only a pistol and have to find your way through different levels or randomly generated ones. But beware, the enemies are lurking in the shadows and can sense your presence. If you make any noise, they will hunt you down. One hit and you are dead. Can you master every level and escape the DarkMaze?
-![alt text](blob/Bild2.png)
+![alt text](blob/Image1.png)
 
 ### A Random Maze
 Here is an example view of a random generated Maze
-![alt text](blob/Bild3.png)
+![alt text](blob/Image2.png)
 
 ### Enemies in the Game
 This is how the Enemies look like (Asset from [Mixamo](https://www.mixamo.com/))
+![alt text](blob/Image3.png)
 
 ### Teleporters
 There are teleporters in the game that you can use to teleport to another Level. But be careful, they have a timer until they activate, so you have to be careful while waiting for them.
+![alt text](blob/Image4.png)
 
 ### Save and Load
 In the game, you can save your Settings. If the game is started for the first time, the settings are set to default. Settings are automatically loaded when the game is started. The settings are saved when you change anything in the Settings. The settings are saved in JSON format. The settings are saved in the following format:
@@ -51,6 +55,7 @@ In the game, you can save your Settings. If the game is started for the first ti
 
 ### Enviroment Fog
 In the game, there is a fog that makes you feel like you are in a dark and dangerous maze. The fog is a post processing effect
+![alt text](blob/Image5.png)
 
 ## Credits
 - **Audio:** 
