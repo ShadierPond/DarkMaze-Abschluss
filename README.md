@@ -3,7 +3,7 @@ A Demo version for WebGL cannot be created because the project uses HDRP and web
 https://user-images.githubusercontent.com/77869498/236032307-d760524f-92a1-4c0d-bdd6-dcd290c53882.mov
 
 ## Game Genre
-Survival
+Survival First Person Shooter
 
 ## Target Audience
 FSK 12
@@ -15,7 +15,7 @@ Unity
 - **WASD:** Movement
 - **Mouse:** Look around
 - **Left Shift:** Sprint
-- **Left Mouse Button:** Shoot Weapon
+- **Left Mouse Button:** Shoot
 - **Escape:** Pause Menu
 
 ## Hints
